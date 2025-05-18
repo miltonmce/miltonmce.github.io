@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,20 +19,20 @@
       --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
       --transition: all 0.3s ease;
     }
-    
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-    
+
     body {
       font-family: 'Inter', sans-serif;
       line-height: 1.6;
       background-color: var(--light);
       color: var(--slate);
     }
-    
+
     /* Header Estilizado */
     header {
       background: linear-gradient(135deg, var(--dark) 0%, var(--slate) 100%);
@@ -41,7 +42,7 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     header::before {
       content: "";
       position: absolute;
@@ -53,26 +54,26 @@
       opacity: 0.15;
       z-index: 0;
     }
-    
+
     .header-content {
       position: relative;
       z-index: 1;
       max-width: 800px;
       margin: 0 auto;
     }
-    
+
     header h1 {
       font-size: 3rem;
       margin-bottom: 0.5rem;
       font-weight: 700;
     }
-    
+
     header p {
       font-size: 1.25rem;
       color: rgba(255, 255, 255, 0.9);
       margin-bottom: 1.5rem;
     }
-    
+
     .contact-badge {
       display: inline-flex;
       align-items: center;
@@ -83,15 +84,15 @@
       margin: 0.5rem;
       transition: var(--transition);
     }
-    
+
     .contact-badge:hover {
       background: rgba(255, 255, 255, 0.2);
     }
-    
+
     .contact-badge i {
       margin-right: 0.5rem;
     }
-    
+
     /* Barra de navegación */
     nav {
       background: white;
@@ -100,7 +101,7 @@
       top: 0;
       z-index: 100;
     }
-    
+
     .nav-container {
       max-width: 1200px;
       margin: 0 auto;
@@ -109,12 +110,12 @@
       align-items: center;
       padding: 1rem 2rem;
     }
-    
+
     .nav-links {
       display: flex;
       gap: 1.5rem;
     }
-    
+
     .nav-links a {
       color: var(--slate);
       text-decoration: none;
@@ -122,7 +123,7 @@
       position: relative;
       padding: 0.5rem 0;
     }
-    
+
     .nav-links a::after {
       content: '';
       position: absolute;
@@ -133,38 +134,38 @@
       background: var(--primary);
       transition: var(--transition);
     }
-    
+
     .nav-links a:hover::after {
       width: 100%;
     }
-    
+
     /* Contenido principal */
     main {
       max-width: 1200px;
       margin: 2rem auto;
       padding: 0 2rem;
     }
-    
+
     /* Secciones */
     .section-title {
       display: flex;
       align-items: center;
       margin-bottom: 2rem;
     }
-    
+
     .section-title h2 {
       font-size: 1.75rem;
       font-weight: 600;
       color: var(--dark);
       margin-right: 1rem;
     }
-    
+
     .section-title .divider {
       flex-grow: 1;
       height: 1px;
       background: var(--gray);
     }
-    
+
     /* Cards */
     .card {
       background: white;
@@ -174,18 +175,18 @@
       margin-bottom: 2rem;
       transition: var(--transition);
     }
-    
+
     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
     }
-    
+
     /* Experiencia */
     .timeline {
       position: relative;
       padding-left: 2rem;
     }
-    
+
     .timeline::before {
       content: '';
       position: absolute;
@@ -195,12 +196,12 @@
       width: 2px;
       background: var(--gray);
     }
-    
+
     .timeline-item {
       position: relative;
       padding-bottom: 2rem;
     }
-    
+
     .timeline-item::before {
       content: '';
       position: absolute;
@@ -212,38 +213,38 @@
       background: var(--primary);
       border: 2px solid white;
     }
-    
+
     .timeline-date {
       font-size: 0.9rem;
       color: #64748b;
       margin-bottom: 0.5rem;
     }
-    
+
     .timeline-title {
       font-size: 1.25rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
       color: var(--dark);
     }
-    
+
     .timeline-subtitle {
       font-size: 1rem;
       color: var(--primary);
       margin-bottom: 1rem;
       font-weight: 500;
     }
-    
+
     /* Habilidades */
     .skills-container {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 1.5rem;
     }
-    
+
     .skill-category {
       margin-bottom: 1.5rem;
     }
-    
+
     .skill-category h3 {
       font-size: 1.1rem;
       margin-bottom: 1rem;
@@ -251,12 +252,12 @@
       display: flex;
       align-items: center;
     }
-    
+
     .skill-category h3 i {
       margin-right: 0.5rem;
       color: var(--primary);
     }
-    
+
     .skill-tag {
       display: inline-block;
       background: var(--gray);
@@ -267,64 +268,64 @@
       font-size: 0.9rem;
       transition: var(--transition);
     }
-    
+
     .skill-tag:hover {
       background: var(--primary);
       color: white;
     }
-    
+
     /* Proyectos */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
       gap: 2rem;
     }
-    
+
     .project-card {
       border-radius: var(--border-radius);
       overflow: hidden;
       box-shadow: var(--shadow);
       transition: var(--transition);
     }
-    
+
     .project-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
     }
-    
+
     .project-image {
       height: 200px;
       overflow: hidden;
     }
-    
+
     .project-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: var(--transition);
     }
-    
+
     .project-card:hover .project-image img {
       transform: scale(1.05);
     }
-    
+
     .project-content {
       padding: 1.5rem;
       background: white;
     }
-    
+
     .project-title {
       font-size: 1.25rem;
       margin-bottom: 0.5rem;
       color: var(--dark);
     }
-    
+
     .project-links {
       margin-top: 1rem;
       display: flex;
       gap: 1rem;
     }
-    
+
     .project-link {
       display: inline-flex;
       align-items: center;
@@ -332,11 +333,11 @@
       text-decoration: none;
       font-size: 0.9rem;
     }
-    
+
     .project-link i {
       margin-right: 0.3rem;
     }
-    
+
     /* Footer */
     footer {
       background: var(--dark);
@@ -345,61 +346,62 @@
       padding: 3rem 2rem;
       margin-top: 3rem;
     }
-    
+
     .footer-content {
       max-width: 600px;
       margin: 0 auto;
     }
-    
+
     .footer-links {
       display: flex;
       justify-content: center;
       gap: 1.5rem;
       margin: 1.5rem 0;
     }
-    
+
     .footer-link {
       color: white;
       font-size: 1.5rem;
       transition: var(--transition);
     }
-    
+
     .footer-link:hover {
       color: var(--primary);
     }
-    
+
     .copyright {
       color: rgba(255, 255, 255, 0.7);
       font-size: 0.9rem;
     }
-    
+
     /* Responsive */
     @media (max-width: 768px) {
       .nav-container {
         flex-direction: column;
         padding: 1rem;
       }
-      
+
       .nav-links {
         margin-top: 1rem;
         flex-wrap: wrap;
         justify-content: center;
       }
-      
+
       header h1 {
         font-size: 2.2rem;
       }
-      
+
       .projects-grid {
         grid-template-columns: 1fr;
       }
-      
+
       .skills-container {
         grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="header-content">
@@ -437,11 +439,15 @@
       </div>
       <div class="card">
         <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">
-          Desarrollador con más de 7 años de experiencia creando soluciones técnicas robustas. Me especializo en transformar problemas complejos en sistemas eficientes, combinando pensamiento lógico con implementación práctica.
+          Desarrollador con más de 7 años de experiencia creando soluciones técnicas robustas. Me especializo en
+          transformar problemas complejos en sistemas eficientes, combinando pensamiento lógico con implementación
+          práctica.
         </p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+        <div
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
           <div>
-            <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--dark); display: flex; align-items: center;">
+            <h3
+              style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--dark); display: flex; align-items: center;">
               <i class="fas fa-bullseye" style="margin-right: 0.5rem; color: var(--primary);"></i> Enfoque
             </h3>
             <ul style="padding-left: 1.5rem;">
@@ -451,7 +457,8 @@
             </ul>
           </div>
           <div>
-            <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--dark); display: flex; align-items: center;">
+            <h3
+              style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--dark); display: flex; align-items: center;">
               <i class="fas fa-lightbulb" style="margin-right: 0.5rem; color: var(--primary);"></i> Filosofía
             </h3>
             <ul style="padding-left: 1.5rem;">
@@ -473,170 +480,199 @@
         <div class="timeline">
 
 
-    <section id="habilidades">
-      <div class="section-title">
-        <h2>Habilidades Técnicas</h2>
-        <div class="divider"></div>
-      </div>
-      <div class="card">
-        <div class="skills-container">
-          <!-- Columna 1 -->
-          <div>
-            <div class="skill-category">
-              <h3><i class="fas fa-code"></i> Lenguajes</h3>
-              <div>
-                <span class="skill-tag">Python (2.7-3.x)</span>
-                <span class="skill-tag">SQL</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">HTML/CSS</span>
-              </div>
+          <section id="habilidades">
+            <div class="section-title">
+              <h2>Habilidades Técnicas</h2>
+              <div class="divider"></div>
             </div>
-            
-            <div class="skill-category">
-              <h3><i class="fas fa-server"></i> Backend</h3>
-              <div>
-                <span class="skill-tag">web2py</span>
-                <span class="skill-tag">Django REST</span>
-                <span class="skill-tag">APIs REST</span>
-                <span class="skill-tag">Microservicios</span>
-                <span class="skill-tag">DDD</span>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Columna 2 -->
-          <div>
-            <div class="skill-category">
-              <h3><i class="fas fa-database"></i> Bases de Datos</h3>
-              <div>
-                <span class="skill-tag">PostgreSQL</span>
-                <span class="skill-tag">MySQL</span>
-                <span class="skill-tag">SQLite</span>
-                <span class="skill-tag">Diseño de DB</span>
-              </div>
-            </div>
-            
-            <div class="skill-category">
-              <h3><i class="fas fa-tools"></i> Herramientas</h3>
-              <div>
-                <span class="skill-tag">Git/GitHub</span>
-                <span class="skill-tag">Docker</span>
-                <span class="skill-tag">MQTT</span>
-                <span class="skill-tag">PLCs</span>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Columna 3 -->
-          <div>
-            <div class="skill-category">
-              <h3><i class="fas fa-chart-line"></i> Procesamiento de Datos</h3>
-              <div>
-                <span class="skill-tag">Pandas</span>
-                <span class="skill-tag">PyFPDF</span>
-                <span class="skill-tag">PyGal</span>
-                <span class="skill-tag">Reportes</span>
-              </div>
-            </div>
-            
-            <div class="skill-category">
-              <h3><i class="fas fa-layer-group"></i> Frontend</h3>
-              <div>
-                <span class="skill-tag">Vue.js</span>
-                <span class="skill-tag">HTMX</span>
-                <span class="skill-tag">jQuery</span>
-                <span class="skill-tag">Bootstrap</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+            <div class="card">
+              <div class="skills-container">
+                <!-- Columna 1 -->
+                <div>
+                  <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Lenguajes</h3>
+                    <div>
+                      <span class="skill-tag">Python (2.7-3.x)</span>
+                      <span class="skill-tag">SQL</span>
+                      <span class="skill-tag">JavaScript</span>
+                      <span class="skill-tag">HTML/CSS</span>
+                    </div>
+                  </div>
 
-    <section id="proyectos">
-      <div class="section-title">
-        <h2>Proyectos Destacados</h2>
-        <div class="divider"></div>
-      </div>
-      <div class="projects-grid">
-        <!-- Proyecto 1 -->
-        <div class="project-card">
-          <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1629904853893-c2c8981a1dc5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Sistema de Gestión Hídrica">
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Sistema de Gestión Hídrica</h3>
-            <p style="color: var(--slate); font-size: 0.95rem; line-height: 1.6;">Plataforma completa para administración de recursos hídricos con integración de PLCs y generación de reportes regulatorios.</p>
-            <div class="project-links">
-             <!--
+                  <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div>
+                      <span class="skill-tag">web2py</span>
+                      <span class="skill-tag">Django REST</span>
+                      <span class="skill-tag">APIs REST</span>
+                      <span class="skill-tag">Microservicios</span>
+                      <span class="skill-tag">DDD</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Columna 2 -->
+                <div>
+                  <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Bases de Datos</h3>
+                    <div>
+                      <span class="skill-tag">PostgreSQL</span>
+                      <span class="skill-tag">MySQL</span>
+                      <span class="skill-tag">SQLite</span>
+                      <span class="skill-tag">Diseño de DB</span>
+                    </div>
+                  </div>
+
+                  <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Herramientas</h3>
+                    <div>
+                      <span class="skill-tag">Git/GitHub</span>
+                      <span class="skill-tag">Docker</span>
+                      <span class="skill-tag">MQTT</span>
+                      <span class="skill-tag">PLCs</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-category">
+                  <h3><i class="fas fa-server"></i> Administración de Servidores</h3>
+                  <div>
+                    <span class="skill-tag">Linux (Ubuntu/Debian/CentOS)</span>
+                    <span class="skill-tag">Bash Scripting</span>
+                    <span class="skill-tag">Nginx/Apache</span>
+                    <span class="skill-tag">Docker & Docker Compose</span>
+                    <span class="skill-tag">Supervisord</span>
+                    <span class="skill-tag">Configuración de Servidores</span>
+                    <span class="skill-tag">SSH</span>
+                    <span class="skill-tag">CI/CD Básico</span>
+                  </div>
+                </div>
+
+                <!-- Columna 3 -->
+                <div>
+                  <div class="skill-category">
+                    <h3><i class="fas fa-chart-line"></i> Procesamiento de Datos</h3>
+                    <div>
+                      <span class="skill-tag">Pandas</span>
+                      <span class="skill-tag">PyFPDF</span>
+                      <span class="skill-tag">PyGal</span>
+                      <span class="skill-tag">Reportes</span>
+                    </div>
+                  </div>
+
+                  <div class="skill-category">
+                    <h3><i class="fas fa-layer-group"></i> Frontend</h3>
+                    <div>
+                      <span class="skill-tag">Vue.js</span>
+                      <span class="skill-tag">HTMX</span>
+                      <span class="skill-tag">jQuery</span>
+                      <span class="skill-tag">Bootstrap</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="proyectos">
+            <div class="section-title">
+              <h2>Proyectos Destacados</h2>
+              <div class="divider"></div>
+            </div>
+            <div class="projects-grid">
+              <!-- Proyecto 1 -->
+              <div class="project-card">
+                <div class="project-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1629904853893-c2c8981a1dc5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                    alt="Sistema de Gestión Hídrica">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">Sistema de Gestión Hídrica</h3>
+                  <p style="color: var(--slate); font-size: 0.95rem; line-height: 1.6;">Plataforma completa para
+                    administración de recursos hídricos con integración de PLCs y generación de reportes regulatorios.
+                  </p>
+                  <div class="project-links">
+                    <!--
                 <a href="#" class="project-link"><i class="fas fa-code"></i> Código</a>
                 <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-              --> 
-            </div>
-          </div>
-        </div>
-        
-        <!-- Proyecto 2 -->
-        <div class="project-card">
-          <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Facturación Electrónica">
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Sistema de Facturación CFDI</h3>
-            <p style="color: var(--slate); font-size: 0.95rem; line-height: 1.6;">Solución completa de facturación electrónica con integración a SAT y generación de archivos PDF/XML.</p>
-            <div class="project-links">
-                <!--
+              -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- Proyecto 2 -->
+              <div class="project-card">
+                <div class="project-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                    alt="Facturación Electrónica">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">Sistema de Facturación CFDI</h3>
+                  <p style="color: var(--slate); font-size: 0.95rem; line-height: 1.6;">Solución completa de facturación
+                    electrónica con integración a SAT y generación de archivos PDF/XML.</p>
+                  <div class="project-links">
+                    <!--
               <a href="#" class="project-link"><i class="fas fa-code"></i> Código</a>
             -->
-            </div>
-          </div>
-        </div>
-        <div class="project-card">
-  <div class="project-image">
-    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Sistema Médico">
-  </div>
-  <div class="project-content">
-    <h3 class="project-title">Gestión Hospitalaria Integral</h3>
-    <p style="color: var(--slate); font-size: 0.95rem; line-height: 1.6;">
-      Plataforma para diagnóstico por imágenes con agendamiento inteligente, control de flujos pacientes y administración financiera.
-    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card">
+                <div class="project-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                    alt="Sistema Médico">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">Gestión Hospitalaria Integral</h3>
+                  <p style="color: var(--slate); font-size: 0.95rem; line-height: 1.6;">
+                    Plataforma para diagnóstico por imágenes con agendamiento inteligente, control de flujos pacientes y
+                    administración financiera.
+                  </p>
 
-    <div class="project-links">
-        <!--
+                  <div class="project-links">
+                    <!--
       <a href="#" class="project-link"><i class="fas fa-clipboard-list"></i> Caso de Estudio</a>
       -->
-    </div>
-  </div>
-</div>
-        <!-- Proyecto 3 -->
-        <div class="project-card">
-          <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Monitor de PLCs">
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Monitor de PLCs en Tiempo Real</h3>
-            <p style="color: var(--slate); font-size: 0.95rem; line-height: 1.6;">Sistema de monitoreo industrial con MQTT para visualización de datos de controladores programables.</p>
-            <div class="project-links">
-                <!--
+                  </div>
+                </div>
+              </div>
+              <!-- Proyecto 3 -->
+              <div class="project-card">
+                <div class="project-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                    alt="Monitor de PLCs">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">Monitor de PLCs en Tiempo Real</h3>
+                  <p style="color: var(--slate); font-size: 0.95rem; line-height: 1.6;">Sistema de monitoreo industrial
+                    con MQTT para visualización de datos de controladores programables.</p>
+                  <div class="project-links">
+                    <!--
               <a href="#" class="project-link"><i class="fas fa-code"></i> Código</a>
               <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
                 -->
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+          </section>
 
 
-  <footer>
-    <div class="footer-content">
-      <div class="footer-links">
-        <a href="https://github.com/miltonmce" target="_blank" class="footer-link"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/milton-medina-134694a4/" class="footer-link"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:miltonmce@gmail.com" class="footer-link"><i class="fas fa-envelope"></i></a>
-      </div>
-      <p class="copyright">© 2023 Milton MCE. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+          <footer>
+            <div class="footer-content">
+              <div class="footer-links">
+                <a href="https://github.com/miltonmce" target="_blank" class="footer-link"><i
+                    class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/milton-medina-134694a4/" class="footer-link"><i
+                    class="fab fa-linkedin"></i></a>
+                <a href="mailto:miltonmce@gmail.com" class="footer-link"><i class="fas fa-envelope"></i></a>
+              </div>
+              <p class="copyright">© 2023 Milton MCE. Todos los derechos reservados.</p>
+            </div>
+          </footer>
 </body>
+
 </html>
