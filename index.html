@@ -3,97 +3,161 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Milton MCE</title>
+  <title>Milton MCE – Desarrollador</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      background: #f5f7fa;
+      color: #111827;
     }
     header {
-      background: #1f2937;
-      color: white;
-      padding: 2rem 1rem;
+      background: #0f172a;
+      color: #fff;
+      padding: 3rem 1rem;
       text-align: center;
     }
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.3rem;
+    }
+    header p {
+      color: #94a3b8;
+      font-size: 1.2rem;
+    }
     nav {
-      margin-top: 1rem;
+      background: #1e293b;
+      text-align: center;
+      padding: 1rem 0;
     }
     nav a {
-      color: #e5e7eb;
-      margin: 0 1rem;
+      color: #cbd5e1;
+      margin: 0 1.2rem;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
     }
     main {
-      padding: 2rem 1rem;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
+      padding: 2rem 1rem;
     }
-    section {
-      margin-bottom: 3rem;
+    h2 {
+      border-left: 5px solid #3b82f6;
+      padding-left: 0.75rem;
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
     }
-    h1, h2 {
-      margin-bottom: 0.5rem;
+    .card {
+      background: white;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
     }
-    p {
-      line-height: 1.6;
+    ul {
+      padding-left: 1.2rem;
+    }
+    a {
+      color: #2563eb;
     }
     footer {
       text-align: center;
-      background: #1f2937;
-      color: #d1d5db;
-      padding: 1rem;
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 1.5rem;
       font-size: 0.9rem;
-    }
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
-      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Milton Medina Celaya</h1>
-    <p>Desarrollador con enfoque en soluciones prácticas y eficientes</p>
-    <nav>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#intereses">Intereses</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+    <h1>Milton MCE</h1>
+    <p>Desarrollador Python enfocado en soluciones prácticas y claras</p>
   </header>
 
+  <nav>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#experiencia">Experiencia</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
   <main>
+
     <section id="sobre-mi">
       <h2>Sobre mí</h2>
-      <p>
-        Hola, soy Milton. Me interesa construir cosas que funcionen bien, resuelvan problemas reales y tengan sentido a largo plazo. A veces me enfoco en lo técnico, otras en cómo organizar mejor una idea. Me gusta mantener las cosas simples, pero bien pensadas.
-      </p>
+      <div class="card">
+        <p>
+          Me interesa crear soluciones que realmente funcionen. Prefiero lo simple pero bien hecho. Me enfoco en entender el contexto, proponer caminos viables y construir desde lo que ya existe, sin complicar lo innecesario. Trabajo desde la lógica y la claridad, combinando lo técnico con lo práctico.
+        </p>
+      </div>
     </section>
 
-    <section id="intereses">
-      <h2>Intereses</h2>
-      <p>
-        Disfruto trabajar con tecnología, entender cómo encajan las piezas y encontrar formas claras de mejorar procesos. También valoro las conversaciones que ayudan a mejorar lo que hacemos, más allá del código. Aprendo todos los días, y cada proyecto me enseña algo nuevo.
-      </p>
+<section id="experiencia">
+  <h2>Experiencia</h2>
+  <div class="card">
+    <p>
+      Desde 2016 he trabajado como desarrollador Python freelance, creando herramientas para resolver problemas reales: desde migrar sistemas antiguos escritos en VB y PHP, hasta construir aplicaciones modernas con Python y bases de datos como MySQL y PostgreSQL.
+    </p>
+    <p>
+      Recientemente, he tenido la oportunidad de colaborar con <strong>Asudir037</strong>, desarrollando soluciones para la gestión de sistemas hídricos. Ahí participé en la construcción de herramientas para controlar volúmenes de agua, gestionar pozos, generar reportes técnicos y procesar autorizaciones de riego. También integré el uso de <strong>brokers de mensajería</strong> para recolectar y almacenar datos enviados desde <strong>PLCs</strong> (controladores lógicos programables), facilitando el monitoreo en tiempo real.
+    </p>
+    <p>
+      También lideré proyectos en Corcab, donde dirigí el desarrollo de plataformas empresariales usando Python, web2py, APIs REST y microservicios. Participé en la implementación de facturación electrónica con Timbox y enfoqué mi trabajo en hacer que los sistemas fueran sostenibles a largo plazo.
+    </p>
+    <p>
+      Además de programar, he colaborado en cursos, comunidades y trabajos de investigación. Contribuí al <em>Arctic Code Vault</em> con un proyecto de lectura/escritura de tarjetas MSR605, participé en la creación de un curso sobre web2py para Latinux y Semnix, e incluso formé parte de una investigación doctoral sobre integridad de datos.
+    </p>
+  </div>
+</section>
+<section id="habilidades">
+  <h2>Habilidades</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Python (desde 2.7 hasta 3.x)</strong> — Desarrollo web, automatización, procesamiento de datos, generación de reportes PDF y gráficos.</li>
+      <li><strong>Frameworks y arquitecturas</strong> — web2py, Django REST Framework, microservicios, arquitectura orientada a dominios (DDD), APIs RESTful.</li>
+      <li><strong>Frontend</strong> — jQuery, HTMX, Vue.js (integración progresiva), uso de Bootstrap y Tailwind CSS, manejo de componentes reutilizables.</li>
+      <li><strong>Bases de datos</strong> — Diseño y consultas avanzadas con PostgreSQL y MySQL. Conexión eficiente entre backend y modelos complejos.</li>
+      <li><strong>Testing</strong> — Pruebas automatizadas en Django, pruebas de integración y validación de lógica de negocio compleja.</li>
+      <li><strong>Mensajería y automatización</strong> — Uso de brokers (como MQTT o similares) para recibir información de PLCs, almacenamiento y monitoreo en tiempo real.</li>
+      <li><strong>Sistemas hídricos</strong> — Modelado de datos para pozos, volúmenes de agua, arrendamientos, subarrendamientos, autorizaciones de riego, transferencia temporal de volúmenes y lectura mensual de medidores.</li>
+      <li><strong>Generación de reportes</strong> — Uso de PyFPDF para PDFs personalizados y PyGal para visualización de datos con gráficos limpios y exportables.</li>
+      <li><strong>Control de versiones y colaboración</strong> — Git y GitHub. Contribuciones al Arctic Code Vault.</li>
+      <li><strong>Documentación y levantamiento de requerimientos</strong> — Experiencia directa con usuarios para transformar procesos reales en soluciones funcionales.</li>
+    </ul>
+  </div>
+</section>
+
+
+    <section id="proyectos">
+      <h2>Proyectos / Demos</h2>
+      <div class="card">
+        <p>Próximamente compartiré ejemplos y demostraciones de los proyectos en los que he trabajado.</p>
+        <p>Mientras tanto, podés visitar mi <a href="https://github.com/miltonmce" target="_blank">repositorio en GitHub</a>.</p>
+      </div>
     </section>
 
     <section id="contacto">
       <h2>Contacto</h2>
-      <p>Puedes encontrarme por aquí:</p>
-      <ul>
-        <li><a href="https://github.com/miltonmce" target="_blank">GitHub: miltonmce</a></li>
-        <li><a href="mailto:milton@example.com">Correo: milton@example.com</a></li>
-      </ul>
+      <div class="card">
+        <p>¿Querés contactarme o ver más de lo que hago?</p>
+        <ul>
+          <li><strong>GitHub:</strong> <a href="https://github.com/miltonmce" target="_blank">github.com/miltonmce</a></li>
+          <li><strong>Email:</strong> <a href="mailto:miltonmce@gmail.com">miltonmce@gmail.com</a></li>
+        </ul>
+      </div>
     </section>
+    
+
   </main>
 
   <footer>
-    &copy; 2025 Milton MCE
+    &copy; 2025 Milton MCE – Todos los derechos reservados.
   </footer>
+
 </body>
 </html>
