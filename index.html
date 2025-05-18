@@ -1,163 +1,642 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Milton MCE – Desarrollador</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Milton MCE - Desarrollador Python Senior</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --dark: #0f172a;
+      --slate: #334155;
+      --light: #f8fafc;
+      --gray: #e2e8f0;
+      --border-radius: 12px;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
     body {
       font-family: 'Inter', sans-serif;
       line-height: 1.6;
-      background: #f5f7fa;
-      color: #111827;
+      background-color: var(--light);
+      color: var(--slate);
     }
+    
+    /* Header Estilizado */
     header {
-      background: #0f172a;
-      color: #fff;
-      padding: 3rem 1rem;
+      background: linear-gradient(135deg, var(--dark) 0%, var(--slate) 100%);
+      color: white;
+      padding: 4rem 2rem;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
+    
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1629904853893-c2c8981a1dc5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80') center/cover;
+      opacity: 0.15;
+      z-index: 0;
+    }
+    
+    .header-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
     header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.3rem;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
     }
+    
     header p {
-      color: #94a3b8;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 1.5rem;
     }
+    
+    .contact-badge {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      margin: 0.5rem;
+      transition: var(--transition);
+    }
+    
+    .contact-badge:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    
+    .contact-badge i {
+      margin-right: 0.5rem;
+    }
+    
+    /* Barra de navegación */
     nav {
-      background: #1e293b;
-      text-align: center;
-      padding: 1rem 0;
-    }
-    nav a {
-      color: #cbd5e1;
-      margin: 0 1.2rem;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-    h2 {
-      border-left: 5px solid #3b82f6;
-      padding-left: 0.75rem;
-      margin-bottom: 1rem;
-      font-size: 1.6rem;
-    }
-    .card {
       background: white;
-      border-radius: 0.5rem;
-      padding: 1.5rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    
+    .nav-links a {
+      color: var(--slate);
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      padding: 0.5rem 0;
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: var(--transition);
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    
+    /* Contenido principal */
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+    
+    /* Secciones */
+    .section-title {
+      display: flex;
+      align-items: center;
       margin-bottom: 2rem;
     }
-    ul {
-      padding-left: 1.2rem;
+    
+    .section-title h2 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin-right: 1rem;
     }
-    a {
-      color: #2563eb;
+    
+    .section-title .divider {
+      flex-grow: 1;
+      height: 1px;
+      background: var(--gray);
     }
-    footer {
-      text-align: center;
-      background: #0f172a;
-      color: #94a3b8;
-      padding: 1.5rem;
+    
+    /* Cards */
+    .card {
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      transition: var(--transition);
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Experiencia */
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+    
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      background: var(--gray);
+    }
+    
+    .timeline-item {
+      position: relative;
+      padding-bottom: 2rem;
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2rem;
+      top: 0;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 2px solid white;
+    }
+    
+    .timeline-date {
       font-size: 0.9rem;
+      color: #64748b;
+      margin-bottom: 0.5rem;
+    }
+    
+    .timeline-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+    
+    .timeline-subtitle {
+      font-size: 1rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    
+    /* Habilidades */
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .skill-category {
+      margin-bottom: 1.5rem;
+    }
+    
+    .skill-category h3 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+    }
+    
+    .skill-category h3 i {
+      margin-right: 0.5rem;
+      color: var(--primary);
+    }
+    
+    .skill-tag {
+      display: inline-block;
+      background: var(--gray);
+      color: var(--slate);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      margin: 0 0.5rem 0.5rem 0;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+    
+    .skill-tag:hover {
+      background: var(--primary);
+      color: white;
+    }
+    
+    /* Proyectos */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+    
+    .project-card {
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .project-image {
+      height: 200px;
+      overflow: hidden;
+    }
+    
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    
+    .project-card:hover .project-image img {
+      transform: scale(1.05);
+    }
+    
+    .project-content {
+      padding: 1.5rem;
+      background: white;
+    }
+    
+    .project-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+    
+    .project-links {
+      margin-top: 1rem;
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    
+    .project-link i {
+      margin-right: 0.3rem;
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 3rem 2rem;
+      margin-top: 3rem;
+    }
+    
+    .footer-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    
+    .footer-link {
+      color: white;
+      font-size: 1.5rem;
+      transition: var(--transition);
+    }
+    
+    .footer-link:hover {
+      color: var(--primary);
+    }
+    
+    .copyright {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+        padding: 1rem;
+      }
+      
+      .nav-links {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      header h1 {
+        font-size: 2.2rem;
+      }
+      
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .skills-container {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Milton MCE</h1>
-    <p>Desarrollador Python enfocado en soluciones prácticas y claras</p>
+    <div class="header-content">
+      <h1>Milton MCE</h1>
+      <p>Desarrollador Python Senior | Especialista en Soluciones Empresariales</p>
+      <div>
+        <a href="mailto:miltonmce@gmail.com" class="contact-badge">
+          <i class="fas fa-envelope"></i> miltonmce@gmail.com
+        </a>
+        <a href="https://github.com/miltonmce" target="_blank" class="contact-badge">
+          <i class="fab fa-github"></i> github.com/miltonmce
+        </a>
+      </div>
+    </div>
   </header>
 
   <nav>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#experiencia">Experiencia</a>
-    <a href="#habilidades">Habilidades</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#contacto">Contacto</a>
+    <div class="nav-container">
+      <div class="nav-brand">Milton MCE</div>
+      <div class="nav-links">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
   </nav>
 
   <main>
-
     <section id="sobre-mi">
-      <h2>Sobre mí</h2>
+      <div class="section-title">
+        <h2>Sobre mí</h2>
+        <div class="divider"></div>
+      </div>
       <div class="card">
-        <p>
-          Me interesa crear soluciones que realmente funcionen. Prefiero lo simple pero bien hecho. Me enfoco en entender el contexto, proponer caminos viables y construir desde lo que ya existe, sin complicar lo innecesario. Trabajo desde la lógica y la claridad, combinando lo técnico con lo práctico.
+        <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">
+          Desarrollador con más de 7 años de experiencia creando soluciones técnicas robustas. Me especializo en transformar problemas complejos en sistemas eficientes, combinando pensamiento lógico con implementación práctica.
         </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+          <div>
+            <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--dark); display: flex; align-items: center;">
+              <i class="fas fa-bullseye" style="margin-right: 0.5rem; color: var(--primary);"></i> Enfoque
+            </h3>
+            <ul style="padding-left: 1.5rem;">
+              <li style="margin-bottom: 0.5rem;">Código mantenible</li>
+              <li style="margin-bottom: 0.5rem;">Arquitecturas limpias</li>
+              <li style="margin-bottom: 0.5rem;">Documentación clara</li>
+            </ul>
+          </div>
+          <div>
+            <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--dark); display: flex; align-items: center;">
+              <i class="fas fa-lightbulb" style="margin-right: 0.5rem; color: var(--primary);"></i> Filosofía
+            </h3>
+            <ul style="padding-left: 1.5rem;">
+              <li style="margin-bottom: 0.5rem;">Simplicidad sobre complejidad</li>
+              <li style="margin-bottom: 0.5rem;">Soluciones a largo plazo</li>
+              <li style="margin-bottom: 0.5rem;">Aprendizaje continuo</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-<section id="experiencia">
-  <h2>Experiencia</h2>
-  <div class="card">
-    <p>
-      Desde 2016 he trabajado como desarrollador Python freelance, creando herramientas para resolver problemas reales: desde migrar sistemas antiguos escritos en VB y PHP, hasta construir aplicaciones modernas con Python y bases de datos como MySQL y PostgreSQL.
-    </p>
-    <p>
-      Recientemente, he tenido la oportunidad de colaborar con <strong>Asudir037</strong>, desarrollando soluciones para la gestión de sistemas hídricos. Ahí participé en la construcción de herramientas para controlar volúmenes de agua, gestionar pozos, generar reportes técnicos y procesar autorizaciones de riego. También integré el uso de <strong>brokers de mensajería</strong> para recolectar y almacenar datos enviados desde <strong>PLCs</strong> (controladores lógicos programables), facilitando el monitoreo en tiempo real.
-    </p>
-    <p>
-      También lideré proyectos en Corcab, donde dirigí el desarrollo de plataformas empresariales usando Python, web2py, APIs REST y microservicios. Participé en la implementación de facturación electrónica con Timbox y enfoqué mi trabajo en hacer que los sistemas fueran sostenibles a largo plazo.
-    </p>
-    <p>
-      Además de programar, he colaborado en cursos, comunidades y trabajos de investigación. Contribuí al <em>Arctic Code Vault</em> con un proyecto de lectura/escritura de tarjetas MSR605, participé en la creación de un curso sobre web2py para Latinux y Semnix, e incluso formé parte de una investigación doctoral sobre integridad de datos.
-    </p>
-  </div>
-</section>
-<section id="habilidades">
-  <h2>Habilidades</h2>
-  <div class="card">
-    <ul>
-      <li><strong>Python (desde 2.7 hasta 3.x)</strong> — Desarrollo web, automatización, procesamiento de datos, generación de reportes PDF y gráficos.</li>
-      <li><strong>Frameworks y arquitecturas</strong> — web2py, Django REST Framework, microservicios, arquitectura orientada a dominios (DDD), APIs RESTful.</li>
-      <li><strong>Frontend</strong> — jQuery, HTMX, Vue.js (integración progresiva), uso de Bootstrap y Tailwind CSS, manejo de componentes reutilizables.</li>
-      <li><strong>Bases de datos</strong> — Diseño y consultas avanzadas con PostgreSQL y MySQL. Conexión eficiente entre backend y modelos complejos.</li>
-      <li><strong>Testing</strong> — Pruebas automatizadas en Django, pruebas de integración y validación de lógica de negocio compleja.</li>
-      <li><strong>Mensajería y automatización</strong> — Uso de brokers (como MQTT o similares) para recibir información de PLCs, almacenamiento y monitoreo en tiempo real.</li>
-      <li><strong>Sistemas hídricos</strong> — Modelado de datos para pozos, volúmenes de agua, arrendamientos, subarrendamientos, autorizaciones de riego, transferencia temporal de volúmenes y lectura mensual de medidores.</li>
-      <li><strong>Generación de reportes</strong> — Uso de PyFPDF para PDFs personalizados y PyGal para visualización de datos con gráficos limpios y exportables.</li>
-      <li><strong>Control de versiones y colaboración</strong> — Git y GitHub. Contribuciones al Arctic Code Vault.</li>
-      <li><strong>Documentación y levantamiento de requerimientos</strong> — Experiencia directa con usuarios para transformar procesos reales en soluciones funcionales.</li>
-    </ul>
-  </div>
-</section>
+    <section id="experiencia">
+      <div class="section-title">
+        <h2>Experiencia Profesional</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="card">
+        <div class="timeline">
 
+
+    <section id="habilidades">
+      <div class="section-title">
+        <h2>Habilidades Técnicas</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="card">
+        <div class="skills-container">
+          <!-- Columna 1 -->
+          <div>
+            <div class="skill-category">
+              <h3><i class="fas fa-code"></i> Lenguajes</h3>
+              <div>
+                <span class="skill-tag">Python (2.7-3.x)</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">HTML/CSS</span>
+              </div>
+            </div>
+            
+            <div class="skill-category">
+              <h3><i class="fas fa-server"></i> Backend</h3>
+              <div>
+                <span class="skill-tag">web2py</span>
+                <span class="skill-tag">Django REST</span>
+                <span class="skill-tag">APIs REST</span>
+                <span class="skill-tag">Microservicios</span>
+                <span class="skill-tag">DDD</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Columna 2 -->
+          <div>
+            <div class="skill-category">
+              <h3><i class="fas fa-database"></i> Bases de Datos</h3>
+              <div>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">SQLite</span>
+                <span class="skill-tag">Diseño de DB</span>
+              </div>
+            </div>
+            
+            <div class="skill-category">
+              <h3><i class="fas fa-tools"></i> Herramientas</h3>
+              <div>
+                <span class="skill-tag">Git/GitHub</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">MQTT</span>
+                <span class="skill-tag">PLCs</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Columna 3 -->
+          <div>
+            <div class="skill-category">
+              <h3><i class="fas fa-chart-line"></i> Procesamiento de Datos</h3>
+              <div>
+                <span class="skill-tag">Pandas</span>
+                <span class="skill-tag">PyFPDF</span>
+                <span class="skill-tag">PyGal</span>
+                <span class="skill-tag">Reportes</span>
+              </div>
+            </div>
+            
+            <div class="skill-category">
+              <h3><i class="fas fa-layer-group"></i> Frontend</h3>
+              <div>
+                <span class="skill-tag">Vue.js</span>
+                <span class="skill-tag">HTMX</span>
+                <span class="skill-tag">jQuery</span>
+                <span class="skill-tag">Bootstrap</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section id="proyectos">
-      <h2>Proyectos / Demos</h2>
-      <div class="card">
-        <p>Próximamente compartiré ejemplos y demostraciones de los proyectos en los que he trabajado.</p>
-        <p>Mientras tanto, podés visitar mi <a href="https://github.com/miltonmce" target="_blank">repositorio en GitHub</a>.</p>
+      <div class="section-title">
+        <h2>Proyectos Destacados</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="projects-grid">
+        <!-- Proyecto 1 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1629904853893-c2c8981a1dc5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Sistema de Gestión Hídrica">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Sistema de Gestión Hídrica</h3>
+            <p style="color: var(--slate); font-size: 0.95rem; line-height: 1.6;">Plataforma completa para administración de recursos hídricos con integración de PLCs y generación de reportes regulatorios.</p>
+            <div class="project-links">
+             <!--
+                <a href="#" class="project-link"><i class="fas fa-code"></i> Código</a>
+                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+              --> 
+            </div>
+          </div>
+        </div>
+        
+        <!-- Proyecto 2 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Facturación Electrónica">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Sistema de Facturación CFDI</h3>
+            <p style="color: var(--slate); font-size: 0.95rem; line-height: 1.6;">Solución completa de facturación electrónica con integración a SAT y generación de archivos PDF/XML.</p>
+            <div class="project-links">
+                <!--
+              <a href="#" class="project-link"><i class="fas fa-code"></i> Código</a>
+            -->
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+  <div class="project-image">
+    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Sistema Médico">
+  </div>
+  <div class="project-content">
+    <h3 class="project-title">Gestión Hospitalaria Integral</h3>
+    <p style="color: var(--slate); font-size: 0.95rem; line-height: 1.6;">
+      Plataforma para diagnóstico por imágenes con agendamiento inteligente, control de flujos pacientes y administración financiera.
+    </p>
+
+    <div class="project-links">
+        <!--
+      <a href="#" class="project-link"><i class="fas fa-clipboard-list"></i> Caso de Estudio</a>
+      -->
+    </div>
+  </div>
+</div>
+        <!-- Proyecto 3 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Monitor de PLCs">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Monitor de PLCs en Tiempo Real</h3>
+            <p style="color: var(--slate); font-size: 0.95rem; line-height: 1.6;">Sistema de monitoreo industrial con MQTT para visualización de datos de controladores programables.</p>
+            <div class="project-links">
+                <!--
+              <a href="#" class="project-link"><i class="fas fa-code"></i> Código</a>
+              <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                -->
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <div class="card">
-        <p>¿Querés contactarme o ver más de lo que hago?</p>
-        <ul>
-          <li><strong>GitHub:</strong> <a href="https://github.com/miltonmce" target="_blank">github.com/miltonmce</a></li>
-          <li><strong>Email:</strong> <a href="mailto:miltonmce@gmail.com">miltonmce@gmail.com</a></li>
-        </ul>
-      </div>
-    </section>
-    
-
-  </main>
 
   <footer>
-    &copy; 2025 Milton MCE – Todos los derechos reservados.
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="https://github.com/miltonmce" target="_blank" class="footer-link"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/milton-medina-134694a4/" class="footer-link"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:miltonmce@gmail.com" class="footer-link"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p class="copyright">© 2023 Milton MCE. Todos los derechos reservados.</p>
+    </div>
   </footer>
-
 </body>
 </html>
