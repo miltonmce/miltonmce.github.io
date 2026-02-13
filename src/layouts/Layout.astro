@@ -1,23 +1,396 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+// Layout.astro
+interface Props {
+  title?: string;
+  description?: string;
+  isHome?: boolean;
+}
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+const { 
+  title = "Milton Medina | Backend Engineer", 
+  description = "Especialista en Django y arquitectura de sistemas.",
+  isHome = true 
+} = Astro.props;
+
+const currentYear = new Date().getFullYear();
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-brand">
+        <span class="brand-accent">&lt;</span>Milton<span class="brand-accent">/&gt;</span>
+      </a>
+      <div class="nav-links">
+        <a href="/" class="nav-link">Inicio</a>
+        <a href="/blog" class="nav-link">Blog</a>
+        <a href="/#proyectos" class="nav-link">Proyectos</a>
+        <a href="/cv" class="nav-link">CV</a>
+        <a href="mailto:miltonmce@gmail.com" class="nav-link cv-button">
+          <i class="fas fa-envelope"></i> Contactar
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class={!isHome ? "article-layout" : ""}>
+    <slot />
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Milton Medina</h3>
+        <p>Backend Engineer & System Architect</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/miltonmce" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/milton-medina-134694a4/" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:miltonmce@gmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+      <p class="copyright">© {currentYear} Milton Medina Celaya. Built with Astro + Tailwind</p>
+    </div>
+  </footer>
+
+  <style is:global>
+    :root {
+      /* Dark Theme - Sin Azul */
+      --bg-primary: #0a0d2f;
+      --bg-secondary: #0f172a;
+      --bg-tertiary: #1e293b;
+      --text-primary: #e2e8f0;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --accent-primary: #06b6d4;
+      --accent-secondary: #a78bfa;
+      --accent-tertiary: #06b6d4;
+      --border-color: rgba(100, 116, 139, 0.3);
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 13, 47, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+      height: 70px;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-brand {
+      font-size: 1.3rem;
+      font-weight: 800;
+      text-decoration: none;
+      color: var(--text-primary);
+      transition: var(--transition);
+      letter-spacing: -0.5px;
+    }
+
+    .brand-accent {
+      color: var(--accent-primary);
+      font-family: 'Fira Code', monospace;
+    }
+
+    .nav-brand:hover {
+      color: var(--accent-primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .nav-link {
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-weight: 500;
+      font-size: 0.95rem;
+      border-radius: 6px;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent-primary);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--text-primary);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-link.cv-button {
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      color: white;
+      padding: 0.65rem 1.3rem;
+      border-radius: 8px;
+    }
+
+    .nav-link.cv-button::after {
+      display: none;
+    }
+
+    .nav-link.cv-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+    }
+
+    /* MAIN CONTENT */
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .article-layout {
+      max-width: 900px;
+    }
+
+    /* Blog content styling */
+    main :global(article) {
+      margin: 2rem auto;
+    }
+
+    main :global(article h1) {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    main :global(article h2) {
+      font-size: 1.8rem;
+      margin: 2rem 0 1rem;
+      color: var(--accent-primary);
+      border-left: 4px solid var(--accent-primary);
+      padding-left: 1rem;
+    }
+
+    main :global(article h3) {
+      font-size: 1.4rem;
+      margin: 1.5rem 0 0.75rem;
+      color: var(--text-primary);
+    }
+
+    main :global(article p) {
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+    }
+
+    main :global(article a) {
+      color: var(--accent-primary);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: var(--transition);
+    }
+
+    main :global(article a:hover) {
+      border-bottom-color: var(--accent-primary);
+    }
+
+    main :global(article ul),
+    main :global(article ol) {
+      margin: 1.5rem 0 1.5rem 2rem;
+      color: var(--text-secondary);
+    }
+
+    main :global(article li) {
+      margin-bottom: 0.5rem;
+    }
+
+    main :global(article code) {
+      font-family: 'Fira Code', monospace;
+      background: rgba(37, 99, 235, 0.1);
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      color: var(--accent-tertiary);
+    }
+
+    main :global(article pre) {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+      overflow-x: auto;
+      font-family: 'Fira Code', monospace;
+    }
+
+    main :global(article pre code) {
+      background: none;
+      padding: 0;
+      color: var(--text-secondary);
+    }
+
+    main :global(article blockquote) {
+      border-left: 4px solid var(--accent-secondary);
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    main :global(article img) {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 2rem 0;
+      border: 1px solid var(--border-color);
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      margin-top: auto;
+      padding: 4rem 2rem;
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .footer-section h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent-primary);
+    }
+
+    .footer-section p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 1.3rem;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-primary);
+      transform: translateY(-3px);
+    }
+
+    .copyright {
+      text-align: right;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-container {
+        padding: 0 1rem;
+      }
+
+      .nav-links {
+        gap: 0.25rem;
+      }
+
+      .nav-link {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+      }
+
+      main {
+        padding: 0 1rem;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .copyright {
+        text-align: center;
+      }
+    }
+  </style>
+</body>
+</html>

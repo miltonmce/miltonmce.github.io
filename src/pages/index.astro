@@ -1,11 +1,791 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Welcome from '../components/Welcome.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Milton Medina - Consultor Técnico Freelance en Backend y Arquitectura">
+  <Welcome />
+
+  <!-- Proyectos -->
+  <section class="featured-case-study">
+    <div class="container">
+      <h2>Caso de Estudio: Sistema Integral de Gestión Hídrica</h2>
+      
+      <div class="case-study-grid">
+        <div class="case-study-content">
+          <div class="project-badge">Proyecto Actual | Enero 2024 – Presente</div>
+          <h3>Plataforma de Gestión Técnica y Jurídica de Recursos Hídricos</h3>
+          
+          <p class="challenge-label"><strong>Desafío</strong></p>
+          <p>
+            Administración de más de 800 pozos activos con procesos manuales propensos a errores, 
+            reglas de negocio complejas de volumen autorizado/disponible/transferido, y reportes 
+            técnicos y jurídicos de alto volumen.
+          </p>
+
+          <p class="solution-label"><strong>Solución</strong></p>
+          <p>
+            Plataforma especializada con arquitectura basada en reglas explícitas de negocio, 
+            integridad de datos, escalabilidad y trazabilidad histórica completa.
+          </p>
+
+          <div class="impact-section">
+            <p class="impact-label"><strong>Impacto Logrado</strong></p>
+            <ul class="impact-bullets">
+              <li>Digitalización 100% de procesos manuales</li>
+              <li>Eliminación de inconsistencias críticas en volúmenes</li>
+              <li>Validaciones automáticas en transferencias y arrendamientos</li>
+              <li>Reportes autogenerados con cálculos consolidados</li>
+              <li>Trazabilidad histórica de todas las operaciones</li>
+            </ul>
+          </div>
+
+          <p class="tech-label"><strong>Stack Tecnológico</strong></p>
+          <div class="tech-tags">
+            <span>Python</span>
+            <span>Django</span>
+            <span>Django REST Framework</span>
+            <span>PostgreSQL</span>
+            <span>Vue.js</span>
+            <span>HTMX</span>
+            <span>openpyxl</span>
+            <span>pandas</span>
+          </div>
+
+          <a href="/cv#proyectos" class="case-study-cta">Ver más proyectos en el CV →</a>
+        </div>
+
+        <div class="case-study-visual">
+          <div class="visual-box">
+            <div class="stat">
+              <div class="stat-number">800+</div>
+              <div class="stat-label">Pozos Gestionados</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">7</div>
+              <div class="stat-label">Validaciones Críticas</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Digitalización</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <div class="container">
+      <div class="section-header">
+        <h2>Mis Servicios de Consultoría</h2>
+        <p>Soluciones especializadas para transformar tus procesos de negocio</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-number">01</div>
+          <h3>Desarrollo Backend a Medida</h3>
+          <ul class="service-list">
+            <li>Sistemas en Django y Django REST Framework</li>
+            <li>APIs seguras con autenticación JWT</li>
+            <li>Arquitectura orientada a dominio (DDD)</li>
+            <li>Modelado de relaciones complejas</li>
+          </ul>
+          <div class="service-badge">Especialidad</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">02</div>
+          <h3>Optimización y Refactorización</h3>
+          <ul class="service-list">
+            <li>Evaluación de sistemas existentes</li>
+            <li>Refactorización de código Django</li>
+            <li>Optimización de consultas SQL/ORM</li>
+            <li>Mejora de rendimiento en reportes</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">03</div>
+          <h3>Sistemas de Gestión Técnica</h3>
+          <ul class="service-list">
+            <li>Gestión de entidades técnicas complejas</li>
+            <li>Control de volúmenes y transferencias</li>
+            <li>Validaciones automáticas con reglas críticas</li>
+            <li>Reportes jurídicos y técnicos</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">04</div>
+          <h3>Automatización y Reportes Avanzados</h3>
+          <ul class="service-list">
+            <li>Generación de reportes en Excel (openpyxl)</li>
+            <li>Procesamiento de datos con pandas</li>
+            <li>Tareas programadas y sincronización</li>
+            <li>Integración con sistemas externos</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">05</div>
+          <h3>Integración con Hardware y Sistemas Externos</h3>
+          <ul class="service-list">
+            <li>Integración Modbus</li>
+            <li>Conexión entre sistemas físicos y plataformas web</li>
+            <li>Sincronización de datos en tiempo real</li>
+            <li>APIs de terceros integradas</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">06</div>
+          <h3>Asesoría Arquitectónica</h3>
+          <ul class="service-list">
+            <li>Diseño de arquitectura escalable</li>
+            <li>Análisis del dominio del negocio</li>
+            <li>Estrategia a largo plazo</li>
+            <li>Evaluación de alternativas técnicas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stack Tecnológico -->
+  <section id="stack" class="stack-section">
+    <div class="container">
+      <h2>Stack Tecnológico</h2>
+      
+      <div class="stack-grid">
+        <div class="stack-category">
+          <h3>Backend</h3>
+          <div class="stack-items">
+            <span class="stack-item">Python</span>
+            <span class="stack-item">Django</span>
+            <span class="stack-item">Django REST Framework</span>
+            <span class="stack-item">PostgreSQL</span>
+          </div>
+        </div>
+
+        <div class="stack-category">
+          <h3>Frontend</h3>
+          <div class="stack-items">
+            <span class="stack-item">Vue.js</span>
+            <span class="stack-item">HTMX</span>
+            <span class="stack-item">Bootstrap</span>
+            <span class="stack-item">jQuery</span>
+          </div>
+        </div>
+
+        <div class="stack-category">
+          <h3>Infraestructura</h3>
+          <div class="stack-items">
+            <span class="stack-item">Linux</span>
+            <span class="stack-item">Docker</span>
+            <span class="stack-item">Configuración de servidores</span>
+            <span class="stack-item">Despliegue continuo</span>
+          </div>
+        </div>
+
+        <div class="stack-category">
+          <h3>Mobile</h3>
+          <div class="stack-items">
+            <span class="stack-item">Android (Kotlin)</span>
+            <span class="stack-item">JWT integrado</span>
+            <span class="stack-item">Sincronización backend</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diferencial -->
+  <section class="diferencial-section">
+    <div class="container">
+      <div class="diferencial-content">
+        <div class="diferencial-text">
+          <h2>Mi Diferencial</h2>
+          <p>
+            No solo escribo código. Diseño sistemas que reflejan correctamente la lógica real del negocio 
+            y evitan inconsistencias futuras.
+          </p>
+          <div class="diferencial-points">
+            <div class="point">
+              <i class="fas fa-check"></i>
+              <span>Análisis profundo del dominio antes de programar</span>
+            </div>
+            <div class="point">
+              <i class="fas fa-check"></i>
+              <span>Validaciones estrictas para evitar errores financieros o legales</span>
+            </div>
+            <div class="point">
+              <i class="fas fa-check"></i>
+              <span>Código estructurado y fácil de mantener</span>
+            </div>
+            <div class="point">
+              <i class="fas fa-check"></i>
+              <span>Comunicación clara con el cliente</span>
+            </div>
+            <div class="point">
+              <i class="fas fa-check"></i>
+              <span>Entregables documentados y sostenibles</span>
+            </div>
+          </div>
+        </div>
+        <div class="diferencial-image">
+          <div class="decorative-box"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tipos de Clientes -->
+  <section class="clients-section">
+    <div class="container">
+      <h2>Tipos de Clientes a los que Ayudo</h2>
+      <div class="clients-grid">
+        <div class="client-card">
+          <i class="fas fa-building"></i>
+          <h3>Empresas con Procesos Técnicos Complejos</h3>
+          <p>Sistemas que requieren modelado avanzado y validaciones críticas</p>
+        </div>
+        <div class="client-card">
+          <i class="fas fa-database"></i>
+          <h3>Organizaciones con Grandes Volúmenes de Datos</h3>
+          <p>Soluciones escalables para procesar y gestionar información masiva</p>
+        </div>
+        <div class="client-card">
+          <i class="fas fa-code-branch"></i>
+          <h3>Proyectos con Reglas de Negocio Estrictas</h3>
+          <p>Implementación precisa de lógica compleja sin fallos operacionales</p>
+        </div>
+        <div class="client-card">
+          <i class="fas fa-rocket"></i>
+          <h3>Startups que Necesitan Base Sólida</h3>
+          <p>Arquitectura escalable desde el inicio para crecer sin deuda técnica</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>¿Tu empresa enfrenta desafíos técnicos complejos?</h2>
+      <p>Hablemos sobre cómo puedo ayudarte a construir sistemas que escalen con tu negocio</p>
+      <a href="mailto:miltonmce@gmail.com?subject=Solicito Consultoría Técnica" class="btn btn-large">
+        <i class="fas fa-envelope"></i> Solicitar Primera Consulta
+      </a>
+    </div>
+  </section>
 </Layout>
+
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  /* Featured Case Study */
+  .featured-case-study {
+    padding: 6rem 2rem;
+    background: linear-gradient(180deg, rgba(6, 182, 212, 0.08) 0%, rgba(168, 85, 247, 0.08) 100%);
+    border-top: 1px solid rgba(6, 182, 212, 0.2);
+    border-bottom: 1px solid rgba(6, 182, 212, 0.2);
+  }
+
+  .featured-case-study h2 {
+    font-size: 2.5rem;
+    color: #e2e8f0;
+    text-align: center;
+    margin-bottom: 4rem;
+    background: linear-gradient(135deg, #06b6d4 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .case-study-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .case-study-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-badge {
+    display: inline-block;
+    background: rgba(6, 182, 212, 0.2);
+    color: #06b6d4;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    width: fit-content;
+  }
+
+  .case-study-content h3 {
+    font-size: 1.8rem;
+    color: #e2e8f0;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .challenge-label, .solution-label, .impact-label, .tech-label {
+    color: #06b6d4;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .case-study-content p {
+    color: #cbd5e1;
+    line-height: 1.8;
+    margin-bottom: 0.75rem;
+  }
+
+  .impact-section {
+    background: rgba(6, 182, 212, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 3px solid #06b6d4;
+    margin: 1.5rem 0;
+  }
+
+  .impact-bullets {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  .impact-bullets li {
+    color: #cbd5e1;
+    padding: 0.4rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .impact-bullets li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #06b6d4;
+    font-weight: bold;
+  }
+
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+
+  .tech-tags span {
+    background: rgba(6, 182, 212, 0.15);
+    color: #cbd5e1;
+    padding: 0.4rem 0.9rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(6, 182, 212, 0.3);
+  }
+
+  .case-study-cta {
+    display: inline-block;
+    color: #06b6d4;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid rgba(6, 182, 212, 0.3);
+    border-radius: 8px;
+    transition: all 0.3s;
+    width: fit-content;
+  }
+
+  .case-study-cta:hover {
+    background: rgba(6, 182, 212, 0.1);
+    border-color: #06b6d4;
+  }
+
+  .case-study-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .visual-box {
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(168, 85, 247, 0.15));
+    border: 2px dashed rgba(6, 182, 212, 0.3);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #06b6d4, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  /* Servicios */
+  .services-section {
+    padding: 6rem 2rem;
+    background: linear-gradient(180deg, rgba(10, 13, 47, 0.5) 0%, rgba(15, 23, 42, 0.5) 100%);
+    border-top: 1px solid rgba(6, 182, 212, 0.2);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-header h2 {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #06b6d4 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-header p {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(6, 182, 212, 0.2);
+    border-radius: 12px;
+    padding: 2.5rem;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .service-card:hover {
+    background: rgba(15, 23, 42, 0.9);
+    border-color: #06b6d4;
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(6, 182, 212, 0.2);
+  }
+
+  .service-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: rgba(6, 182, 212, 0.2);
+    margin-bottom: 1rem;
+  }
+
+  .service-card h3 {
+    color: #e2e8f0;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-list li {
+    color: #cbd5e1;
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .service-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #06b6d4;
+    font-weight: bold;
+  }
+
+  .service-badge {
+    display: inline-block;
+    background: rgba(6, 182, 212, 0.15);
+    color: #06b6d4;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  /* Stack */
+  .stack-section {
+    padding: 6rem 2rem;
+  }
+
+  .stack-section h2 {
+    font-size: 2.5rem;
+    color: #e2e8f0;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .stack-category h3 {
+    color: #06b6d4;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .stack-category h3::before {
+    content: "→";
+    font-weight: bold;
+  }
+
+  .stack-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .stack-item {
+    background: rgba(6, 182, 212, 0.1);
+    color: #cbd5e1;
+    padding: 0.75rem 1.2rem;
+    border-radius: 8px;
+    border-left: 3px solid #a78bfa;
+    font-size: 0.95rem;
+  }
+
+  /* Diferencial */
+  .diferencial-section {
+    padding: 6rem 2rem;
+    background: linear-gradient(180deg, rgba(10, 13, 47, 0.5) 0%, rgba(15, 23, 42, 0.5) 100%);
+    border-top: 1px solid rgba(6, 182, 212, 0.2);
+  }
+
+  .diferencial-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .diferencial-text h2 {
+    font-size: 2rem;
+    color: #e2e8f0;
+    margin-bottom: 1.5rem;
+  }
+
+  .diferencial-text > p {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+
+  .diferencial-points {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .point {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .point i {
+    color: #06b6d4;
+    font-size: 1.5rem;
+    margin-top: 0.25rem;
+  }
+
+  .point span {
+    color: #cbd5e1;
+    font-size: 1rem;
+  }
+
+  .decorative-box {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+    border: 2px dashed rgba(6, 182, 212, 0.3);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    font-size: 3rem;
+  }
+
+  /* Clientes */
+  .clients-section {
+    padding: 6rem 2rem;
+  }
+
+  .clients-section h2 {
+    font-size: 2.5rem;
+    color: #e2e8f0;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .clients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+
+  .client-card {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(6, 182, 212, 0.2);
+    border-radius: 12px;
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .client-card:hover {
+    background: rgba(15, 23, 42, 0.9);
+    border-color: #a78bfa;
+    transform: translateY(-8px);
+  }
+
+  .client-card i {
+    font-size: 2.5rem;
+    color: #06b6d4;
+    margin-bottom: 1rem;
+  }
+
+  .client-card h3 {
+    color: #e2e8f0;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .client-card p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+  }
+
+  /* Final CTA */
+  .final-cta {
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%);
+    border-top: 1px solid rgba(6, 182, 212, 0.3);
+    border-bottom: 1px solid rgba(6, 182, 212, 0.3);
+    text-align: center;
+  }
+
+  .final-cta h2 {
+    font-size: 2rem;
+    color: #e2e8f0;
+    margin-bottom: 1rem;
+  }
+
+  .final-cta p {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+  }
+
+  .btn-large {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, #06b6d4, #0891b2);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .btn-large:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(6, 182, 212, 0.4);
+  }
+
+  @media (max-width: 768px) {
+    .services-section, .stack-section, .diferencial-section, .clients-section, .final-cta {
+      padding: 4rem 1rem;
+    }
+
+    .featured-case-study {
+      padding: 4rem 1rem;
+    }
+
+    .featured-case-study h2 {
+      font-size: 1.8rem;
+    }
+
+    .case-study-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .case-study-content h3 {
+      font-size: 1.3rem;
+    }
+
+    .visual-box {
+      padding: 2rem 1rem;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.8rem;
+    }
+
+    .diferencial-content {
+      grid-template-columns: 1fr;
+    }
+
+    .decorative-box {
+      height: 200px;
+    }
+  }
+</style>
