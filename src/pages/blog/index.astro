@@ -7,10 +7,10 @@ const posts = await getCollection('blog');
 const sortedPosts = posts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 ---
 
-<Layout title="Blog" description="Artículos técnicos y tutoriales sobre Python, Django y arquitectura de sistemas" isHome={false}>
+<Layout title="Blog" description="Artículos técnicos sobre Python, integración de hardware, seguridad informática y desarrollo backend" isHome={false}>
   <div class="blog-header">
     <h1>Blog Técnico</h1>
-    <p>Artículos sobre Python, Django, arquitectura de sistemas y desarrollo backend</p>
+    <p>Guías sobre Python, integración de PLCs, hardware, seguridad informática y desarrollo backend</p>
   </div>
 
   {sortedPosts.length === 0 ? (
