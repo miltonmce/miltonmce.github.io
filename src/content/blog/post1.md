@@ -1,7 +1,7 @@
 ---
 title: "Mapeo de Direcciones Modbus - PLC HNC Serie HCS"
 description: "Guía definitiva de direccionamiento Modbus TCP confirmado mediante barridos técnicos para PLCs HNC serie HCS"
-date: 2024-05-20
+date: 2025-12-20
 tags: ["Modbus", "PLC", "HNC", "Python", "Integración"]
 ---
 
