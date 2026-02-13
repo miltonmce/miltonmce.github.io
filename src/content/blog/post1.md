@@ -9,7 +9,7 @@ tags: ["Modbus", "PLC", "HNC", "Python", "Integración"]
 **Modelo probado:** HCS-6X4Y-T  
 **Configuración necesaria:** PLC en modo "Soft Address" (Mapeo por bloques de 1024/512)
 
-Este repositorio contiene las direcciones Modbus TCP confirmadas mediante barridos técnicos (scanning). Es la guía definitiva para integrar PLCs HNC con Python, Django o SCADAs cuando la ficha técnica oficial no cuadra con la realidad del equipo.
+Este repositorio contiene las direcciones Modbus TCP confirmadas mediante barridos técnicos (scanning). Es la guía definitiva para integrar PLCs HNC con Python, Django o SCADAs cuando la ficha técnica oficial no cuadra con la realidad del equipo
 
 ---
 

@@ -24,7 +24,7 @@ El **MSR605** es un dispositivo de lectura/escritura de tarjetas magnéticas que
 - Control de acceso (tarjetas de hotel)
 - Lectores POS
 - Sistemas de autenticación heredados
-- Validación de tarjetas de identificación
+- Validación de tarjetas de identificación.
 
 ---
 
