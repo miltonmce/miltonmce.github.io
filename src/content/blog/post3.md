@@ -1,7 +1,7 @@
 ---
 title: "Mapear PLCs con Python: Guía Práctica"
 description: "Guía definitiva de direccionamiento Modbus TCP para PLCs HNC serie HCS (En desarrollo)"
-date: 2025-12-20
+date: 2026-02-18
 tags: ["Modbus", "PLC", "HNC", "Python", "Integración"]
 layout: "../../layouts/Layout.astro"
 ---
