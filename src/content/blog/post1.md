@@ -27,7 +27,7 @@ Estas direcciones son las que responden tras el barrido. El PLC utiliza un **Off
 
 ---
 
-## 🔍 El caso extraño de los Contadores (CV)
+## El caso extraño de los Contadores (CV)
 
 Si revisas el manual, dice que los contadores pueden estar en varios lados, pero en el barrido técnico confirmamos lo siguiente para la serie HCS:
 
