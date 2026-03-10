@@ -62,16 +62,6 @@ source .venv/bin/activate
 pip install pymodbus
 ```
 
-<figure>
-  <img src="https://miltonmce.github.io/img/force-y0.png" alt="Forzar Y0" width="300">
-  <figcaption>Forzamos el encendido de Y0</figcaption>
-</figure>
-
-<figure>
-  <img src="https://miltonmce.github.io/img/force-cv48.png"
-  alt="Forzar CV48" width="300">
-  <figcaption>Forzamos un valor conocido en CV48</figcaption>
-</figure>
 
 ## Script de Barrido de Registros Modbus (main.py)
 Este script permite realizar un escaneo de registros para identificar dónde se encuentran los datos que forzamos previamente en el PLC.
