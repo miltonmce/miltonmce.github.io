@@ -61,7 +61,6 @@ source .venv/bin/activate
 pip install pymodbus
 ```
 
-<figure> <img src="https://miltonmce.github.io/img/force-y0.png" alt="Force Y0" width="300"> <figcaption>Forcing Y0 to ON</figcaption> </figure> <figure> <img src="https://miltonmce.github.io/img/force-cv48.png" alt="Force CV48" width="300"> <figcaption>Forcing a known value in CV48</figcaption> </figure>
 
 ## Modbus Register Scanning Script (main.py)
 
