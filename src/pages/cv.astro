@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SkillBlock from '../components/SkillBlock.astro'; 
 ---
 
 <Layout title="CV - Milton Medina" description="Currículum vitae de Milton Medina, Desarrollador Python Senior" isHome={false}>
@@ -19,6 +20,7 @@ import Layout from '../layouts/Layout.astro';
           <i class="fab fa-linkedin"></i> LinkedIn
         </a>
       </div>
+      
     </div>
 
     <section class="cv-section">
@@ -96,69 +98,33 @@ import Layout from '../layouts/Layout.astro';
     <section class="cv-section">
       <h2><i class="fas fa-code"></i> Habilidades Técnicas</h2>
       
+      
       <div class="skills-grid">
-        <div class="skill-block">
-          <h3>Lenguajes</h3>
-          <div class="skill-tags">
-            <span>Python (2.7-3.x)</span>
-            <span>SQL</span>
-            <span>JavaScript</span>
-            <span>HTML/CSS</span>
-          </div>
-        </div>
+        <SkillBlock 
+          title="Desarrollo Backend & Datos" 
+          tags={["Python (2.7 - 3.13)", "Django & REST Framework", "SQL (PostgreSQL / MySQL)", "Diseño de Bases de Datos", "Modelado de Reglas de Negocio"]} 
+        />
 
-        <div class="skill-block">
-          <h3>Backend</h3>
-          <div class="skill-tags">
-            <span>Django REST</span>
-            <span>APIs REST</span>
-            <span>DDD</span>
-          </div>
-        </div>
+      <SkillBlock 
+        title="Automatización & Industrial Stack" 
+        tags={["Integración Modbus TCP/RTU", "MQTT", "Node-RED", "Telemetría IIoT", "Monitoreo de Pozos / PLCs"]} 
+      />
 
-        <div class="skill-block">
-          <h3>Bases de Datos</h3>
-          <div class="skill-tags">
-            <span>PostgreSQL</span>
-            <span>MySQL</span>
-            <span>SQLite</span>
-            <span>Diseño de DB</span>
-          </div>
-        </div>
+      <SkillBlock 
+        title="Infraestructura & Deployment" 
+        tags={["Linux (Fedora / Debian / Ubuntu)", "Docker & Compose", "Bash Scripting", "Nginx", "Podman", "SSH & Túneles Seguros"]} 
+      />
 
-        <div class="skill-block">
-          <h3>Herramientas</h3>
-          <div class="skill-tags">
-            <span>Git/GitHub</span>
-            <span>Docker</span>
-            <span>Visual Studio Code</span>
-            <span>PyCharm</span>
-            <span>WSL</span>
-            <span>Postman</span>
-          </div>
-        </div>
+      <SkillBlock 
+        title="Herramientas & Entorno" 
+        tags={["Git / GitHub", "VS Code", "PyCharm", "Postman", "WSL2", "CI / CD"]} 
+      />
+        
+      <SkillBlock 
+        title="Frontend & UI" 
+        tags={["HTMX", "JavaScript (ES6+)", "Bootstrap", "Tailwind CSS", "Astro"]} 
+      />
 
-        <div class="skill-block">
-          <h3>Administración de Servidores</h3>
-          <div class="skill-tags">
-            <span>Linux (Ubuntu/Debian)</span>
-            <span>Bash Scripting</span>
-            <span>Nginx/Apache</span>
-            <span>Docker Compose</span>
-            <span>SSH</span>
-            <span>CI/CD</span>
-          </div>
-        </div>
-
-        <div class="skill-block">
-          <h3>Frontend</h3>
-          <div class="skill-tags">
-            <span>Vue.js</span>
-            <span>HTMX</span>
-            <span>jQuery</span>
-            <span>Bootstrap</span>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -198,7 +164,6 @@ import Layout from '../layouts/Layout.astro';
           <span>Django</span>
           <span>Django REST Framework</span>
           <span>PostgreSQL</span>
-          <span>Vue.js</span>
           <span>HTMX</span>
           <span>openpyxl</span>
           <span>pandas</span>
@@ -214,7 +179,7 @@ import Layout from '../layouts/Layout.astro';
           <h3>Desarrollo Backend a Medida</h3>
           <p>
             Sistemas en Django y Django REST Framework • APIs seguras con autenticación JWT • 
-            Arquitectura orientada a dominio (DDD) • Modelado de relaciones complejas
+            Trabajar bajo principios de código mantenible y modular • Modelado de relaciones complejas
           </p>
         </div>
 
@@ -297,14 +262,16 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <section class="cv-section download-section">
-      <a href="/cv-milton-medina.pdf" class="download-btn">
+      <button onclick="generatePDF()" class="download-btn">
         <i class="fas fa-download"></i> Descargar CV en PDF
-      </a>
+      </button>
     </section>
   </div>
 </Layout>
 
 <style>
+
+  
   .cv-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -778,4 +745,92 @@ import Layout from '../layouts/Layout.astro';
       grid-template-columns: 1fr;
     }
   }
+
+@media print {
+    #download-pdf, .download-section, .nav-buttons {
+      display: none !important;
+    }
+    .cv-container {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: white;
+      color: black;
+    }
+    .cv-section {
+      break-inside: avoid;
+      background: transparent;
+      border-color: #eee;
+    }
+  }
+@media print {
+    #download-pdf, .download-section {
+      display: none !important;
+    }
+    
+    .cv-container {
+  background: white;
+  color: black;
+}
+
+    /* Ajuste para que las secciones se vean bien en papel/PDF */
+    .cv-section {
+      background: #f8fafc !important;
+      border-left: 4px solid #06b6d4 !important;
+      color: #1a1a1a !important;
+      break-inside: avoid;
+      margin-bottom: 1.5rem;
+    }
+
+    h1, h2, h3, p, li, span, .timeline-title, .timeline-subtitle {
+      color: #000000 !important;
+    }
+
+    .highlight, .cert-item, .service-item, .skill-block {
+      background: #f1f5f9 !important;
+      border: 1px solid #ddd !important;
+      color: #000 !important;
+    }
+  }
 </style>
+
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<script is:inline>
+function generatePDF() {
+  const element = document.querySelector('.cv-container');
+
+  // 🔧 Forzar colores sólidos y fondos para que se vean en PDF
+  element.querySelectorAll('*').forEach(el => {
+    const style = window.getComputedStyle(el);
+    el.style.color = style.color;
+    // Si el fondo es transparente, reemplazar por blanco
+    if (style.backgroundColor === 'rgba(0, 0, 0, 0)' || style.backgroundColor === 'transparent') {
+      el.style.backgroundColor = '#ffffff';
+    } else {
+      el.style.backgroundColor = style.backgroundColor;
+    }
+  });
+
+  const opt = {
+    margin: [10, 10, 10, 10],
+    filename: 'CV-Milton-Medina.pdf',
+    image: { type: 'jpeg', quality: 1 },
+    html2canvas: { 
+      scale: 2,
+      useCORS: true,
+      logging: false,
+      letterRendering: true,
+      backgroundColor: '#ffffff' // asegura que el fondo del PDF sea blanco
+    },
+    jsPDF: { 
+      unit: 'mm',
+      format: 'a4',
+      orientation: 'portrait'
+    }
+  };
+
+  html2pdf().set(opt).from(element).save();
+}
+</script>

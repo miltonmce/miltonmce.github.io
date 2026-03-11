@@ -1,0 +1,57 @@
+---
+// src/components/SkillBlock.astro
+interface Props {
+  title: string;
+  tags: string[];
+}
+
+const { title, tags } = Astro.props;
+---
+
+<div class="skill-block">
+  <h3>{title}</h3>
+  <div class="skill-tags">
+    {tags.map((tag) => (
+      <span>{tag}</span>
+    ))}
+  </div>
+</div>
+
+<style>
+  .skill-block {
+    background: rgba(6, 182, 212, 0.08);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(6, 182, 212, 0.2);
+    height: 100%; /* Para que todos midan lo mismo en el grid */
+  }
+
+  .skill-block h3 {
+    color: var(--accent-tertiary);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .skill-tags span {
+    background: rgba(6, 182, 212, 0.15);
+    color: var(--text-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(6, 182, 212, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .skill-tags span:hover {
+    background: rgba(6, 182, 212, 0.3);
+    color: var(--accent-tertiary);
+    border-color: var(--accent-tertiary);
+  }
+</style>
