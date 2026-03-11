@@ -1,4 +1,5 @@
 ---
+
 ---
 
 <section class="hero">
@@ -6,18 +7,20 @@
     <div class="hero-badge">
       <i class="fas fa-briefcase"></i> Consultor Técnico Independiente
     </div>
-    
+
     <h1 class="hero-title">
-      Transformo Procesos Manuales en Sistemas Robusos
+      Transformo Procesos Manuales en Sistemas Robustos
     </h1>
-    
+
     <p class="hero-subtitle">
-      Diseño y desarrollo de sistemas backend que resuelven problemas reales de negocio
+      Diseño y desarrollo de sistemas backend que resuelven problemas reales de
+      negocio
     </p>
-    
+
     <p class="hero-description">
-      Especializado en Python, Django y arquitectura de sistemas. Ayudo a empresas a estructurar datos técnicos complejos, 
-      automatizar procesos críticos y escalar sus operaciones sin perder consistencia.
+      Especializado en Python, Django y arquitectura de sistemas. Ayudo a
+      empresas a estructurar datos técnicos complejos, automatizar procesos
+      críticos y escalar sus operaciones sin perder consistencia.
     </p>
 
     <div class="highlight-points">
@@ -25,10 +28,12 @@
         <i class="fas fa-check-circle"></i>
         <span>No solo código, sino soluciones de negocio</span>
       </div>
+
       <div class="point">
         <i class="fas fa-check-circle"></i>
         <span>Arquitectura limpia y mantenible a largo plazo</span>
       </div>
+
       <div class="point">
         <i class="fas fa-check-circle"></i>
         <span>Enfoque en reglas de negocio y validaciones críticas</span>
@@ -37,42 +42,92 @@
 
     <div class="cta-buttons">
       <a href="#servicios" class="btn btn-primary">
-        <i class="fas fa-services"></i> Mis Servicios
+        <i class="fas fa-layer-group"></i> Mis Servicios
       </a>
-      <a href="mailto:miltonmce@gmail.com?subject=Consultoría Técnica" class="btn btn-secondary">
+
+      <a
+        href="mailto:miltonmce@gmail.com?subject=Consultoría Técnica"
+        class="btn btn-secondary"
+      >
         <i class="fas fa-envelope"></i> Solicitar Consulta
       </a>
+
       <a href="/cv" class="btn btn-tertiary">
-        <i class="fas fa-file-pdf"></i> Ver CV Completo
+        <i class="fas fa-file"></i> Ver CV Completo
       </a>
     </div>
   </div>
 
-  <!-- Especialidades -->
+  <h2 class="tech-title">Especialidades</h2>
+
   <div class="specialties-grid">
     <div class="specialty-card">
-      <div class="specialty-icon">🏗️</div>
-      <h3>Arquitectura de Sistemas</h3>
-      <p>Diseño escalable con DDD y patrones limpios</p>
+      <div class="specialty-icon">📡</div>
+      <h3>Ecosistemas de Telemetría</h3>
+      <p>
+        Captura vía MQTT/Node-RED y procesamiento centralizado en Django Cloud
+        para control total.
+      </p>
     </div>
+
     <div class="specialty-card">
       <div class="specialty-icon">📊</div>
       <h3>Gestión de Datos Técnicos</h3>
-      <p>Modelado complejo con reglas de negocio</p>
+      <p>
+        Modelado de bases de datos complejas alineadas a reglas de negocio
+        críticas.
+      </p>
     </div>
+
     <div class="specialty-card">
       <div class="specialty-icon">⚡</div>
       <h3>Automatización de Procesos</h3>
-      <p>Reducción de errores operativos</p>
+      <p>
+        Eliminación de tareas manuales y reducción de errores operativos
+        mediante software.
+      </p>
     </div>
+
     <div class="specialty-card">
       <div class="specialty-icon">🔧</div>
-      <h3>Optimización y Refactorización</h3>
-      <p>Mejora de sistemas existentes</p>
+      <h3>Optimización de Sistemas</h3>
+      <p>
+        Refactorización y mejora de infraestructuras existentes para
+        escalabilidad y seguridad.
+      </p>
     </div>
   </div>
-</section>
 
+  <!-- STACK TECNOLÓGICO -->
+
+  <h2 class="tech-title">Stack Tecnológico</h2>
+
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-icon">🐍</div>
+      <h3>Python Experto</h3>
+      <p>Desarrollo de lógica robusta y procesamiento de datos técnicos.</p>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-icon">🎯</div>
+      <h3>Django Framework</h3>
+      <p>Arquitecturas escalables para plataformas de gestión y APIs.</p>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-icon">📡</div>
+      <h3>IIoT & Real-time</h3>
+      <p>Comunicación vía MQTT y Node-RED para flujos de baja latencia.</p>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-icon">🐧</div>
+      <h3>Infraestructura</h3>
+      <p>Despliegue soberano con Linux, Podman y seguridad SSL/TLS.</p>
+    </div>
+</div>
+</section>
 <style>
   .hero {
     min-height: 100vh;
@@ -81,39 +136,17 @@
     justify-content: center;
     align-items: center;
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, rgba(10, 13, 47, 0.7) 0%, rgba(15, 23, 42, 0.7) 100%),
-                radial-gradient(ellipse at 20% 50%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+
+    background:
+      linear-gradient(135deg, rgba(10, 13, 47, 0.7), rgba(15, 23, 42, 0.7)),
+      radial-gradient(
+        ellipse at 20% 50%,
+        rgba(6, 182, 212, 0.1),
+        transparent 50%
+      );
+
     position: relative;
     overflow: hidden;
-  }
-
-  .hero::before {
-    content: "";
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
-    border-radius: 50%;
-    top: -200px;
-    right: -200px;
-    animation: float 6s ease-in-out infinite;
-  }
-
-  .hero::after {
-    content: "";
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
-    border-radius: 50%;
-    bottom: -100px;
-    left: -100px;
-    animation: float 8s ease-in-out infinite reverse;
-  }
-
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(20px); }
   }
 
   .hero-wrapper {
@@ -121,44 +154,29 @@
     z-index: 2;
     max-width: 900px;
     text-align: center;
-    animation: fadeInDown 1s ease-out;
-  }
-
-  @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 
   .hero-badge {
     display: inline-flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.6rem;
     background: rgba(6, 182, 212, 0.15);
     color: #06b6d4;
-    padding: 0.75rem 1.5rem;
+    padding: 0.6rem 1.4rem;
     border-radius: 50px;
     margin-bottom: 1.5rem;
     font-weight: 600;
-    font-size: 0.95rem;
     border: 1px solid rgba(6, 182, 212, 0.3);
   }
 
   .hero-title {
     font-size: clamp(2.5rem, 8vw, 4.5rem);
     font-weight: 800;
-    background: linear-gradient(135deg, #06b6d4 0%, #a78bfa 100%);
+    background: linear-gradient(135deg, #06b6d4, #a78bfa);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
     margin: 1.5rem 0;
     letter-spacing: -2px;
-    line-height: 1.2;
   }
 
   .hero-subtitle {
@@ -181,24 +199,20 @@
   .highlight-points {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.7rem;
     margin-bottom: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .point {
     display: flex;
     align-items: center;
     gap: 1rem;
+    justify-content: center;
     color: #cbd5e1;
-    font-size: 1rem;
   }
 
   .point i {
     color: #06b6d4;
-    font-size: 1.2rem;
   }
 
   .cta-buttons {
@@ -207,25 +221,17 @@
     justify-content: center;
     flex-wrap: wrap;
     margin: 3rem 0;
-    animation: fadeIn 1.2s ease-out;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
   }
 
   .btn {
     display: inline-flex;
     align-items: center;
-    gap: 0.75rem;
-    padding: 0.75rem 1.75rem;
+    gap: 0.6rem;
+    padding: 0.75rem 1.7rem;
     border-radius: 10px;
-    text-decoration: none;
     font-weight: 600;
-    font-size: 0.95rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 2px solid transparent;
+    text-decoration: none;
+    transition: 0.25s;
   }
 
   .btn-primary {
@@ -241,356 +247,102 @@
   .btn-secondary {
     background: rgba(168, 85, 247, 0.15);
     color: #c4b5fd;
-    border-color: #a78bfa;
+    border: 1px solid #a78bfa;
   }
 
   .btn-secondary:hover {
     background: rgba(168, 85, 247, 0.25);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.2);
   }
 
   .btn-tertiary {
     background: transparent;
     color: #94a3b8;
-    border-color: #64748b;
+    border: 1px solid #64748b;
   }
 
   .btn-tertiary:hover {
     color: #cbd5e1;
-    border-color: #cbd5e1;
-    background: rgba(100, 116, 139, 0.1);
   }
 
-  .specialties-grid {
+  .specialties-grid,
+.skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* En desktop forzamos 4 columnas */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 1.5rem;
-    margin-top: 6rem;
     width: 100%;
-    max-width: 900px;
-  }
-
-  .specialty-card {
-    background: rgba(15, 23, 42, 0.5);
-    border: 1px solid rgba(6, 182, 212, 0.3);
-    border-radius: 12px;
-    padding: 2rem 1.5rem;
-    text-align: center;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .specialty-card:hover {
-    background: rgba(15, 23, 42, 0.8);
-    border-color: #06b6d4;
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(6, 182, 212, 0.15);
-  }
-
-  .specialty-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  .specialty-card h3 {
-    color: #e2e8f0;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-  }
-
-  .specialty-card p {
-    color: #94a3b8;
-    font-size: 0.9rem;
-  }
-
-  @media (max-width: 768px) {
-    .hero {
-      padding: 3rem 1rem;
-    }
-
-    .hero-title {
-      font-size: 2rem;
-    }
-
-    .hero-subtitle {
-      font-size: 1rem;
-    }
-
-    .cta-buttons {
-      flex-direction: column;
-      align-items: stretch;
-    }
-
-    .btn {
-      justify-content: center;
-    }
-
-    .highlight-points {
-      align-items: flex-start;
-    }
-
-    .point {
-      justify-content: flex-start;
-    }
-  }
-</style>
-    <div class="skill-card">
-      <div class="skill-icon">🐍</div>
-      <h3>Python</h3>
-      <p>10+ años de experiencia</p>
-    </div>
-    <div class="skill-card">
-      <div class="skill-icon">🎯</div>
-      <h3>Django</h3>
-      <p>Experto en arquitectura</p>
-    </div>
-    <div class="skill-card">
-      <div class="skill-icon">🗄️</div>
-      <h3>PostgreSQL</h3>
-      <p>Optimización y diseño</p>
-    </div>
-    <div class="skill-card">
-      <div class="skill-icon">🐳</div>
-      <h3>Docker</h3>
-      <p>Containerización y orquestación</p>
-    </div>
-  </div>
-</section>
-
-<style>
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 4rem 2rem;
-    background: linear-gradient(135deg, rgba(10, 13, 47, 0.7) 0%, rgba(15, 23, 42, 0.7) 100%),
-                radial-gradient(ellipse at 20% 50%, rgba(37, 99, 235, 0.1) 0%, transparent 50%);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero::before {
-    content: "";
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
-    border-radius: 50%;
-    top: -200px;
-    right: -200px;
-    animation: float 6s ease-in-out infinite;
-  }
-
-  .hero::after {
-    content: "";
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
-    border-radius: 50%;
-    bottom: -100px;
-    left: -100px;
-    animation: float 8s ease-in-out infinite reverse;
-  }
-
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(20px); }
-  }
-
-  .hero-wrapper {
-    position: relative;
-    z-index: 2;
-    max-width: 900px;
-    text-align: center;
-    animation: fadeInDown 1s ease-out;
-  }
-
-  @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .code-block {
-    font-family: 'Fira Code', monospace;
-    font-size: 0.9rem;
-    color: #94a3b8;
-    margin: 1.5rem 0;
-    padding: 1rem;
-    background: rgba(15, 23, 42, 0.4);
-    border-left: 3px solid #06b6d4;
-    border-radius: 8px;
-    text-align: left;
-    display: inline-block;
-    animation: slideInLeft 0.6s ease-out;
-  }
-
-  @keyframes slideInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  .code-keyword {
-    color: #d946ef;
-  }
-
-  .code-variable {
-    color: #38bdf8;
-  }
-
-  .code-string {
-    color: #86efac;
-  }
-
-  .hero-title {
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
-    font-weight: 800;
-    background: linear-gradient(135deg, #06b6d4 0%, #a78bfa 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin: 1.5rem 0;
-    letter-spacing: -2px;
-  }
-
-  .cursor {
-    display: inline-block;
-    animation: blink 1.5s infinite;
-  }
-
-  @keyframes blink {
-    0%, 50%, 100% { opacity: 1; }
-    51%, 99% { opacity: 0; }
-  }
-
-  .hero-subtitle {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #a78bfa;
-    margin-bottom: 0.5rem;
-  }
-
-  .hero-description {
-    font-size: 1.05rem;
-    color: #cbd5e1;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-    max-width: 600px;
+    max-width: 1100px; /* Un poco más ancho para que respiren las 4 tarjetas */
     margin-left: auto;
     margin-right: auto;
-  }
+}
 
-  .cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 3rem 0;
-    animation: fadeIn 1.2s ease-out;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.75rem 1.75rem;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 2px solid transparent;
-  }
-
-  .btn-primary {
-    background: linear-gradient(135deg, #06b6d4, #0891b2);
-    color: white;
-  }
-
-  .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(6, 182, 212, 0.4);
-  }
-
-  .btn-secondary {
-    background: rgba(168, 85, 247, 0.15);
-    color: #c4b5fd;
-    border-color: #a78bfa;
-  }
-
-  .btn-secondary:hover {
-    background: rgba(168, 85, 247, 0.25);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.2);
-  }
-
-  .btn-tertiary {
-    background: transparent;
-    color: #94a3b8;
-    border-color: #64748b;
-  }
-
-  .btn-tertiary:hover {
-    color: #cbd5e1;
-    border-color: #cbd5e1;
-    background: rgba(100, 116, 139, 0.1);
+  .specialties-grid {
+    margin-top: 5rem;
   }
 
   .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    margin-top: 6rem;
-    width: 100%;
-    max-width: 900px;
+    margin-top: 2rem;
   }
 
+  .tech-title {
+    margin-top: 6rem; /* Más espacio para separar las secciones */
+    margin-bottom: 2rem;
+    color: #06b6d4; /* Color de acento para los títulos de sección */
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+  .specialty-card,
   .skill-card {
     background: rgba(15, 23, 42, 0.5);
     border: 1px solid rgba(6, 182, 212, 0.3);
     border-radius: 12px;
     padding: 2rem 1.5rem;
     text-align: center;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 0.3s;
   }
 
+  /* --- Ajuste de Responsividad --- */
+@media (max-width: 1024px) {
+    .specialties-grid,
+    .skills-grid {
+        /* En tablets ponemos 2 y 2 */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .specialties-grid,
+    .skills-grid {
+        /* En móviles 1 sola columna */
+        grid-template-columns: 1fr;
+    }
+}
+
+  .specialty-card:hover,
   .skill-card:hover {
+    transform: translateY(-8px);
     background: rgba(15, 23, 42, 0.8);
     border-color: #06b6d4;
-    transform: translateY(-8px);
     box-shadow: 0 12px 24px rgba(6, 182, 212, 0.15);
   }
 
+  .specialty-icon,
   .skill-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
   }
 
+  .specialty-card h3,
   .skill-card h3 {
     color: #e2e8f0;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
   }
 
+  .specialty-card p,
   .skill-card p {
     color: #94a3b8;
     font-size: 0.9rem;
@@ -616,11 +368,6 @@
 
     .btn {
       justify-content: center;
-    }
-
-    .code-block {
-      font-size: 0.75rem;
-      padding: 0.75rem;
     }
   }
 </style>

@@ -1,32 +1,38 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Welcome from '../components/Welcome.astro';
+import Layout from "../layouts/Layout.astro";
+import Welcome from "../components/Welcome.astro";
 ---
 
-<Layout title="Milton Medina - Consultor Técnico Freelance en Backend y Arquitectura">
+<Layout
+  title="Milton Medina - Consultor Técnico Freelance en Backend y Arquitectura"
+>
   <Welcome />
 
   <!-- Proyectos -->
-  <section class="featured-case-study">
+  <section class="featured-case-study" id=proyectos>
     <div class="container">
       <h2>Caso de Estudio: Sistema Integral de Gestión Hídrica.</h2>
-      
+
       <div class="case-study-grid">
         <div class="case-study-content">
-          <div class="project-badge">Proyecto Actual | Enero 2024 – Presente</div>
+          <div class="project-badge">
+            Proyecto Actual | Enero 2024 – Presente
+          </div>
           <h3>Plataforma de Gestión Técnica y Jurídica de Recursos Hídricos</h3>
-          
+
           <p class="challenge-label"><strong>Desafío</strong></p>
           <p>
-            Administración de más de 800 pozos activos con procesos manuales propensos a errores, 
-            reglas de negocio complejas de volumen autorizado/disponible/transferido, y reportes 
-            técnicos y jurídicos de alto volumen.
+            Administración de más de 800 pozos activos con procesos manuales
+            propensos a errores, reglas de negocio complejas de volumen
+            autorizado/disponible/transferido, y reportes técnicos y jurídicos
+            de alto volumen.
           </p>
 
           <p class="solution-label"><strong>Solución</strong></p>
           <p>
-            Plataforma especializada con arquitectura basada en reglas explícitas de negocio, 
-            integridad de datos, escalabilidad y trazabilidad histórica completa.
+            Plataforma especializada con arquitectura basada en reglas
+            explícitas de negocio, integridad de datos, escalabilidad y
+            trazabilidad histórica completa.
           </p>
 
           <div class="impact-section">
@@ -34,9 +40,15 @@ import Welcome from '../components/Welcome.astro';
             <ul class="impact-bullets">
               <li>Digitalización 100% de procesos manuales</li>
               <li>Eliminación de inconsistencias críticas en volúmenes</li>
-              <li>Validaciones automáticas en transferencias y arrendamientos</li>
+              <li>
+                Validaciones automáticas en transferencias y arrendamientos
+              </li>
               <li>Reportes autogenerados con cálculos consolidados</li>
               <li>Trazabilidad histórica de todas las operaciones</li>
+              <li>
+                Integración de datos de campo vía protocolos industriales
+                (Modbus)
+              </li>
             </ul>
           </div>
 
@@ -52,7 +64,9 @@ import Welcome from '../components/Welcome.astro';
             <span>pandas</span>
           </div>
 
-          <a href="/cv#proyectos" class="case-study-cta">Ver más proyectos en el CV →</a>
+          <a href="/cv#proyectos" class="case-study-cta"
+            >Ver más proyectos en el CV →</a
+          >
         </div>
 
         <div class="case-study-visual">
@@ -72,80 +86,84 @@ import Welcome from '../components/Welcome.astro';
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </div> 
+  </section> 
+  <section class="services-section"> 
     <div class="container">
       <div class="section-header">
-        <h2>Mis Servicios de Consultoría</h2>
-        <p>Soluciones especializadas para transformar tus procesos de negocio</p>
-      </div>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-number">01</div>
-          <h3>Desarrollo Backend a Medida</h3>
-          <ul class="service-list">
-            <li>Sistemas en Django y Django REST Framework</li>
-            <li>APIs seguras con autenticación JWT</li>
-            <li>Arquitectura orientada a dominio (DDD)</li>
-            <li>Modelado de relaciones complejas</li>
-          </ul>
-          <div class="service-badge">Especialidad</div>
+          <h2>Mis Servicios de Consultoría</h2>
+          <p>
+            Soluciones especializadas para transformar tus procesos de negocio
+          </p>
         </div>
 
-        <div class="service-card">
-          <div class="service-number">02</div>
-          <h3>Optimización y Refactorización</h3>
-          <ul class="service-list">
-            <li>Evaluación de sistemas existentes</li>
-            <li>Refactorización de código Django</li>
-            <li>Optimización de consultas SQL/ORM</li>
-            <li>Mejora de rendimiento en reportes</li>
-          </ul>
-        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-number">01</div>
+            <h3>Desarrollo Backend a Medida</h3>
+            <ul class="service-list">
+              <li>Sistemas en Django y Django REST Framework</li>
+              <li>APIs seguras con autenticación JWT</li>
+              <li>Arquitectura orientada a dominio (DDD)</li>
+              <li>Modelado de relaciones complejas</li>
+            </ul>
+            <div class="service-badge">Especialidad</div>
+          </div>
 
-        <div class="service-card">
-          <div class="service-number">03</div>
-          <h3>Sistemas de Gestión Técnica</h3>
-          <ul class="service-list">
-            <li>Gestión de entidades técnicas complejas</li>
-            <li>Control de volúmenes y transferencias</li>
-            <li>Validaciones automáticas con reglas críticas</li>
-            <li>Reportes jurídicos y técnicos</li>
-          </ul>
-        </div>
+          <div class="service-card">
+            <div class="service-number">02</div>
+            <h3>Optimización y Refactorización</h3>
+            <ul class="service-list">
+              <li>Evaluación de sistemas existentes</li>
+              <li>Refactorización de código Django</li>
+              <li>Optimización de consultas SQL/ORM</li>
+              <li>Mejora de rendimiento en reportes</li>
+            </ul>
+          </div>
 
-        <div class="service-card">
-          <div class="service-number">04</div>
-          <h3>Automatización y Reportes Avanzados</h3>
-          <ul class="service-list">
-            <li>Generación de reportes en Excel (openpyxl)</li>
-            <li>Procesamiento de datos con pandas</li>
-            <li>Tareas programadas y sincronización</li>
-            <li>Integración con sistemas externos</li>
-          </ul>
-        </div>
+          <div class="service-card">
+            <div class="service-number">03</div>
+            <h3>Sistemas de Gestión Técnica</h3>
+            <ul class="service-list">
+              <li>Gestión de entidades técnicas complejas</li>
+              <li>Control de volúmenes y transferencias</li>
+              <li>Validaciones automáticas con reglas críticas</li>
+              <li>Reportes jurídicos y técnicos</li>
+            </ul>
+          </div>
 
-        <div class="service-card">
-          <div class="service-number">05</div>
-          <h3>Integración con Hardware y Sistemas Externos</h3>
-          <ul class="service-list">
-            <li>Integración Modbus</li>
-            <li>Conexión entre sistemas físicos y plataformas web</li>
-            <li>Sincronización de datos en tiempo real</li>
-            <li>APIs de terceros integradas</li>
-          </ul>
-        </div>
+          <div class="service-card">
+            <div class="service-number">04</div>
+            <h3>Automatización y Reportes Avanzados</h3>
+            <ul class="service-list">
+              <li>Generación de reportes en Excel (openpyxl)</li>
+              <li>Procesamiento de datos con pandas</li>
+              <li>Tareas programadas y sincronización</li>
+              <li>Integración con sistemas externos</li>
+            </ul>
+          </div>
 
-        <div class="service-card">
-          <div class="service-number">06</div>
-          <h3>Asesoría Arquitectónica</h3>
-          <ul class="service-list">
-            <li>Diseño de arquitectura escalable</li>
-            <li>Análisis del dominio del negocio</li>
-            <li>Estrategia a largo plazo</li>
-            <li>Evaluación de alternativas técnicas</li>
-          </ul>
+          <div class="service-card">
+            <div class="service-number">05</div>
+            <h3>Integración con Hardware y Sistemas Externos</h3>
+            <ul class="service-list">
+              <li>Integración Modbus</li>
+              <li>Conexión entre sistemas físicos y plataformas web</li>
+              <li>Sincronización de datos en tiempo real</li>
+              <li>APIs de terceros integradas</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-number">06</div>
+            <h3>Asesoría Arquitectónica</h3>
+            <ul class="service-list">
+              <li>Diseño de arquitectura escalable</li>
+              <li>Análisis del dominio del negocio</li>
+              <li>Estrategia a largo plazo</li>
+              <li>Evaluación de alternativas técnicas</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -155,7 +173,7 @@ import Welcome from '../components/Welcome.astro';
   <section id="stack" class="stack-section">
     <div class="container">
       <h2>Stack Tecnológico</h2>
-      
+
       <div class="stack-grid">
         <div class="stack-category">
           <h3>Backend</h3>
@@ -180,10 +198,10 @@ import Welcome from '../components/Welcome.astro';
         <div class="stack-category">
           <h3>Infraestructura</h3>
           <div class="stack-items">
-            <span class="stack-item">Linux</span>
-            <span class="stack-item">Docker</span>
-            <span class="stack-item">Configuración de servidores</span>
-            <span class="stack-item">Despliegue continuo</span>
+            <span class="stack-item">Linux (Fedora/Debian)</span>
+            <span class="stack-item">Podman & Containers</span>
+            <span class="stack-item">Seguridad SSL/TLS</span>
+            <span class="stack-item">CI/CD Automático</span>
           </div>
         </div>
 
@@ -206,8 +224,8 @@ import Welcome from '../components/Welcome.astro';
         <div class="diferencial-text">
           <h2>Mi Diferencial</h2>
           <p>
-            No solo escribo código. Diseño sistemas que reflejan correctamente la lógica real del negocio 
-            y evitan inconsistencias futuras.
+            No solo escribo código. Diseño sistemas que reflejan correctamente
+            la lógica real del negocio y evitan inconsistencias futuras.
           </p>
           <div class="diferencial-points">
             <div class="point">
@@ -216,7 +234,10 @@ import Welcome from '../components/Welcome.astro';
             </div>
             <div class="point">
               <i class="fas fa-check"></i>
-              <span>Validaciones estrictas para evitar errores financieros o legales</span>
+              <span
+                >Validaciones estrictas para evitar errores financieros o
+                legales</span
+              >
             </div>
             <div class="point">
               <i class="fas fa-check"></i>
@@ -233,7 +254,9 @@ import Welcome from '../components/Welcome.astro';
           </div>
         </div>
         <div class="diferencial-image">
-          <div class="decorative-box"></div>
+          <div class="decorative-box">
+            <i class="fas fa-microchip" style="opacity: 0.2;"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -247,22 +270,30 @@ import Welcome from '../components/Welcome.astro';
         <div class="client-card">
           <i class="fas fa-building"></i>
           <h3>Empresas con Procesos Técnicos Complejos</h3>
-          <p>Sistemas que requieren modelado avanzado y validaciones críticas</p>
+          <p>
+            Sistemas que requieren modelado avanzado y validaciones críticas
+          </p>
         </div>
         <div class="client-card">
           <i class="fas fa-database"></i>
           <h3>Organizaciones con Grandes Volúmenes de Datos</h3>
-          <p>Soluciones escalables para procesar y gestionar información masiva</p>
+          <p>
+            Soluciones escalables para procesar y gestionar información masiva
+          </p>
         </div>
         <div class="client-card">
           <i class="fas fa-code-branch"></i>
           <h3>Proyectos con Reglas de Negocio Estrictas</h3>
-          <p>Implementación precisa de lógica compleja sin fallos operacionales</p>
+          <p>
+            Implementación precisa de lógica compleja sin fallos operacionales
+          </p>
         </div>
         <div class="client-card">
           <i class="fas fa-rocket"></i>
           <h3>Startups que Necesitan Base Sólida</h3>
-          <p>Arquitectura escalable desde el inicio para crecer sin deuda técnica</p>
+          <p>
+            Arquitectura escalable desde el inicio para crecer sin deuda técnica
+          </p>
         </div>
       </div>
     </div>
@@ -272,8 +303,14 @@ import Welcome from '../components/Welcome.astro';
   <section class="final-cta">
     <div class="container">
       <h2>¿Tu empresa enfrenta desafíos técnicos complejos?</h2>
-      <p>Hablemos sobre cómo puedo ayudarte a construir sistemas que escalen con tu negocio</p>
-      <a href="mailto:miltonmce@gmail.com?subject=Solicito Consultoría Técnica" class="btn btn-large">
+      <p>
+        Hablemos sobre cómo puedo ayudarte a construir sistemas que escalen con
+        tu negocio
+      </p>
+      <a
+        href="mailto:miltonmce@gmail.com?subject=Solicito Consultoría Técnica"
+        class="btn btn-large"
+      >
         <i class="fas fa-envelope"></i> Solicitar Primera Consulta
       </a>
     </div>
@@ -290,7 +327,11 @@ import Welcome from '../components/Welcome.astro';
   /* Featured Case Study */
   .featured-case-study {
     padding: 6rem 2rem;
-    background: linear-gradient(180deg, rgba(6, 182, 212, 0.08) 0%, rgba(168, 85, 247, 0.08) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(6, 182, 212, 0.08) 0%,
+      rgba(168, 85, 247, 0.08) 100%
+    );
     border-top: 1px solid rgba(6, 182, 212, 0.2);
     border-bottom: 1px solid rgba(6, 182, 212, 0.2);
   }
@@ -337,7 +378,10 @@ import Welcome from '../components/Welcome.astro';
     line-height: 1.3;
   }
 
-  .challenge-label, .solution-label, .impact-label, .tech-label {
+  .challenge-label,
+  .solution-label,
+  .impact-label,
+  .tech-label {
     color: #06b6d4;
     font-weight: 600;
     font-size: 0.95rem;
@@ -421,7 +465,11 @@ import Welcome from '../components/Welcome.astro';
   }
 
   .visual-box {
-    background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(168, 85, 247, 0.15));
+    background: linear-gradient(
+      135deg,
+      rgba(6, 182, 212, 0.15),
+      rgba(168, 85, 247, 0.15)
+    );
     border: 2px dashed rgba(6, 182, 212, 0.3);
     border-radius: 12px;
     padding: 3rem 2rem;
@@ -456,7 +504,11 @@ import Welcome from '../components/Welcome.astro';
   /* Servicios */
   .services-section {
     padding: 6rem 2rem;
-    background: linear-gradient(180deg, rgba(10, 13, 47, 0.5) 0%, rgba(15, 23, 42, 0.5) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(10, 13, 47, 0.5) 0%,
+      rgba(15, 23, 42, 0.5) 100%
+    );
     border-top: 1px solid rgba(6, 182, 212, 0.2);
   }
 
@@ -595,7 +647,11 @@ import Welcome from '../components/Welcome.astro';
   /* Diferencial */
   .diferencial-section {
     padding: 6rem 2rem;
-    background: linear-gradient(180deg, rgba(10, 13, 47, 0.5) 0%, rgba(15, 23, 42, 0.5) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(10, 13, 47, 0.5) 0%,
+      rgba(15, 23, 42, 0.5) 100%
+    );
     border-top: 1px solid rgba(6, 182, 212, 0.2);
   }
 
@@ -646,7 +702,11 @@ import Welcome from '../components/Welcome.astro';
   .decorative-box {
     width: 100%;
     height: 300px;
-    background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+    background: linear-gradient(
+      135deg,
+      rgba(6, 182, 212, 0.1) 0%,
+      rgba(168, 85, 247, 0.1) 100%
+    );
     border: 2px dashed rgba(6, 182, 212, 0.3);
     border-radius: 12px;
     display: flex;
@@ -709,7 +769,11 @@ import Welcome from '../components/Welcome.astro';
   /* Final CTA */
   .final-cta {
     padding: 6rem 2rem;
-    background: linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%);
+    background: linear-gradient(
+      135deg,
+      rgba(6, 182, 212, 0.15) 0%,
+      rgba(168, 85, 247, 0.15) 100%
+    );
     border-top: 1px solid rgba(6, 182, 212, 0.3);
     border-bottom: 1px solid rgba(6, 182, 212, 0.3);
     text-align: center;
@@ -747,7 +811,11 @@ import Welcome from '../components/Welcome.astro';
   }
 
   @media (max-width: 768px) {
-    .services-section, .stack-section, .diferencial-section, .clients-section, .final-cta {
+    .services-section,
+    .stack-section,
+    .diferencial-section,
+    .clients-section,
+    .final-cta {
       padding: 4rem 1rem;
     }
 

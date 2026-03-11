@@ -23,12 +23,27 @@ const currentYear = new Date().getFullYear();
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <title>{title}</title>
   <meta name="description" content={description} />
+  <meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL('/og-image.png', Astro.url)} />
+
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={new URL('/og-image.png', Astro.url)} />
   <meta name="google-site-verification" content="fRBYqOSpO2DuWeR3d52aupwKMdm0snr005b9kn5BKeA" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVDQKSSZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="/" class="nav-brand">
@@ -67,7 +82,7 @@ const currentYear = new Date().getFullYear();
           <i class="fas fa-envelope"></i>
         </a>
       </div>
-      <p class="copyright">© {currentYear} Milton Medina Celaya. Built with Astro + Tailwind</p>
+      <p class="copyright">© {currentYear} Milton Medina Celaya. Built with Astro</p>
     </div>
   </footer>
 
@@ -393,8 +408,5 @@ const currentYear = new Date().getFullYear();
     }
   </style>
 </body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVDQKSSZ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+
 </html>
