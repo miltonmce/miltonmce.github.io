@@ -3,6 +3,7 @@ title: "Mapping Modbus Registers from a PLC with Python (Practical Guide)"
 description: "Learn how to map Modbus registers from an HNC PLC using Python and PyModbus through register scanning and real hardware testing."
 date: 2026-03-09
 tags: ["Modbus", "PLC", "Python", "Industrial Automation", "IIoT"]
+lang: en
 layout: "../../layouts/Layout.astro"
 ---
 

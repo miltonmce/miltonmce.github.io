@@ -1,0 +1,66 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  post: CollectionEntry<"blog">;
+  index?: number;
+  featured?: boolean;
+}
+
+const { post, index = 0, featured = false } = Astro.props;
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString("es-ES", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
+const readingTime = (body = "") =>
+  Math.max(1, Math.ceil(body.split(/\s+/).length / 200));
+---
+
+<article
+  class:list={["post-card", { "is-featured": featured }]}
+  data-reveal
+  style={`--reveal-delay: ${Math.min(index, 4) * 60}ms`}
+>
+  <a href={`/blog/${post.slug}`} class="post-link">
+    <div class="post-top">
+      <span class="post-kicker">
+        {featured ? (
+          <>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            Destacado
+          </>
+        ) : (
+          "Artículo"
+        )}
+      </span>
+      <time class="post-date" datetime={post.data.date.toISOString()}>
+        {formatDate(post.data.date)}
+      </time>
+    </div>
+
+    <h2 class="post-title">{post.data.title}</h2>
+    <p class="post-description">{post.data.description}</p>
+
+    <div class="post-bottom">
+      <div class="post-tags">
+        {post.data.tags.slice(0, 4).map((tag) => (
+          <span class="chip">{tag}</span>
+        ))}
+      </div>
+
+      <div class="post-meta">
+        <span class="reading-time">
+          <i class="fa-regular fa-clock" aria-hidden="true"></i>
+          {readingTime(post.body)} min
+        </span>
+        <span class="post-arrow" aria-hidden="true">
+          <i class="fa-solid fa-arrow-right"></i>
+        </span>
+      </div>
+    </div>
+  </a>
+</article>

@@ -1,238 +1,452 @@
 ---
-import { getCollection } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import PostCard from "../../components/PostCard.astro";
 
-const posts = await getCollection('blog');
-// Ordena los posts por fecha (más recientes primero)
-const sortedPosts = posts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+const posts = await getCollection("blog");
+const sortedPosts = posts.sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+
+const spanishPosts = sortedPosts.filter((post) => post.data.lang !== "en");
+const englishPosts = sortedPosts.filter((post) => post.data.lang === "en");
+
+const allTags = [...new Set(sortedPosts.flatMap((post) => post.data.tags))];
 ---
 
-<Layout title="Blog" description="Artículos técnicos sobre Python, integración de hardware, seguridad informática y desarrollo backend" isHome={false}>
-  <div class="blog-header">
-    <h1>Blog</h1>
-    <p>Guías sobre Python, integración de PLCs, hardware, seguridad informática y desarrollo backend</p>
-  </div>
-
-  {sortedPosts.length === 0 ? (
-    <div class="empty-state">
-      <p>No hay posts aún 📝</p>
+<Layout
+  title="Blog — Milton Medina"
+  description="Artículos técnicos sobre Python, integración de hardware, seguridad informática y desarrollo backend."
+  isHome={false}
+>
+  <section class="blog-hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="container">
+      <div class="blog-hero-inner" data-reveal>
+        <span class="eyebrow">Notas técnicas</span>
+        <h1>Blog</h1>
+        <p>
+          Guías sobre Python, integración de PLCs, hardware, seguridad
+          informática y desarrollo backend.
+        </p>
+        <div class="blog-stats">
+          <span><strong>{sortedPosts.length}</strong> artículos publicados</span>
+          <span class="divider" aria-hidden="true"></span>
+          <span><strong>{spanishPosts.length}</strong> en español</span>
+          <span class="divider" aria-hidden="true"></span>
+          <span><strong>{englishPosts.length}</strong> in English</span>
+        </div>
+      </div>
     </div>
-  ) : (
-    <div class="posts-container">
-      {sortedPosts.map((post, index) => (
-        <article class={`post-card ${index === 0 ? 'featured' : ''}`}>
-          <a href={`/blog/${post.slug}`} class="post-link">
-            <div class="post-content">
-              <header class="post-header">
-                {index === 0 && <span class="badge-featured">Destacado</span>}
-                <h2 class="post-title">{post.data.title}</h2>
-                <p class="post-description">{post.data.description}</p>
-              </header>
-              
-              <footer class="post-footer">
-                <time class="post-date" datetime={post.data.date.toISOString()}>
-                  {new Date(post.data.date).toLocaleDateString('es-ES', { 
-                    year: 'numeric', 
-                    month: 'long', 
-                    day: 'numeric' 
-                  })}
-                </time>
-                
-                <div class="post-tags">
-                  {post.data.tags.map(tag => (
-                    <span class="tag">{tag}</span>
-                  ))}
-                </div>
-              </footer>
-            </div>
+  </section>
 
-            <div class="post-arrow">
-              <i class="fas fa-arrow-right"></i>
-            </div>
-          </a>
-        </article>
-      ))}
+  <section class="section blog-list">
+    <div class="container">
+      <div class="lang-tabs" role="tablist" aria-label="Idioma de los artículos">
+        <button
+          class="lang-tab is-active"
+          role="tab"
+          id="tab-es"
+          aria-selected="true"
+          aria-controls="panel-es"
+          data-lang="es"
+        >
+          <i class="fa-solid fa-language" aria-hidden="true"></i>
+          Español
+          <span class="tab-count">{spanishPosts.length}</span>
+        </button>
+        <button
+          class="lang-tab"
+          role="tab"
+          id="tab-en"
+          aria-selected="false"
+          aria-controls="panel-en"
+          data-lang="en"
+        >
+          <i class="fa-solid fa-globe" aria-hidden="true"></i>
+          English
+          <span class="tab-count">{englishPosts.length}</span>
+        </button>
+      </div>
+
+      <div
+        class="lang-panel"
+        role="tabpanel"
+        id="panel-es"
+        aria-labelledby="tab-es"
+      >
+        {spanishPosts.length === 0 ? (
+          <div class="empty-state">
+            <i class="fa-regular fa-file-lines" aria-hidden="true"></i>
+            <p>No hay posts en español aún.</p>
+          </div>
+        ) : (
+          <div class="posts-grid">
+            {spanishPosts.map((post, index) => (
+              <PostCard post={post} index={index} featured={index === 0} />
+            ))}
+          </div>
+        )}
+      </div>
+
+      <div
+        class="lang-panel"
+        role="tabpanel"
+        id="panel-en"
+        aria-labelledby="tab-en"
+        hidden
+      >
+        {englishPosts.length === 0 ? (
+          <div class="empty-state">
+            <i class="fa-regular fa-file-lines" aria-hidden="true"></i>
+            <p>No posts in English yet.</p>
+          </div>
+        ) : (
+          <div class="posts-grid">
+            {englishPosts.map((post, index) => (
+              <PostCard post={post} index={index} featured={index === 0} />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
-  )}
+  </section>
 </Layout>
 
+<script>
+  const tabs = document.querySelectorAll<HTMLButtonElement>(".lang-tab");
+  const panels = document.querySelectorAll<HTMLElement>(".lang-panel");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      tabs.forEach((t) => {
+        t.classList.toggle("is-active", t === tab);
+        t.setAttribute("aria-selected", String(t === tab));
+      });
+      panels.forEach((panel) => {
+        panel.hidden = panel.id !== `panel-${tab.dataset.lang}`;
+      });
+    });
+  });
+</script>
+
 <style>
-  .blog-header {
-    text-align: center;
-    margin-bottom: 4rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--border-color);
-  }
-
-  .blog-header h1 {
-    font-size: 3rem;
-    margin-bottom: 0.75rem;
-    background: linear-gradient(135deg, #06b6d4, #a78bfa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .blog-header p {
-    color: var(--text-muted);
-    font-size: 1.1rem;
-  }
-
-  .empty-state {
-    text-align: center;
-    padding: 4rem 2rem;
-    color: var(--text-muted);
-  }
-
-  .posts-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .post-card {
-    background: linear-gradient(135deg, rgba(10, 13, 47, 0.5), rgba(30, 41, 59, 0.5));
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
+  .blog-hero {
+    position: relative;
     overflow: hidden;
+    padding: clamp(3.5rem, 8vw, 6rem) 0 clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 70% 100% at 30% 0%, #000, transparent 78%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 100% at 30% 0%, #000, transparent 78%);
+    pointer-events: none;
+  }
+
+  .blog-hero::after {
+    content: "";
+    position: absolute;
+    top: -220px;
+    right: -120px;
+    width: 560px;
+    height: 560px;
+    background: radial-gradient(circle, rgba(var(--accent-2-rgb), 0.14), transparent 62%);
+    filter: blur(30px);
+    pointer-events: none;
+  }
+
+  .blog-hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+  }
+
+  .blog-hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    line-height: 1;
+  }
+
+  .blog-hero p {
+    max-width: 560px;
+    margin-top: 1rem;
+    color: var(--text-soft);
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .blog-stats {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+  }
+
+  .blog-stats strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .blog-stats .divider {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--line-strong);
+  }
+
+  .blog-list {
+    padding-top: 0;
+  }
+
+  .lang-tabs {
+    display: inline-flex;
+    gap: 0.35rem;
+    margin-bottom: 1.75rem;
+    padding: 0.35rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--card);
+  }
+
+  .lang-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1.1rem;
+    border: 1px solid transparent;
+    border-radius: calc(var(--radius-lg) - 6px);
+    background: transparent;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    cursor: pointer;
     transition: var(--transition);
   }
 
-  .post-card:hover {
-    background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(168, 85, 247, 0.1));
-    border-color: #06b6d4;
-    transform: translateY(-4px);
-    box-shadow: 0 16px 40px rgba(6, 182, 212, 0.1);
+  .lang-tab i {
+    font-size: 0.72rem;
   }
 
-  .post-card.featured {
-    border-color: #06b6d4;
-    background: linear-gradient(135deg, rgba(6, 182, 212, 0.08), rgba(168, 85, 247, 0.08));
+  .lang-tab:hover {
+    color: var(--text);
   }
 
-  .post-link {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
-    text-decoration: none;
-    color: inherit;
-    gap: 2rem;
+  .lang-tab.is-active {
+    color: var(--accent);
+    border-color: rgba(var(--accent-rgb), 0.3);
+    background: rgba(var(--accent-rgb), 0.08);
   }
 
-  .post-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+  .tab-count {
+    padding: 0.1rem 0.45rem;
+    border-radius: 999px;
+    background: rgba(var(--accent-rgb), 0.12);
+    color: var(--accent);
+    font-size: 0.65rem;
+  }
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
   }
 
-  .post-header {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .badge-featured {
-    display: inline-flex;
-    width: fit-content;
-    background: rgba(6, 182, 212, 0.2);
-    color: #06b6d4;
-    padding: 0.25rem 0.75rem;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  .post-title {
-    font-size: 1.5rem;
-    color: var(--text-primary);
-    margin: 0;
+  .post-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--card);
     transition: var(--transition);
   }
 
-  .post-card:hover .post-title {
-    color: #06b6d4;
+  .post-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(500px 220px at 0% 0%, rgba(var(--accent-rgb), 0.08), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
   }
 
-  .post-description {
-    color: var(--text-secondary);
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.6;
+  .post-card:hover {
+    border-color: rgba(var(--accent-rgb), 0.3);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
   }
 
-  .post-footer {
+  .post-card:hover::before {
+    opacity: 1;
+  }
+
+  .post-card.is-featured {
+    grid-column: 1 / -1;
+    border-color: rgba(var(--accent-rgb), 0.2);
+    background:
+      linear-gradient(120deg, rgba(var(--accent-rgb), 0.05), rgba(var(--accent-2-rgb), 0.06)),
+      var(--card-solid);
+  }
+
+  .post-link {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: clamp(1.35rem, 3vw, 2rem);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .post-card.is-featured .post-link {
+    padding: clamp(1.75rem, 4vw, 2.75rem);
+  }
+
+  .post-top {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    margin-top: 0.5rem;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .post-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .post-kicker i {
+    font-size: 0.6rem;
   }
 
   .post-date {
     color: var(--text-muted);
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    white-space: nowrap;
   }
 
-  .post-date::before {
-    content: "📅";
+  .post-title {
+    margin-bottom: 0.7rem;
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    line-height: 1.25;
+    transition: color 0.25s ease;
+  }
+
+  .post-card.is-featured .post-title {
+    max-width: 800px;
+    font-size: clamp(1.45rem, 3.4vw, 2.1rem);
+  }
+
+  .post-card:hover .post-title {
+    color: var(--accent);
+  }
+
+  .post-description {
+    max-width: 760px;
+    color: var(--text-soft);
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .post-card.is-featured .post-description {
+    font-size: 0.98rem;
+  }
+
+  .post-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: auto;
+    padding-top: 1.35rem;
   }
 
   .post-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.35rem;
   }
 
-  .tag {
-    background: rgba(100, 116, 139, 0.2);
-    color: #06b6d4;
-    padding: 0.3rem 0.75rem;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    font-weight: 500;
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    flex: 0 0 auto;
+  }
+
+  .reading-time {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
   }
 
   .post-arrow {
-    color: #06b6d4;
-    font-size: 1.2rem;
-    opacity: 0;
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    color: var(--text-soft);
+    font-size: 0.75rem;
     transition: var(--transition);
   }
 
   .post-card:hover .post-arrow {
-    opacity: 1;
-    transform: translateX(5px);
+    color: #041016;
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: translateX(3px);
   }
 
-  @media (max-width: 768px) {
-    .blog-header h1 {
-      font-size: 2rem;
+  .empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 4rem 2rem;
+    border: 1px dashed var(--line-strong);
+    border-radius: var(--radius-lg);
+    color: var(--text-muted);
+  }
+
+  .empty-state i {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 780px) {
+    .posts-grid {
+      grid-template-columns: 1fr;
     }
 
-    .post-link {
+    .post-bottom {
       flex-direction: column;
       align-items: flex-start;
-      padding: 1.5rem;
-      gap: 1rem;
     }
 
-    .post-arrow {
-      opacity: 1;
-    }
-
-    .post-title {
-      font-size: 1.25rem;
-    }
-
-    .post-footer {
+    .post-meta {
       width: 100%;
-      flex-wrap: wrap;
+      justify-content: space-between;
     }
   }
 </style>

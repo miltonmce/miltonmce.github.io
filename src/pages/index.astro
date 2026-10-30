@@ -3,214 +3,301 @@ import Layout from "../layouts/Layout.astro";
 import Welcome from "../components/Welcome.astro";
 ---
 
-<Layout
-  title="Milton Medina - Consultor Técnico Freelance en Backend y Arquitectura"
->
+<Layout title="Milton Medina — Consultor en Backend y Arquitectura">
   <Welcome />
 
   <!-- Proyectos -->
-  <section class="featured-case-study" id=proyectos>
+  <section class="section case-study" id="proyectos">
     <div class="container">
-      <h2>Caso de Estudio: Sistema Integral de Gestión Hídrica.</h2>
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Caso de estudio</span>
+        <h2 class="section-title">Sistema Integral de Gestión Hídrica</h2>
+        <p class="section-lead">
+          Una plataforma para administrar el ciclo técnico y jurídico de más de
+          800 pozos activos, con reglas de negocio que no admiten errores.
+        </p>
+      </div>
 
-      <div class="case-study-grid">
-        <div class="case-study-content">
-          <div class="project-badge">
-            Proyecto Actual | Enero 2024 – Presente
+      <div class="case-grid">
+        <div class="case-content card" data-reveal>
+          <span class="project-badge">
+            <span class="project-badge-dot" aria-hidden="true"></span>
+            Proyecto actual · Enero 2024 – Presente
+          </span>
+
+          <h3>Plataforma de gestión técnica y jurídica de recursos hídricos</h3>
+
+          <div class="case-block">
+            <p class="case-label">Desafío</p>
+            <p>
+              Administración de más de 800 pozos activos con procesos manuales
+              propensos a errores, reglas de negocio complejas de volumen
+              autorizado, disponible y transferido, además de reportes técnicos
+              y jurídicos de alto volumen.
+            </p>
           </div>
-          <h3>Plataforma de Gestión Técnica y Jurídica de Recursos Hídricos</h3>
 
-          <p class="challenge-label"><strong>Desafío</strong></p>
-          <p>
-            Administración de más de 800 pozos activos con procesos manuales
-            propensos a errores, reglas de negocio complejas de volumen
-            autorizado/disponible/transferido, y reportes técnicos y jurídicos
-            de alto volumen.
-          </p>
+          <div class="case-block">
+            <p class="case-label">Solución</p>
+            <p>
+              Plataforma especializada con arquitectura basada en reglas
+              explícitas de negocio, integridad de datos, escalabilidad y
+              trazabilidad histórica completa.
+            </p>
+          </div>
 
-          <p class="solution-label"><strong>Solución</strong></p>
-          <p>
-            Plataforma especializada con arquitectura basada en reglas
-            explícitas de negocio, integridad de datos, escalabilidad y
-            trazabilidad histórica completa.
-          </p>
-
-          <div class="impact-section">
-            <p class="impact-label"><strong>Impacto Logrado</strong></p>
-            <ul class="impact-bullets">
-              <li>Digitalización 100% de procesos manuales</li>
+          <div class="impact-box">
+            <p class="case-label">Impacto logrado</p>
+            <ul class="impact-list">
+              <li>Digitalización del 100% de los procesos manuales</li>
               <li>Eliminación de inconsistencias críticas en volúmenes</li>
-              <li>
-                Validaciones automáticas en transferencias y arrendamientos
-              </li>
+              <li>Validaciones automáticas en transferencias y arrendamientos</li>
               <li>Reportes autogenerados con cálculos consolidados</li>
               <li>Trazabilidad histórica de todas las operaciones</li>
+              <li>Integración de datos de campo vía Modbus</li>
+            </ul>
+          </div>
+
+          <div class="tech-tags" aria-label="Tecnologías utilizadas">
+            <span class="chip">Python</span>
+            <span class="chip">Django</span>
+            <span class="chip">Django REST</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">Vue.js</span>
+            <span class="chip">HTMX</span>
+            <span class="chip">openpyxl</span>
+            <span class="chip">pandas</span>
+          </div>
+
+          <a href="/cv#proyectos" class="case-link">
+            Ver más proyectos en el CV
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <aside class="case-side" data-reveal style="--reveal-delay: 120ms">
+          <div class="stats-card">
+            <div class="stat">
+              <span class="stat-number">800+</span>
+              <span class="stat-label">Pozos gestionados</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">7</span>
+              <span class="stat-label">Validaciones críticas</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Digitalización</span>
+            </div>
+          </div>
+
+          <div class="flow-card card">
+            <div class="flow-head">
+              <span class="flow-title">Arquitectura en producción</span>
+              <span class="flow-live">
+                <span aria-hidden="true"></span>
+                Live
+              </span>
+            </div>
+
+            <ol class="flow-list">
               <li>
-                Integración de datos de campo vía protocolos industriales
-                (Modbus)
+                <span class="flow-icon"><i class="fa-solid fa-microchip" aria-hidden="true"></i></span>
+                <span>
+                  <strong>Campo / PLC</strong>
+                  <small>Captura Modbus y MQTT</small>
+                </span>
               </li>
-            </ul>
+              <li>
+                <span class="flow-icon"><i class="fa-brands fa-python" aria-hidden="true"></i></span>
+                <span>
+                  <strong>Django + DRF</strong>
+                  <small>Reglas de negocio y API</small>
+                </span>
+              </li>
+              <li>
+                <span class="flow-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></span>
+                <span>
+                  <strong>PostgreSQL</strong>
+                  <small>Integridad y trazabilidad</small>
+                </span>
+              </li>
+              <li>
+                <span class="flow-icon"><i class="fa-solid fa-file-excel" aria-hidden="true"></i></span>
+                <span>
+                  <strong>Reportes</strong>
+                  <small>openpyxl · pandas</small>
+                </span>
+              </li>
+            </ol>
           </div>
-
-          <p class="tech-label"><strong>Stack Tecnológico</strong></p>
-          <div class="tech-tags">
-            <span>Python</span>
-            <span>Django</span>
-            <span>Django REST Framework</span>
-            <span>PostgreSQL</span>
-            <span>Vue.js</span>
-            <span>HTMX</span>
-            <span>openpyxl</span>
-            <span>pandas</span>
-          </div>
-
-          <a href="/cv#proyectos" class="case-study-cta"
-            >Ver más proyectos en el CV →</a
-          >
-        </div>
-
-        <div class="case-study-visual">
-          <div class="visual-box">
-            <div class="stat">
-              <div class="stat-number">800+</div>
-              <div class="stat-label">Pozos Gestionados</div>
-            </div>
-            <div class="stat">
-              <div class="stat-number">7</div>
-              <div class="stat-label">Validaciones Críticas</div>
-            </div>
-            <div class="stat">
-              <div class="stat-number">100%</div>
-              <div class="stat-label">Digitalización</div>
-            </div>
-          </div>
-        </div>
+        </aside>
       </div>
-    </div> 
-  </section> 
-  <section class="services-section"> 
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section class="section services" id="servicios">
     <div class="container">
-      <div class="section-header">
-          <h2>Mis Servicios de Consultoría</h2>
-          <p>
-            Soluciones especializadas para transformar tus procesos de negocio
-          </p>
-        </div>
+      <div class="section-head center" data-reveal>
+        <span class="eyebrow">Servicios</span>
+        <h2 class="section-title">Cómo puedo ayudarte</h2>
+        <p class="section-lead">
+          Soluciones especializadas para transformar procesos de negocio en
+          sistemas claros, medibles y sostenibles.
+        </p>
+      </div>
 
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-number">01</div>
-            <h3>Desarrollo Backend a Medida</h3>
-            <ul class="service-list">
-              <li>Sistemas en Django y Django REST Framework</li>
-              <li>APIs seguras con autenticación JWT</li>
-              <li>Arquitectura orientada a dominio (DDD)</li>
-              <li>Modelado de relaciones complejas</li>
-            </ul>
-            <div class="service-badge">Especialidad</div>
+      <div class="services-grid">
+        <article class="service-card" data-reveal>
+          <div class="service-head">
+            <span class="icon-tile"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
+            <span class="service-number">01</span>
           </div>
+          <h3>Desarrollo backend a medida</h3>
+          <ul class="service-list">
+            <li>Sistemas en Django y Django REST Framework</li>
+            <li>APIs seguras con autenticación JWT</li>
+            <li>Arquitectura orientada a dominio (DDD)</li>
+            <li>Modelado de relaciones complejas</li>
+          </ul>
+          <span class="service-badge">Especialidad</span>
+        </article>
 
-          <div class="service-card">
-            <div class="service-number">02</div>
-            <h3>Optimización y Refactorización</h3>
-            <ul class="service-list">
-              <li>Evaluación de sistemas existentes</li>
-              <li>Refactorización de código Django</li>
-              <li>Optimización de consultas SQL/ORM</li>
-              <li>Mejora de rendimiento en reportes</li>
-            </ul>
+        <article class="service-card" data-reveal style="--reveal-delay: 80ms">
+          <div class="service-head">
+            <span class="icon-tile"><i class="fa-solid fa-gauge-high" aria-hidden="true"></i></span>
+            <span class="service-number">02</span>
           </div>
+          <h3>Optimización y refactorización</h3>
+          <ul class="service-list">
+            <li>Evaluación de sistemas existentes</li>
+            <li>Refactorización de código Django</li>
+            <li>Optimización de consultas SQL y ORM</li>
+            <li>Mejora de rendimiento en reportes</li>
+          </ul>
+        </article>
 
-          <div class="service-card">
-            <div class="service-number">03</div>
-            <h3>Sistemas de Gestión Técnica</h3>
-            <ul class="service-list">
-              <li>Gestión de entidades técnicas complejas</li>
-              <li>Control de volúmenes y transferencias</li>
-              <li>Validaciones automáticas con reglas críticas</li>
-              <li>Reportes jurídicos y técnicos</li>
-            </ul>
+        <article class="service-card" data-reveal style="--reveal-delay: 160ms">
+          <div class="service-head">
+            <span class="icon-tile"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></span>
+            <span class="service-number">03</span>
           </div>
+          <h3>Sistemas de gestión técnica</h3>
+          <ul class="service-list">
+            <li>Gestión de entidades técnicas complejas</li>
+            <li>Control de volúmenes y transferencias</li>
+            <li>Validaciones automáticas con reglas críticas</li>
+            <li>Reportes jurídicos y técnicos</li>
+          </ul>
+        </article>
 
-          <div class="service-card">
-            <div class="service-number">04</div>
-            <h3>Automatización y Reportes Avanzados</h3>
-            <ul class="service-list">
-              <li>Generación de reportes en Excel (openpyxl)</li>
-              <li>Procesamiento de datos con pandas</li>
-              <li>Tareas programadas y sincronización</li>
-              <li>Integración con sistemas externos</li>
-            </ul>
+        <article class="service-card" data-reveal>
+          <div class="service-head">
+            <span class="icon-tile"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></span>
+            <span class="service-number">04</span>
           </div>
+          <h3>Automatización y reportes avanzados</h3>
+          <ul class="service-list">
+            <li>Generación de reportes en Excel (openpyxl)</li>
+            <li>Procesamiento de datos con pandas</li>
+            <li>Tareas programadas y sincronización</li>
+            <li>Integración con sistemas externos</li>
+          </ul>
+        </article>
 
-          <div class="service-card">
-            <div class="service-number">05</div>
-            <h3>Integración con Hardware y Sistemas Externos</h3>
-            <ul class="service-list">
-              <li>Integración Modbus</li>
-              <li>Conexión entre sistemas físicos y plataformas web</li>
-              <li>Sincronización de datos en tiempo real</li>
-              <li>APIs de terceros integradas</li>
-            </ul>
+        <article class="service-card" data-reveal style="--reveal-delay: 80ms">
+          <div class="service-head">
+            <span class="icon-tile"><i class="fa-solid fa-microchip" aria-hidden="true"></i></span>
+            <span class="service-number">05</span>
           </div>
+          <h3>Integración con hardware</h3>
+          <ul class="service-list">
+            <li>Integración de protocolos Modbus</li>
+            <li>Conexión entre sistemas físicos y web</li>
+            <li>Sincronización de datos en tiempo real</li>
+            <li>APIs de terceros integradas</li>
+          </ul>
+        </article>
 
-          <div class="service-card">
-            <div class="service-number">06</div>
-            <h3>Asesoría Arquitectónica</h3>
-            <ul class="service-list">
-              <li>Diseño de arquitectura escalable</li>
-              <li>Análisis del dominio del negocio</li>
-              <li>Estrategia a largo plazo</li>
-              <li>Evaluación de alternativas técnicas</li>
-            </ul>
+        <article class="service-card" data-reveal style="--reveal-delay: 160ms">
+          <div class="service-head">
+            <span class="icon-tile"><i class="fa-solid fa-sitemap" aria-hidden="true"></i></span>
+            <span class="service-number">06</span>
           </div>
-        </div>
+          <h3>Asesoría arquitectónica</h3>
+          <ul class="service-list">
+            <li>Diseño de arquitectura escalable</li>
+            <li>Análisis del dominio del negocio</li>
+            <li>Estrategia técnica a largo plazo</li>
+            <li>Evaluación de alternativas técnicas</li>
+          </ul>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- Stack Tecnológico -->
-  <section id="stack" class="stack-section">
+  <section class="section stack" id="stack">
     <div class="container">
-      <h2>Stack Tecnológico</h2>
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Stack</span>
+        <h2 class="section-title">Herramientas con las que trabajo</h2>
+        <p class="section-lead">
+          Un stack enfocado en estabilidad, rendimiento y mantenimiento a largo
+          plazo.
+        </p>
+      </div>
 
       <div class="stack-grid">
-        <div class="stack-category">
-          <h3>Backend</h3>
+        <div class="stack-card card" data-reveal>
+          <div class="stack-head">
+            <span class="icon-tile"><i class="fa-solid fa-server" aria-hidden="true"></i></span>
+            <h3>Backend</h3>
+          </div>
           <div class="stack-items">
-            <span class="stack-item">Python</span>
-            <span class="stack-item">Django</span>
-            <span class="stack-item">Django REST Framework</span>
-            <span class="stack-item">PostgreSQL</span>
+            <span class="chip">Python</span>
+            <span class="chip">Django</span>
+            <span class="chip">Django REST Framework</span>
+            <span class="chip">PostgreSQL</span>
           </div>
         </div>
 
-        <div class="stack-category">
-          <h3>Frontend</h3>
+        <div class="stack-card card" data-reveal style="--reveal-delay: 80ms">
+          <div class="stack-head">
+            <span class="icon-tile"><i class="fa-solid fa-window-maximize" aria-hidden="true"></i></span>
+            <h3>Frontend</h3>
+          </div>
           <div class="stack-items">
-            <span class="stack-item">Vue.js</span>
-            <span class="stack-item">HTMX</span>
-            <span class="stack-item">Bootstrap</span>
-            <span class="stack-item">jQuery</span>
+            <span class="chip">Vue.js</span>
+            <span class="chip">HTMX</span>
+            <span class="chip">Bootstrap</span>
+            <span class="chip">jQuery</span>
           </div>
         </div>
 
-        <div class="stack-category">
-          <h3>Infraestructura</h3>
+        <div class="stack-card card" data-reveal style="--reveal-delay: 160ms">
+          <div class="stack-head">
+            <span class="icon-tile"><i class="fa-brands fa-linux" aria-hidden="true"></i></span>
+            <h3>Infraestructura</h3>
+          </div>
           <div class="stack-items">
-            <span class="stack-item">Linux (Fedora/Debian)</span>
-            <span class="stack-item">Podman & Containers</span>
-            <span class="stack-item">Seguridad SSL/TLS</span>
-            <span class="stack-item">CI/CD Automático</span>
+            <span class="chip">Linux (Fedora / Debian)</span>
+            <span class="chip">Podman & containers</span>
+            <span class="chip">SSL / TLS</span>
+            <span class="chip">CI/CD</span>
           </div>
         </div>
 
-        <div class="stack-category">
-          <h3>Mobile</h3>
+        <div class="stack-card card" data-reveal style="--reveal-delay: 240ms">
+          <div class="stack-head">
+            <span class="icon-tile"><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i></span>
+            <h3>Mobile</h3>
+          </div>
           <div class="stack-items">
-            <span class="stack-item">Android (Kotlin)</span>
-            <span class="stack-item">JWT integrado</span>
-            <span class="stack-item">Sincronización backend</span>
+            <span class="chip">Android (Kotlin)</span>
+            <span class="chip">JWT integrado</span>
+            <span class="chip">Sincronización backend</span>
           </div>
         </div>
       </div>
@@ -218,642 +305,845 @@ import Welcome from "../components/Welcome.astro";
   </section>
 
   <!-- Diferencial -->
-  <section class="diferencial-section">
-    <div class="container">
-      <div class="diferencial-content">
-        <div class="diferencial-text">
-          <h2>Mi Diferencial</h2>
-          <p>
-            No solo escribo código. Diseño sistemas que reflejan correctamente
-            la lógica real del negocio y evitan inconsistencias futuras.
-          </p>
-          <div class="diferencial-points">
-            <div class="point">
-              <i class="fas fa-check"></i>
-              <span>Análisis profundo del dominio antes de programar</span>
+  <section class="section difference">
+    <div class="container difference-grid">
+      <div class="difference-copy" data-reveal>
+        <span class="eyebrow">Mi diferencial</span>
+        <h2 class="section-title">Pienso en el negocio antes que en el código</h2>
+        <p class="section-lead">
+          No solo escribo código. Diseño sistemas que reflejan correctamente la
+          lógica real del negocio y evitan inconsistencias futuras.
+        </p>
+
+        <ul class="difference-list">
+          <li>
+            <i class="fa-solid fa-check" aria-hidden="true"></i>
+            <span>Análisis profundo del dominio antes de programar</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-check" aria-hidden="true"></i>
+            <span>Validaciones estrictas para evitar errores financieros o legales</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-check" aria-hidden="true"></i>
+            <span>Código estructurado y fácil de mantener</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-check" aria-hidden="true"></i>
+            <span>Comunicación clara con el cliente</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-check" aria-hidden="true"></i>
+            <span>Entregables documentados y sostenibles</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="principles" data-reveal style="--reveal-delay: 120ms">
+        <div class="principles-head">
+          <span class="mono">// principios_de_trabajo</span>
+          <span class="principles-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        </div>
+
+        <div class="principles-body">
+          <div class="principle">
+            <span class="principle-num">01</span>
+            <div>
+              <strong>Claridad</strong>
+              <p>Si el dominio no está claro, el software tampoco lo estará.</p>
             </div>
-            <div class="point">
-              <i class="fas fa-check"></i>
-              <span
-                >Validaciones estrictas para evitar errores financieros o
-                legales</span
-              >
+          </div>
+          <div class="principle">
+            <span class="principle-num">02</span>
+            <div>
+              <strong>Consistencia</strong>
+              <p>Las reglas se validan en el sistema, no en la memoria de las personas.</p>
             </div>
-            <div class="point">
-              <i class="fas fa-check"></i>
-              <span>Código estructurado y fácil de mantener</span>
+          </div>
+          <div class="principle">
+            <span class="principle-num">03</span>
+            <div>
+              <strong>Trazabilidad</strong>
+              <p>Cada operación debe poder explicarse y auditarse.</p>
             </div>
-            <div class="point">
-              <i class="fas fa-check"></i>
-              <span>Comunicación clara con el cliente</span>
-            </div>
-            <div class="point">
-              <i class="fas fa-check"></i>
-              <span>Entregables documentados y sostenibles</span>
+          </div>
+          <div class="principle">
+            <span class="principle-num">04</span>
+            <div>
+              <strong>Mantenibilidad</strong>
+              <p>El software debe seguir siendo comprensible dentro de cinco años.</p>
             </div>
           </div>
         </div>
-        <div class="diferencial-image">
-          <div class="decorative-box">
-            <i class="fas fa-microchip" style="opacity: 0.2;"></i>
-          </div>
+
+        <div class="principles-foot">
+          <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+          <p>
+            La tecnología cambia. La lógica del negocio, bien modelada, perdura.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Tipos de Clientes -->
-  <section class="clients-section">
+  <section class="section clients">
     <div class="container">
-      <h2>Tipos de Clientes a los que Ayudo</h2>
+      <div class="section-head center" data-reveal>
+        <span class="eyebrow">Colaboraciones</span>
+        <h2 class="section-title">¿Con quién trabajo?</h2>
+        <p class="section-lead">
+          Con equipos y organizaciones que necesitan convertir complejidad
+          operativa en software confiable.
+        </p>
+      </div>
+
       <div class="clients-grid">
-        <div class="client-card">
-          <i class="fas fa-building"></i>
-          <h3>Empresas con Procesos Técnicos Complejos</h3>
-          <p>
-            Sistemas que requieren modelado avanzado y validaciones críticas
-          </p>
-        </div>
-        <div class="client-card">
-          <i class="fas fa-database"></i>
-          <h3>Organizaciones con Grandes Volúmenes de Datos</h3>
-          <p>
-            Soluciones escalables para procesar y gestionar información masiva
-          </p>
-        </div>
-        <div class="client-card">
-          <i class="fas fa-code-branch"></i>
-          <h3>Proyectos con Reglas de Negocio Estrictas</h3>
-          <p>
-            Implementación precisa de lógica compleja sin fallos operacionales
-          </p>
-        </div>
-        <div class="client-card">
-          <i class="fas fa-rocket"></i>
-          <h3>Startups que Necesitan Base Sólida</h3>
-          <p>
-            Arquitectura escalable desde el inicio para crecer sin deuda técnica
-          </p>
-        </div>
+        <article class="client-card" data-reveal>
+          <span class="icon-tile"><i class="fa-regular fa-building" aria-hidden="true"></i></span>
+          <h3>Empresas con procesos técnicos complejos</h3>
+          <p>Sistemas que requieren modelado avanzado y validaciones críticas.</p>
+        </article>
+
+        <article class="client-card" data-reveal style="--reveal-delay: 80ms">
+          <span class="icon-tile"><i class="fa-solid fa-database" aria-hidden="true"></i></span>
+          <h3>Organizaciones con grandes volúmenes de datos</h3>
+          <p>Soluciones escalables para procesar y gestionar información masiva.</p>
+        </article>
+
+        <article class="client-card" data-reveal style="--reveal-delay: 160ms">
+          <span class="icon-tile"><i class="fa-solid fa-code-branch" aria-hidden="true"></i></span>
+          <h3>Proyectos con reglas de negocio estrictas</h3>
+          <p>Implementación precisa de lógica compleja sin fallos operacionales.</p>
+        </article>
+
+        <article class="client-card" data-reveal style="--reveal-delay: 240ms">
+          <span class="icon-tile"><i class="fa-solid fa-rocket" aria-hidden="true"></i></span>
+          <h3>Startups que necesitan una base sólida</h3>
+          <p>Arquitectura escalable desde el inicio para crecer sin deuda técnica.</p>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- CTA Final -->
-  <section class="final-cta">
+  <section class="section cta-section">
     <div class="container">
-      <h2>¿Tu empresa enfrenta desafíos técnicos complejos?</h2>
-      <p>
-        Hablemos sobre cómo puedo ayudarte a construir sistemas que escalen con
-        tu negocio
-      </p>
-      <a
-        href="mailto:miltonmce@gmail.com?subject=Solicito Consultoría Técnica"
-        class="btn btn-large"
-      >
-        <i class="fas fa-envelope"></i> Solicitar Primera Consulta
-      </a>
+      <div class="cta-panel" data-reveal>
+        <div class="cta-glow" aria-hidden="true"></div>
+        <span class="eyebrow">Siguiente paso</span>
+        <h2 class="cta-title">¿Tu empresa enfrenta desafíos técnicos complejos?</h2>
+        <p class="cta-text">
+          Hablemos sobre cómo puedo ayudarte a construir sistemas que escalen con
+          tu negocio, sin sacrificar claridad ni integridad.
+        </p>
+        <div class="cta-actions">
+          <a
+            href="mailto:miltonmce@gmail.com?subject=Solicito%20consultor%C3%ADa%20t%C3%A9cnica"
+            class="btn btn-primary"
+          >
+            <i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
+            Solicitar primera consulta
+          </a>
+          <a href="/cv" class="btn btn-ghost">
+            <i class="fa-regular fa-file-lines" aria-hidden="true"></i>
+            Conocer mi experiencia
+          </a>
+        </div>
+        <p class="cta-note">Respuesta en menos de 24 horas · Sin compromiso</p>
+      </div>
     </div>
   </section>
 </Layout>
 
 <style>
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+  /* ---------- Case study ---------- */
+  .case-study {
+    background:
+      radial-gradient(800px 420px at 100% 0%, rgba(var(--accent-2-rgb), 0.06), transparent 65%),
+      var(--bg-soft);
   }
 
-  /* Featured Case Study */
-  .featured-case-study {
-    padding: 6rem 2rem;
-    background: linear-gradient(
-      180deg,
-      rgba(6, 182, 212, 0.08) 0%,
-      rgba(168, 85, 247, 0.08) 100%
-    );
-    border-top: 1px solid rgba(6, 182, 212, 0.2);
-    border-bottom: 1px solid rgba(6, 182, 212, 0.2);
-  }
-
-  .featured-case-study h2 {
-    font-size: 2.5rem;
-    color: #e2e8f0;
-    text-align: center;
-    margin-bottom: 4rem;
-    background: linear-gradient(135deg, #06b6d4 0%, #a78bfa 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .case-study-grid {
+  .case-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+    gap: 1.5rem;
+    align-items: start;
   }
 
-  .case-study-content {
-    display: flex;
-    flex-direction: column;
+  .case-content {
+    padding: clamp(1.5rem, 3vw, 2.25rem);
   }
 
   .project-badge {
-    display: inline-block;
-    background: rgba(6, 182, 212, 0.2);
-    color: #06b6d4;
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid rgba(var(--accent-rgb), 0.22);
+    border-radius: 999px;
+    background: rgba(var(--accent-rgb), 0.07);
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
   }
 
-  .case-study-content h3 {
-    font-size: 1.8rem;
-    color: #e2e8f0;
-    margin-bottom: 1.5rem;
-    line-height: 1.3;
+  .project-badge-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.14);
   }
 
-  .challenge-label,
-  .solution-label,
-  .impact-label,
-  .tech-label {
-    color: #06b6d4;
-    font-weight: 600;
-    font-size: 0.95rem;
+  .case-content h3 {
+    margin-top: 1.2rem;
+    font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+    max-width: 620px;
+  }
+
+  .case-block {
+    margin-top: 1.35rem;
+  }
+
+  .case-label {
+    margin-bottom: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .case-block p:last-child {
+    color: var(--text-soft);
+    font-size: 0.94rem;
+    line-height: 1.75;
+  }
+
+  .impact-box {
     margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
+    padding: 1.25rem;
+    border: 1px solid rgba(var(--accent-rgb), 0.14);
+    border-left: 2px solid var(--accent);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    background: rgba(var(--accent-rgb), 0.045);
   }
 
-  .case-study-content p {
-    color: #cbd5e1;
-    line-height: 1.8;
-    margin-bottom: 0.75rem;
-  }
-
-  .impact-section {
-    background: rgba(6, 182, 212, 0.1);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 3px solid #06b6d4;
-    margin: 1.5rem 0;
-  }
-
-  .impact-bullets {
-    list-style: none;
+  .impact-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.55rem 1.5rem;
+    margin-top: 0.5rem;
     padding: 0;
-    margin-top: 1rem;
+    list-style: none;
   }
 
-  .impact-bullets li {
-    color: #cbd5e1;
-    padding: 0.4rem 0;
-    padding-left: 1.5rem;
+  .impact-list li {
     position: relative;
+    padding-left: 1.15rem;
+    color: var(--text-soft);
+    font-size: 0.84rem;
+    line-height: 1.55;
   }
 
-  .impact-bullets li::before {
+  .impact-list li::before {
     content: "✓";
     position: absolute;
     left: 0;
-    color: #06b6d4;
-    font-weight: bold;
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 700;
   }
 
   .tech-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 1rem 0;
-  }
-
-  .tech-tags span {
-    background: rgba(6, 182, 212, 0.15);
-    color: #cbd5e1;
-    padding: 0.4rem 0.9rem;
-    border-radius: 50px;
-    font-size: 0.8rem;
-    border: 1px solid rgba(6, 182, 212, 0.3);
-  }
-
-  .case-study-cta {
-    display: inline-block;
-    color: #06b6d4;
-    text-decoration: none;
-    font-weight: 600;
+    gap: 0.45rem;
     margin-top: 1.5rem;
-    padding: 0.75rem 1.5rem;
-    border: 2px solid rgba(6, 182, 212, 0.3);
-    border-radius: 8px;
-    transition: all 0.3s;
-    width: fit-content;
   }
 
-  .case-study-cta:hover {
-    background: rgba(6, 182, 212, 0.1);
-    border-color: #06b6d4;
-  }
-
-  .case-study-visual {
-    display: flex;
+  .case-link {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    color: var(--accent);
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
   }
 
-  .visual-box {
-    background: linear-gradient(
-      135deg,
-      rgba(6, 182, 212, 0.15),
-      rgba(168, 85, 247, 0.15)
-    );
-    border: 2px dashed rgba(6, 182, 212, 0.3);
-    border-radius: 12px;
-    padding: 3rem 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 2rem;
-    text-align: center;
+  .case-link i {
+    transition: transform 0.25s var(--ease);
+  }
+
+  .case-link:hover i {
+    transform: translateX(4px);
+  }
+
+  .case-side {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: sticky;
+    top: calc(var(--nav-height) + 1.5rem);
+  }
+
+  .stats-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--card-solid);
   }
 
   .stat {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 0.3rem;
+    padding: 1.35rem 1.5rem;
+  }
+
+  .stat + .stat {
+    border-top: 1px solid var(--line);
   }
 
   .stat-number {
-    font-size: 2.5rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #06b6d4, #a78bfa);
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 700;
+    line-height: 1;
+    background: linear-gradient(120deg, var(--accent), var(--accent-2));
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 0.5rem;
+    -webkit-text-fill-color: transparent;
   }
 
   .stat-label {
-    color: #94a3b8;
-    font-size: 0.9rem;
-    font-weight: 500;
+    color: var(--text-muted);
+    font-size: 0.82rem;
   }
 
-  /* Servicios */
-  .services-section {
-    padding: 6rem 2rem;
-    background: linear-gradient(
-      180deg,
-      rgba(10, 13, 47, 0.5) 0%,
-      rgba(15, 23, 42, 0.5) 100%
-    );
-    border-top: 1px solid rgba(6, 182, 212, 0.2);
+  .flow-card {
+    padding: 1.35rem 1.4rem;
   }
 
-  .section-header {
-    text-align: center;
-    margin-bottom: 4rem;
+  .flow-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--line);
   }
 
-  .section-header h2 {
-    font-size: 2.5rem;
-    background: linear-gradient(135deg, #06b6d4 0%, #a78bfa 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 0.5rem;
-  }
-
-  .section-header p {
-    font-size: 1.1rem;
-    color: #cbd5e1;
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-  }
-
-  .service-card {
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(6, 182, 212, 0.2);
-    border-radius: 12px;
-    padding: 2.5rem;
-    position: relative;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .service-card:hover {
-    background: rgba(15, 23, 42, 0.9);
-    border-color: #06b6d4;
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(6, 182, 212, 0.2);
-  }
-
-  .service-number {
-    font-size: 3rem;
-    font-weight: 800;
-    color: rgba(6, 182, 212, 0.2);
-    margin-bottom: 1rem;
-  }
-
-  .service-card h3 {
-    color: #e2e8f0;
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .service-list {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 1.5rem;
-  }
-
-  .service-list li {
-    color: #cbd5e1;
-    padding: 0.5rem 0;
-    padding-left: 1.5rem;
-    position: relative;
-  }
-
-  .service-list li::before {
-    content: "→";
-    position: absolute;
-    left: 0;
-    color: #06b6d4;
-    font-weight: bold;
-  }
-
-  .service-badge {
-    display: inline-block;
-    background: rgba(6, 182, 212, 0.15);
-    color: #06b6d4;
-    padding: 0.4rem 1rem;
-    border-radius: 50px;
-    font-size: 0.85rem;
+  .flow-title {
+    font-size: 0.86rem;
     font-weight: 600;
   }
 
-  /* Stack */
-  .stack-section {
-    padding: 6rem 2rem;
+  .flow-live {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--success);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
   }
 
-  .stack-section h2 {
-    font-size: 2.5rem;
-    color: #e2e8f0;
-    text-align: center;
-    margin-bottom: 4rem;
+  .flow-live span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--success);
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+
+  .flow-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .flow-list li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.8rem 0;
+  }
+
+  .flow-list li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 46px;
+    width: 1px;
+    height: calc(100% - 32px);
+    background: linear-gradient(var(--line-strong), transparent);
+  }
+
+  .flow-icon {
+    display: grid;
+    place-items: center;
+    flex: 0 0 35px;
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--accent);
+    font-size: 0.8rem;
+  }
+
+  .flow-list li > span:last-child {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.35;
+  }
+
+  .flow-list strong {
+    font-size: 0.83rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .flow-list small {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.4;
+    }
+  }
+
+  /* ---------- Services ---------- */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .service-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1.6rem;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--card);
+    transition: var(--transition);
+  }
+
+  .service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 1.6rem;
+    right: 1.6rem;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(var(--accent-rgb), 0.5), transparent);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(var(--accent-rgb), 0.28);
+    background: rgba(18, 25, 38, 0.8);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .service-card:hover::before {
+    opacity: 1;
+  }
+
+  .service-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+  }
+
+  .service-number {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+  }
+
+  .service-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.08rem;
+  }
+
+  .service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0 0 1.25rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .service-list li {
+    position: relative;
+    padding-left: 1.1rem;
+    color: var(--text-soft);
+    font-size: 0.86rem;
+    line-height: 1.5;
+  }
+
+  .service-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 5px;
+    height: 5px;
+    border-radius: 1px;
+    background: var(--accent);
+    transform: rotate(45deg);
+  }
+
+  .service-badge {
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 0.25rem 0.65rem;
+    border: 1px solid rgba(var(--accent-rgb), 0.25);
+    border-radius: 999px;
+    background: rgba(var(--accent-rgb), 0.07);
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.04em;
+  }
+
+  /* ---------- Stack ---------- */
+  .stack {
+    background: var(--bg-soft);
   }
 
   .stack-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
   }
 
-  .stack-category h3 {
-    color: #06b6d4;
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+  .stack-card {
+    padding: 1.5rem;
+    transition: var(--transition);
+  }
+
+  .stack-card:hover {
+    border-color: rgba(var(--accent-rgb), 0.28);
+    transform: translateY(-3px);
+  }
+
+  .stack-head {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.85rem;
+    margin-bottom: 1.2rem;
   }
 
-  .stack-category h3::before {
-    content: "→";
-    font-weight: bold;
+  .stack-head h3 {
+    font-size: 1rem;
   }
 
   .stack-items {
     display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.45rem;
   }
 
-  .stack-item {
-    background: rgba(6, 182, 212, 0.1);
-    color: #cbd5e1;
-    padding: 0.75rem 1.2rem;
-    border-radius: 8px;
-    border-left: 3px solid #a78bfa;
-    font-size: 0.95rem;
-  }
-
-  /* Diferencial */
-  .diferencial-section {
-    padding: 6rem 2rem;
-    background: linear-gradient(
-      180deg,
-      rgba(10, 13, 47, 0.5) 0%,
-      rgba(15, 23, 42, 0.5) 100%
-    );
-    border-top: 1px solid rgba(6, 182, 212, 0.2);
-  }
-
-  .diferencial-content {
+  /* ---------- Difference ---------- */
+  .difference-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+    gap: clamp(2.5rem, 6vw, 5rem);
     align-items: center;
   }
 
-  .diferencial-text h2 {
-    font-size: 2rem;
-    color: #e2e8f0;
-    margin-bottom: 1.5rem;
-  }
-
-  .diferencial-text > p {
-    color: #cbd5e1;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-    font-style: italic;
-  }
-
-  .diferencial-points {
+  .difference-list {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 0.9rem;
+    margin-top: 2rem;
+    padding: 0;
+    list-style: none;
   }
 
-  .point {
+  .difference-list li {
     display: flex;
     align-items: flex-start;
+    gap: 0.8rem;
+    color: var(--text-soft);
+    font-size: 0.94rem;
+  }
+
+  .difference-list i {
+    display: grid;
+    place-items: center;
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    margin-top: 0.1rem;
+    border-radius: 50%;
+    background: rgba(var(--accent-rgb), 0.11);
+    color: var(--accent);
+    font-size: 0.55rem;
+  }
+
+  .principles {
+    overflow: hidden;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-lg);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 45%),
+      rgba(10, 14, 22, 0.9);
+    box-shadow: var(--shadow);
+  }
+
+  .principles-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1.25rem;
+    border-bottom: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .principles-head > span:first-child {
+    color: var(--text-muted);
+    font-size: 0.72rem;
+  }
+
+  .principles-dots {
+    display: inline-flex;
+    gap: 5px;
+  }
+
+  .principles-dots i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #2c3a4e;
+  }
+
+  .principles-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .principle {
+    display: flex;
+    gap: 1rem;
+    padding: 1.1rem 1.25rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .principle-num {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--accent);
+    padding-top: 0.2rem;
+  }
+
+  .principle strong {
+    display: block;
+    margin-bottom: 0.15rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .principle p {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    line-height: 1.55;
+  }
+
+  .principles-foot {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 1.25rem;
+    background: rgba(var(--accent-rgb), 0.045);
+  }
+
+  .principles-foot i {
+    color: var(--accent);
+    font-size: 0.75rem;
+    margin-top: 0.3rem;
+  }
+
+  .principles-foot p {
+    color: var(--text-soft);
+    font-size: 0.84rem;
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  /* ---------- Clients ---------- */
+  .clients-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
   }
 
-  .point i {
-    color: #06b6d4;
-    font-size: 1.5rem;
-    margin-top: 0.25rem;
-  }
-
-  .point span {
-    color: #cbd5e1;
-    font-size: 1rem;
-  }
-
-  .decorative-box {
-    width: 100%;
-    height: 300px;
-    background: linear-gradient(
-      135deg,
-      rgba(6, 182, 212, 0.1) 0%,
-      rgba(168, 85, 247, 0.1) 100%
-    );
-    border: 2px dashed rgba(6, 182, 212, 0.3);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #64748b;
-    font-size: 3rem;
-  }
-
-  /* Clientes */
-  .clients-section {
-    padding: 6rem 2rem;
-  }
-
-  .clients-section h2 {
-    font-size: 2.5rem;
-    color: #e2e8f0;
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-
-  .clients-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2rem;
-  }
-
   .client-card {
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(6, 182, 212, 0.2);
-    border-radius: 12px;
-    padding: 2.5rem;
-    text-align: center;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding: 1.6rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--card);
+    transition: var(--transition);
   }
 
   .client-card:hover {
-    background: rgba(15, 23, 42, 0.9);
-    border-color: #a78bfa;
-    transform: translateY(-8px);
-  }
-
-  .client-card i {
-    font-size: 2.5rem;
-    color: #06b6d4;
-    margin-bottom: 1rem;
+    border-color: rgba(var(--accent-rgb), 0.28);
+    transform: translateY(-3px);
   }
 
   .client-card h3 {
-    color: #e2e8f0;
-    font-size: 1.1rem;
-    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.35;
   }
 
   .client-card p {
-    color: #cbd5e1;
-    font-size: 0.95rem;
+    color: var(--text-soft);
+    font-size: 0.87rem;
+    line-height: 1.6;
   }
 
-  /* Final CTA */
-  .final-cta {
-    padding: 6rem 2rem;
-    background: linear-gradient(
-      135deg,
-      rgba(6, 182, 212, 0.15) 0%,
-      rgba(168, 85, 247, 0.15) 100%
-    );
-    border-top: 1px solid rgba(6, 182, 212, 0.3);
-    border-bottom: 1px solid rgba(6, 182, 212, 0.3);
+  /* ---------- Final CTA ---------- */
+  .cta-section {
+    padding-top: clamp(2rem, 4vw, 3rem);
+  }
+
+  .cta-panel {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(2.5rem, 6vw, 4.5rem);
+    border: 1px solid rgba(var(--accent-rgb), 0.18);
+    border-radius: var(--radius-xl);
+    background:
+      linear-gradient(140deg, rgba(var(--accent-rgb), 0.07), rgba(var(--accent-2-rgb), 0.09)),
+      rgba(10, 14, 22, 0.85);
     text-align: center;
+    box-shadow: var(--shadow);
   }
 
-  .final-cta h2 {
-    font-size: 2rem;
-    color: #e2e8f0;
-    margin-bottom: 1rem;
+  .cta-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(148, 163, 184, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.045) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, #000, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, #000, transparent 75%);
+    pointer-events: none;
   }
 
-  .final-cta p {
-    font-size: 1.1rem;
-    color: #cbd5e1;
-    margin-bottom: 2rem;
+  .cta-glow {
+    position: absolute;
+    top: -160px;
+    left: 50%;
+    width: 480px;
+    height: 320px;
+    background: rgba(var(--accent-rgb), 0.16);
+    filter: blur(80px);
+    transform: translateX(-50%);
+    pointer-events: none;
   }
 
-  .btn-large {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    background: linear-gradient(135deg, #06b6d4, #0891b2);
-    color: white;
-    padding: 1rem 2.5rem;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
+  .cta-panel > * {
+    position: relative;
+  }
+
+  .cta-title {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+  }
+
+  .cta-text {
+    max-width: 620px;
+    margin: 1rem auto 0;
+    color: var(--text-soft);
     font-size: 1rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    line-height: 1.75;
   }
 
-  .btn-large:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 24px rgba(6, 182, 212, 0.4);
+  .cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
   }
 
-  @media (max-width: 768px) {
-    .services-section,
-    .stack-section,
-    .diferencial-section,
-    .clients-section,
-    .final-cta {
-      padding: 4rem 1rem;
-    }
+  .cta-note {
+    margin-top: 1.25rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+  }
 
-    .featured-case-study {
-      padding: 4rem 1rem;
-    }
-
-    .featured-case-study h2 {
-      font-size: 1.8rem;
-    }
-
-    .case-study-grid {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    .case-study-content h3 {
-      font-size: 1.3rem;
-    }
-
-    .visual-box {
-      padding: 2rem 1rem;
-    }
-
-    .stat-number {
-      font-size: 2rem;
-    }
-
-    .section-header h2 {
-      font-size: 1.8rem;
-    }
-
-    .diferencial-content {
+  @media (max-width: 960px) {
+    .case-grid {
       grid-template-columns: 1fr;
     }
 
-    .decorative-box {
-      height: 200px;
+    .case-side {
+      position: static;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .difference-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .impact-list {
+      grid-template-columns: 1fr;
+    }
+
+    .case-side {
+      grid-template-columns: 1fr;
+    }
+
+    .services-grid,
+    .stack-grid,
+    .clients-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-actions {
+      flex-direction: column;
+      align-items: stretch;
     }
   }
 </style>

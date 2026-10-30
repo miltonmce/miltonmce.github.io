@@ -1,40 +1,69 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import SkillBlock from '../components/SkillBlock.astro'; 
+import Layout from "../layouts/Layout.astro";
+import SkillBlock from "../components/SkillBlock.astro";
 ---
 
-<Layout title="CV - Milton Medina" description="Currículum vitae de Milton Medina, Desarrollador Python Senior" isHome={false}>
-  <div class="cv-container">
-    <div class="cv-header">
-      <h1>Milton Medina</h1>
-      <p class="cv-subtitle">Consultor Freelance en Desarrollo Backend y Arquitectura de Sistemas</p>
-      <p class="cv-location">México | Trabajo Remoto</p>
-      <div class="cv-contacts">
-        <a href="mailto:miltonmce@gmail.com">
-          <i class="fas fa-envelope"></i> miltonmce@gmail.com
+<Layout
+  title="CV — Milton Medina | Backend Engineer"
+  description="Currículum vitae de Milton Medina, consultor en desarrollo backend, arquitectura de sistemas y automatización."
+  isHome={false}
+>
+  <div class="cv-page">
+    <header class="cv-header">
+      <div class="cv-identity">
+        <div class="cv-monogram" aria-hidden="true">MM</div>
+        <div class="cv-identity-text">
+          <span class="eyebrow">Curriculum vitae</span>
+          <h1>Milton Medina</h1>
+          <p class="cv-role">
+            Consultor freelance en desarrollo backend y arquitectura de sistemas
+          </p>
+          <p class="cv-location">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            México · Trabajo remoto
+          </p>
+        </div>
+      </div>
+
+      <div class="cv-actions">
+        <a href="mailto:miltonmce@gmail.com" class="btn btn-primary btn-sm">
+          <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+          Email
         </a>
-        <a href="https://github.com/miltonmce" target="_blank">
-          <i class="fab fa-github"></i> github.com/miltonmce
+        <a
+          href="https://github.com/miltonmce"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-ghost btn-sm"
+        >
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+          GitHub
         </a>
-        <a href="https://www.linkedin.com/in/milton-medina-134694a4/" target="_blank">
-          <i class="fab fa-linkedin"></i> LinkedIn
+        <a
+          href="https://www.linkedin.com/in/milton-medina-134694a4/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-ghost btn-sm"
+        >
+          <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+          LinkedIn
         </a>
       </div>
-      
-    </div>
+    </header>
 
-    <section class="cv-section">
-      <h2><i class="fas fa-briefcase"></i> Perfil Profesional</h2>
+    <section class="cv-section" id="perfil">
+      <h2><i class="fa-solid fa-user-tie" aria-hidden="true"></i> Perfil profesional</h2>
       <p>
-        Consultor independiente especializado en Python y Django, enfocado en el diseño y desarrollo de sistemas 
-        robustos para la gestión de datos técnicos, reglas de negocio complejas y automatización de procesos.
+        Consultor independiente especializado en Python y Django, enfocado en el
+        diseño y desarrollo de sistemas robustos para la gestión de datos
+        técnicos, reglas de negocio complejas y automatización de procesos.
       </p>
-      <p style="margin-top: 1rem;">
-        <strong>Actualmente lidero:</strong> Sistema Integral de Gestión Hídrica (administración de 800+ pozos activos con reglas de negocio complejas, validaciones críticas y reportes de alto volumen).
+      <p class="cv-emphasis">
+        <strong>Actualmente lidero:</strong> Sistema Integral de Gestión Hídrica
+        (administración de 800+ pozos activos con reglas de negocio complejas,
+        validaciones críticas y reportes de alto volumen).
       </p>
-      <p style="margin-top: 1rem;">
-        <strong>Ayudo a empresas y organizaciones a:</strong>
-      </p>
+      <p><strong>Ayudo a empresas y organizaciones a:</strong></p>
       <div class="cv-highlights">
         <div class="highlight">
           <ul>
@@ -53,112 +82,168 @@ import SkillBlock from '../components/SkillBlock.astro';
       </div>
     </section>
 
-    <section class="cv-section">
-      <h2><i class="fas fa-briefcase"></i> Experiencia Profesional</h2>
+    <section class="cv-section" id="experiencia">
+      <h2><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Experiencia profesional</h2>
       <div class="timeline">
         <div class="timeline-item">
-          <div class="timeline-date">Enero 2024 - Presente</div>
-          <div class="timeline-title">Consultor y Desarrollador Principal</div>
-          <div class="timeline-subtitle">Sistema Integral de Gestión Hídrica · 1 año</div>
+          <div class="timeline-date">Enero 2024 – Presente</div>
+          <div class="timeline-title">Consultor y desarrollador principal</div>
+          <div class="timeline-subtitle">
+            Sistema Integral de Gestión Hídrica · 1 año
+          </div>
           <p>
-            Lidero el desarrollo integral de plataforma especializada en gestión técnica y jurídica de recursos 
-            hídricos. Diseño y desarrollo de arquitectura basada en reglas explícitas de negocio, administrando 
-            800+ pozos activos con validaciones críticas. Implementación de modelado complejo (volumen autorizado/disponible/transferido), 
-            arrendamientos en cascada, transferencias temporales automáticas y generación de reportes de alto volumen 
-            con integridad de datos garantizada.
+            Lidero el desarrollo integral de una plataforma especializada en la
+            gestión técnica y jurídica de recursos hídricos. Diseño y desarrollo
+            de arquitectura basada en reglas explícitas de negocio, administrando
+            800+ pozos activos con validaciones críticas. Implementación de
+            modelado complejo (volumen autorizado, disponible y transferido),
+            arrendamientos en cascada, transferencias temporales automáticas y
+            generación de reportes de alto volumen con integridad de datos
+            garantizada.
           </p>
         </div>
 
         <div class="timeline-item">
-          <div class="timeline-date">feb. 2016 - presente</div>
-          <div class="timeline-title">Consultor Freelance - Desarrollo Backend</div>
+          <div class="timeline-date">Feb. 2016 – Presente</div>
+          <div class="timeline-title">Consultor freelance — Desarrollo backend</div>
           <div class="timeline-subtitle">Autoempleado · 10+ años</div>
           <p>
-            Consultoría especializada en diseño y desarrollo de sistemas backend con Python y Django. 
-            Experiencia en gestión de datos técnicos complejos, reglas de negocio estrictas, optimización 
-            de bases de datos PostgreSQL, y automatización de procesos críticos. Trabajo directo con empresas 
-            mexicanas en desarrollo de plataformas escalables y mantenibles.
+            Consultoría especializada en diseño y desarrollo de sistemas backend
+            con Python y Django. Experiencia en gestión de datos técnicos
+            complejos, reglas de negocio estrictas, optimización de bases de
+            datos PostgreSQL y automatización de procesos críticos. Trabajo
+            directo con empresas mexicanas en el desarrollo de plataformas
+            escalables y mantenibles.
           </p>
         </div>
 
         <div class="timeline-item">
-          <div class="timeline-date">dic. 2017 - ene. 2019</div>
-          <div class="timeline-title">Líder de Proyecto</div>
+          <div class="timeline-date">Dic. 2017 – Ene. 2019</div>
+          <div class="timeline-title">Líder de proyecto</div>
           <div class="timeline-subtitle">Corcab · 1 año 2 meses</div>
           <p>
-            Gestión y desarrollo de aplicaciones web empresariales usando Python 2.7.X con web2py Framework. 
-            Implementación de APIs REST, arquitectura con componentes y microservicios, facturación electrónica 
-            con Timbox, generación de reportes avanzados con PyFPDF. Levantamiento de requerimientos, 
-            documentación UML, y coordinación de equipos técnicos.
+            Gestión y desarrollo de aplicaciones web empresariales usando Python
+            2.7.X con web2py Framework. Implementación de APIs REST,
+            arquitectura con componentes y microservicios, facturación
+            electrónica con Timbox, generación de reportes avanzados con PyFPDF.
+            Levantamiento de requerimientos, documentación UML y coordinación de
+            equipos técnicos.
           </p>
         </div>
       </div>
     </section>
 
-    <section class="cv-section">
-      <h2><i class="fas fa-code"></i> Habilidades Técnicas</h2>
-      
-      
+    <section class="cv-section" id="habilidades">
+      <h2><i class="fa-solid fa-code" aria-hidden="true"></i> Habilidades técnicas</h2>
       <div class="skills-grid">
-        <SkillBlock 
-          title="Desarrollo Backend & Datos" 
-          tags={["Python (2.7 - 3.13)", "Django & REST Framework", "SQL (PostgreSQL / MySQL)", "Diseño de Bases de Datos", "Modelado de Reglas de Negocio"]} 
+        <SkillBlock
+          title="Desarrollo backend & datos"
+          tags={[
+            "Python (2.7 - 3.13)",
+            "Django & REST Framework",
+            "SQL (PostgreSQL / MySQL)",
+            "Diseño de Bases de Datos",
+            "Modelado de Reglas de Negocio",
+          ]}
         />
 
-      <SkillBlock 
-        title="Automatización & Industrial Stack" 
-        tags={["Integración Modbus TCP/RTU", "MQTT", "Node-RED", "Telemetría IIoT", "Monitoreo de Pozos / PLCs"]} 
-      />
+        <SkillBlock
+          title="Automatización & stack industrial"
+          tags={[
+            "Integración Modbus TCP/RTU",
+            "MQTT",
+            "Node-RED",
+            "Telemetría IIoT",
+            "Monitoreo de Pozos / PLCs",
+          ]}
+        />
 
-      <SkillBlock 
-        title="Infraestructura & Deployment" 
-        tags={["Linux (Fedora / Debian / Ubuntu)", "Docker & Compose", "Bash Scripting", "Nginx", "Podman", "SSH & Túneles Seguros"]} 
-      />
+        <SkillBlock
+          title="Infraestructura & deployment"
+          tags={[
+            "Linux (Fedora / Debian / Ubuntu)",
+            "Docker & Compose",
+            "Bash Scripting",
+            "Nginx",
+            "Podman",
+            "SSH & Túneles Seguros",
+          ]}
+        />
 
-      <SkillBlock 
-        title="Herramientas & Entorno" 
-        tags={["Git / GitHub", "VS Code", "PyCharm", "Postman", "WSL2", "CI / CD"]} 
-      />
-        
-      <SkillBlock 
-        title="Frontend & UI" 
-        tags={["HTMX", "JavaScript (ES6+)", "Bootstrap", "Tailwind CSS", "Astro"]} 
-      />
+        <SkillBlock
+          title="Herramientas & entorno"
+          tags={["Git / GitHub", "VS Code", "PyCharm", "Postman", "WSL2", "CI / CD"]}
+        />
 
+        <SkillBlock
+          title="Frontend & UI"
+          tags={["HTMX", "JavaScript (ES6+)", "Bootstrap", "Tailwind CSS", "Astro"]}
+        />
       </div>
     </section>
 
-    <section class="cv-section">
-      <h2><i class="fas fa-project-diagram"></i> Proyectos Destacados</h2>
-      
+    <section class="cv-section" id="proyectos">
+      <h2><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> Proyectos destacados</h2>
+
       <div class="featured-project">
         <div class="project-header-featured">
           <h3>Sistema Integral de Gestión Hídrica</h3>
           <span class="project-date">Enero 2024 – Presente</span>
         </div>
         <p class="project-role">
-          <strong>Consultor y Desarrollador Principal</strong>
-        </p>
-        
-        <p class="project-description">
-          Lidero el desarrollo de una plataforma especializada en la gestión técnica y jurídica de recursos 
-          hídricos, optimizando la administración de más de 800 pozos activos y sus operaciones asociadas.
+          <strong>Consultor y desarrollador principal</strong>
         </p>
 
-        <h4 class="impact-title"><i class="fas fa-star"></i> Impacto y Resultados</h4>
+        <p class="project-description">
+          Lidero el desarrollo de una plataforma especializada en la gestión
+          técnica y jurídica de recursos hídricos, optimizando la administración
+          de más de 800 pozos activos y sus operaciones asociadas.
+        </p>
+
+        <h4 class="impact-title">
+          <i class="fa-solid fa-star" aria-hidden="true"></i> Impacto y resultados
+        </h4>
         <ul class="impact-list">
-          <li><strong>Digitalización completa</strong> de procesos previamente manuales, reduciendo errores operativos y administrativos</li>
-          <li><strong>Modelado de reglas de negocio complejas</strong> para control de volumen autorizado, disponible y transferido, evitando inconsistencias críticas</li>
-          <li><strong>Arrendamientos en cascada</strong> con trazabilidad estructurada y validaciones automáticas</li>
-          <li><strong>Sistema de transferencias temporales</strong> que previene saldos negativos o sobreasignaciones</li>
-          <li><strong>Optimización de consultas SQL</strong> para generación rápida de reportes técnicos y jurídicos de alto volumen</li>
-          <li><strong>Automatización de reportes Excel</strong> con cálculos consolidados, agrupaciones y validaciones integradas</li>
-          <li><strong>Mejora en integridad de datos</strong> crítica para toma de decisiones administrativas y cumplimiento normativo</li>
+          <li>
+            <strong>Digitalización completa</strong> de procesos previamente
+            manuales, reduciendo errores operativos y administrativos.
+          </li>
+          <li>
+            <strong>Modelado de reglas de negocio complejas</strong> para control
+            de volumen autorizado, disponible y transferido, evitando
+            inconsistencias críticas.
+          </li>
+          <li>
+            <strong>Arrendamientos en cascada</strong> con trazabilidad
+            estructurada y validaciones automáticas.
+          </li>
+          <li>
+            <strong>Sistema de transferencias temporales</strong> que previene
+            saldos negativos o sobreasignaciones.
+          </li>
+          <li>
+            <strong>Optimización de consultas SQL</strong> para generación rápida
+            de reportes técnicos y jurídicos de alto volumen.
+          </li>
+          <li>
+            <strong>Automatización de reportes Excel</strong> con cálculos
+            consolidados, agrupaciones y validaciones integradas.
+          </li>
+          <li>
+            <strong>Mejora en integridad de datos</strong> crítica para toma de
+            decisiones administrativas y cumplimiento normativo.
+          </li>
         </ul>
 
-        <h4 class="technical-title"><i class="fas fa-cog"></i> Enfoque Técnico</h4>
-        <p>Arquitectura basada en reglas explícitas de negocio, priorizando integridad de datos, escalabilidad, claridad en el dominio y trazabilidad histórica de operaciones.</p>
-        
+        <h4 class="technical-title">
+          <i class="fa-solid fa-gear" aria-hidden="true"></i> Enfoque técnico
+        </h4>
+        <p>
+          Arquitectura basada en reglas explícitas de negocio, priorizando
+          integridad de datos, escalabilidad, claridad en el dominio y
+          trazabilidad histórica de operaciones.
+        </p>
+
         <div class="tech-stack-featured">
           <span>Python</span>
           <span>Django</span>
@@ -171,68 +256,73 @@ import SkillBlock from '../components/SkillBlock.astro';
       </div>
     </section>
 
-    <section class="cv-section">
-      <h2><i class="fas fa-briefcase"></i> Servicios de Consultoría</h2>
-      
+    <section class="cv-section" id="servicios">
+      <h2><i class="fa-solid fa-handshake" aria-hidden="true"></i> Servicios de consultoría</h2>
+
       <div class="services-list">
         <div class="service-item">
-          <h3>Desarrollo Backend a Medida</h3>
+          <h3>Desarrollo backend a medida</h3>
           <p>
-            Sistemas en Django y Django REST Framework • APIs seguras con autenticación JWT • 
-            Trabajar bajo principios de código mantenible y modular • Modelado de relaciones complejas
+            Sistemas en Django y Django REST Framework · APIs seguras con
+            autenticación JWT · Código mantenible y modular · Modelado de
+            relaciones complejas.
           </p>
         </div>
 
         <div class="service-item">
-          <h3>Optimización y Refactorización</h3>
+          <h3>Optimización y refactorización</h3>
           <p>
-            Refactorización de proyectos Django • Optimización de consultas SQL y ORM • 
-            Corrección de inconsistencias lógicas • Mejora de rendimiento en reportes pesados
+            Refactorización de proyectos Django · Optimización de consultas SQL y
+            ORM · Corrección de inconsistencias lógicas · Mejora de rendimiento
+            en reportes pesados.
           </p>
         </div>
 
         <div class="service-item">
-          <h3>Sistemas de Gestión Técnica</h3>
+          <h3>Sistemas de gestión técnica</h3>
           <p>
-            Gestión de más de 800 entidades técnicas activas • Control de volúmenes autorizados 
-            disponibles y transferidos • Arrendamientos y subarrendamientos en cascada • 
-            Transferencias temporales con validación automática
+            Gestión de más de 800 entidades técnicas activas · Control de
+            volúmenes autorizados, disponibles y transferidos · Arrendamientos y
+            subarrendamientos en cascada · Transferencias temporales con
+            validación automática.
           </p>
         </div>
 
         <div class="service-item">
-          <h3>Automatización y Reportes Avanzados</h3>
+          <h3>Automatización y reportes avanzados</h3>
           <p>
-            Generación avanzada de reportes en Excel (openpyxl) • Procesamiento de datos con pandas • 
-            Agrupaciones totales y validaciones automáticas • Tareas programadas con django-crontab
+            Generación avanzada de reportes en Excel (openpyxl) · Procesamiento
+            de datos con pandas · Agrupaciones, totales y validaciones
+            automáticas · Tareas programadas con django-crontab.
           </p>
         </div>
 
         <div class="service-item">
-          <h3>Integración con Hardware y Sistemas Externos</h3>
+          <h3>Integración con hardware y sistemas externos</h3>
           <p>
-            Integración Modbus • Conexión entre sistemas físicos y plataformas web • 
-            Sincronización de datos en tiempo real
+            Integración Modbus · Conexión entre sistemas físicos y plataformas
+            web · Sincronización de datos en tiempo real.
           </p>
         </div>
 
         <div class="service-item">
-          <h3>Asesoría Arquitectónica</h3>
+          <h3>Asesoría arquitectónica</h3>
           <p>
-            Diseño de arquitectura escalable • Análisis profundo del dominio del negocio • 
-            Estrategia a largo plazo • Evaluación de alternativas técnicas
+            Diseño de arquitectura escalable · Análisis profundo del dominio del
+            negocio · Estrategia a largo plazo · Evaluación de alternativas
+            técnicas.
           </p>
         </div>
       </div>
     </section>
 
-    <section class="cv-section">
-      <h2><i class="fas fa-certificate"></i> Certificaciones y Educación</h2>
+    <section class="cv-section" id="certificaciones">
+      <h2><i class="fa-solid fa-certificate" aria-hidden="true"></i> Certificaciones y educación</h2>
       <div class="certifications-list">
         <div class="cert-item">
           <h3>Ethical Hacking</h3>
           <p class="cert-issuer">mKit IT & Security Solutions</p>
-          <p>Curso Gratuito de Ethical Hacking. Certificación de asistencia completa.</p>
+          <p>Curso gratuito de Ethical Hacking. Certificación de asistencia completa.</p>
         </div>
 
         <div class="cert-item">
@@ -242,425 +332,384 @@ import SkillBlock from '../components/SkillBlock.astro';
         </div>
 
         <div class="cert-item">
-          <h3>Educación Continua - SharePoint Office 365</h3>
+          <h3>Educación continua — SharePoint Office 365</h3>
           <p class="cert-issuer">Develop Talent & Technology</p>
-          <p>Agradecimiento de educación continua por el curso SharePoint Office 365 como instructor auxiliar.</p>
+          <p>
+            Agradecimiento de educación continua por el curso SharePoint Office
+            365 como instructor auxiliar.
+          </p>
         </div>
 
         <div class="cert-item">
-          <h3>Colaboración - Curso web2py</h3>
+          <h3>Colaboración — Curso web2py</h3>
           <p class="cert-issuer">Latinux & Semnix</p>
-          <p>Colaboración en desarrollo del curso web2py para Latinux y Semnix.</p>
+          <p>Colaboración en el desarrollo del curso web2py para Latinux y Semnix.</p>
         </div>
 
         <div class="cert-item">
-          <h3>Investigación Doctoral</h3>
-          <p class="cert-issuer">Colaboración Académica</p>
+          <h3>Investigación doctoral</h3>
+          <p class="cert-issuer">Colaboración académica</p>
           <p>Colaboración en investigación doctoral sobre integridad de datos.</p>
         </div>
       </div>
     </section>
 
     <section class="cv-section download-section">
-      <button onclick="generatePDF()" class="download-btn">
-        <i class="fas fa-download"></i> Descargar CV en PDF
+      <div>
+        <h2><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Lleva mi CV contigo</h2>
+        <p>Descarga una versión en PDF lista para compartir o imprimir.</p>
+      </div>
+      <button onclick="generatePDF()" class="btn btn-primary" type="button">
+        <i class="fa-solid fa-download" aria-hidden="true"></i>
+        Descargar CV en PDF
       </button>
     </section>
   </div>
 </Layout>
 
 <style>
-
-  
-  .cv-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 2rem 0;
+  .cv-page {
+    width: min(1000px, 100% - 3rem);
+    margin-inline: auto;
+    padding: 2.5rem 0 5rem;
   }
 
+  /* Header */
   .cv-header {
-    text-align: center;
-    margin-bottom: 3rem;
-    padding: 3rem 2rem;
-    background: linear-gradient(135deg, rgba(5, 150, 105, 0.1), rgba(168, 85, 247, 0.1));
-    border-radius: 12px;
-    border: 1px solid rgba(168, 85, 247, 0.2);
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 1.25rem;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background:
+      radial-gradient(600px 260px at 85% 0%, rgba(var(--accent-2-rgb), 0.12), transparent 65%),
+      radial-gradient(500px 260px at 0% 100%, rgba(var(--accent-rgb), 0.08), transparent 65%),
+      var(--card-solid);
   }
 
-  .cv-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-primary);
+  .cv-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(148, 163, 184, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(ellipse 80% 100% at 50% 0%, #000, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 100% at 50% 0%, #000, transparent 80%);
+    pointer-events: none;
   }
 
-  .cv-subtitle {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-    margin-bottom: 0.5rem;
+  .cv-identity,
+  .cv-actions {
+    position: relative;
+    z-index: 1;
+  }
+
+  .cv-identity {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+  }
+
+  .cv-monogram {
+    display: grid;
+    place-items: center;
+    flex: 0 0 76px;
+    width: 76px;
+    height: 76px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #041016;
+    font-family: var(--font-mono);
+    font-size: 1.35rem;
+    font-weight: 700;
+    box-shadow: 0 18px 40px -18px rgba(var(--accent-rgb), 0.8);
+  }
+
+  .cv-identity .eyebrow {
+    margin-bottom: 0.35rem;
+  }
+
+  .cv-identity h1 {
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
+    line-height: 1;
+  }
+
+  .cv-role {
+    margin-top: 0.5rem;
+    color: var(--text-soft);
+    font-size: 0.95rem;
   }
 
   .cv-location {
-    font-size: 1rem;
-    color: #06b6d4;
-    margin-bottom: 1.5rem;
-    font-weight: 500;
-  }
-
-  .cv-contacts {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-
-  .cv-contacts a {
-    color: var(--accent-tertiary);
-    text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-weight: 500;
-    transition: var(--transition);
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
   }
 
-  .cv-contacts a:hover {
-    color: var(--accent-secondary);
-    transform: translateY(-2px);
+  .cv-location i {
+    color: var(--accent);
   }
 
+  .cv-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.4rem;
+    min-width: 148px;
+    justify-content: flex-end;
+  }
+
+  .cv-actions .btn {
+    justify-content: flex-start;
+  }
+
+  /* Sections */
   .cv-section {
-    margin-bottom: 3rem;
-    padding: 2rem;
-    background: rgba(30, 41, 59, 0.5);
-    border-radius: 12px;
-    border-left: 4px solid var(--accent-tertiary);
+    margin-bottom: 1.25rem;
+    padding: clamp(1.35rem, 3vw, 2rem);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--card);
   }
 
   .cv-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    color: var(--text-primary);
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.7rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.3rem;
   }
 
   .cv-section h2 i {
-    color: var(--accent-tertiary);
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(var(--accent-rgb), 0.2);
+    border-radius: 9px;
+    background: rgba(var(--accent-rgb), 0.07);
+    color: var(--accent);
+    font-size: 0.78rem;
   }
 
   .cv-section p {
-    color: var(--text-secondary);
-    line-height: 1.8;
-    margin-bottom: 1rem;
+    color: var(--text-soft);
+    font-size: 0.94rem;
+    line-height: 1.75;
+    margin-bottom: 0.8rem;
   }
 
+  .cv-section p:last-child {
+    margin-bottom: 0;
+  }
+
+  .cv-emphasis {
+    padding: 0.9rem 1rem;
+    border: 1px solid rgba(var(--accent-rgb), 0.14);
+    border-left: 2px solid var(--accent);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    background: rgba(var(--accent-rgb), 0.045);
+  }
+
+  .cv-emphasis strong {
+    color: var(--text);
+  }
+
+  /* Highlights */
   .cv-highlights {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 1.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
   }
 
   .highlight {
-    background: rgba(6, 182, 212, 0.08);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 3px solid var(--accent-tertiary);
-  }
-
-  .highlight h3 {
-    color: var(--accent-tertiary);
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.02);
   }
 
   .highlight ul {
     list-style: none;
-    padding-left: 0;
   }
 
   .highlight li {
-    color: var(--text-secondary);
-    padding: 0.5rem 0;
-    padding-left: 1.5rem;
     position: relative;
+    padding: 0.35rem 0 0.35rem 1.2rem;
+    color: var(--text-soft);
+    font-size: 0.9rem;
+    line-height: 1.55;
   }
 
   .highlight li::before {
     content: "▸";
     position: absolute;
     left: 0;
-    color: var(--accent-tertiary);
+    color: var(--accent);
   }
 
   /* Timeline */
   .timeline {
     position: relative;
-    padding-left: 2rem;
+    padding-left: 1.75rem;
   }
 
   .timeline::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 5px;
-    top: 0;
-    height: 100%;
-    width: 2px;
-    background: var(--accent-tertiary);
+    top: 0.35rem;
+    bottom: 0.35rem;
+    width: 1px;
+    background: linear-gradient(var(--accent), var(--line));
   }
 
   .timeline-item {
     position: relative;
-    padding-bottom: 2rem;
-    margin-bottom: 1rem;
+    padding-bottom: 1.75rem;
+  }
+
+  .timeline-item:last-child {
+    padding-bottom: 0;
   }
 
   .timeline-item::before {
-    content: '';
+    content: "";
     position: absolute;
-    left: -2.5rem;
-    top: 0;
-    width: 12px;
-    height: 12px;
+    left: -1.75rem;
+    top: 0.35rem;
+    width: 11px;
+    height: 11px;
     border-radius: 50%;
-    background: var(--accent-tertiary);
-    border: 2px solid var(--bg-primary);
+    background: var(--bg);
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.1);
   }
 
   .timeline-date {
-    font-size: 0.9rem;
+    margin-bottom: 0.15rem;
     color: var(--text-muted);
-    margin-bottom: 0.25rem;
-    font-weight: 600;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
   }
 
   .timeline-title {
-    font-size: 1.2rem;
+    font-family: var(--font-display);
+    font-size: 1.08rem;
     font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 0.25rem;
+    color: var(--text);
   }
 
   .timeline-subtitle {
-    font-size: 1rem;
-    color: var(--accent-tertiary);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+    font-size: 0.84rem;
     font-weight: 500;
   }
 
   .timeline-item p {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-  }
-
-  /* Certifications */
-  .certifications-list {
-    display: grid;
-    gap: 1.5rem;
-  }
-
-  .cert-item {
-    background: rgba(168, 85, 247, 0.08);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 3px solid var(--accent-secondary);
-    border: 1px solid rgba(168, 85, 247, 0.2);
-    border-left: 3px solid var(--accent-secondary);
-  }
-
-  .cert-item h3 {
-    color: var(--text-primary);
-    margin-bottom: 0.25rem;
-    font-size: 1.1rem;
-  }
-
-  .cert-issuer {
-    color: var(--accent-secondary);
-    font-weight: 600;
+    margin: 0;
     font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+    line-height: 1.7;
   }
 
-  .cert-item p {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  /* Skills Grid */
+  /* Skills */
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
   }
 
-  .skill-block {
-    background: rgba(6, 182, 212, 0.08);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid rgba(6, 182, 212, 0.2);
+  .skills-grid :global(.skill-block:last-child) {
+    grid-column: 1 / -1;
   }
 
-  .skill-block h3 {
-    color: var(--accent-tertiary);
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
-  }
-
-  .skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  .skill-tags span {
-    background: rgba(6, 182, 212, 0.15);
-    color: var(--text-secondary);
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
-    font-size: 0.85rem;
-    border: 1px solid rgba(6, 182, 212, 0.3);
-    transition: var(--transition);
-  }
-
-  .skill-tags span:hover {
-    background: rgba(6, 182, 212, 0.3);
-    color: var(--accent-tertiary);
-    border-color: var(--accent-tertiary);
-  }
-
-  /* Projects List */
-  .projects-list {
-    display: grid;
-    gap: 1.5rem;
-  }
-
-  .project-item {
-    background: rgba(168, 85, 247, 0.08);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 3px solid var(--accent-secondary);
-    border: 1px solid rgba(168, 85, 247, 0.2);
-    border-left: 3px solid var(--accent-secondary);
-  }
-
-  .project-item h3 {
-    color: var(--text-primary);
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-  }
-
-  .project-item p {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  /* Services List */
-  .services-list {
-    display: grid;
-    gap: 1.5rem;
-  }
-
-  .service-item {
-    background: rgba(6, 182, 212, 0.08);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 3px solid #06b6d4;
-    border: 1px solid rgba(6, 182, 212, 0.2);
-    border-left: 3px solid #06b6d4;
-  }
-
-  .service-item h3 {
-    color: var(--text-primary);
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-  }
-
-  .service-item p {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  /* Featured Project */
+  /* Featured project */
   .featured-project {
-    background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(168, 85, 247, 0.15));
-    border: 2px solid rgba(6, 182, 212, 0.3);
-    padding: 2.5rem;
-    border-radius: 12px;
-    margin-bottom: 2rem;
+    padding: clamp(1.15rem, 3vw, 1.75rem);
+    border: 1px solid rgba(var(--accent-rgb), 0.16);
+    border-radius: var(--radius);
+    background:
+      linear-gradient(135deg, rgba(var(--accent-rgb), 0.05), rgba(var(--accent-2-rgb), 0.05)),
+      rgba(9, 13, 20, 0.6);
   }
 
   .project-header-featured {
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 1rem;
-    gap: 2rem;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.35rem;
   }
 
   .project-header-featured h3 {
-    color: #06b6d4;
-    font-size: 1.4rem;
-    margin: 0;
+    font-size: 1.2rem;
   }
 
   .project-date {
-    background: rgba(6, 182, 212, 0.2);
-    color: #06b6d4;
-    padding: 0.4rem 1rem;
-    border-radius: 50px;
-    font-size: 0.85rem;
-    font-weight: 600;
+    flex: 0 0 auto;
+    padding: 0.3rem 0.65rem;
+    border: 1px solid rgba(var(--accent-rgb), 0.22);
+    border-radius: 999px;
+    background: rgba(var(--accent-rgb), 0.07);
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
     white-space: nowrap;
   }
 
   .project-role {
-    color: #a78bfa;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    font-size: 0.95rem;
+    margin-bottom: 0.9rem !important;
+    color: var(--accent-2) !important;
+    font-size: 0.82rem !important;
   }
 
   .project-description {
-    color: var(--text-secondary);
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-    font-size: 1rem;
+    font-size: 0.92rem !important;
   }
 
-  .impact-title, .technical-title {
-    color: #e2e8f0;
-    font-size: 1.1rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
+  .impact-title,
+  .technical-title {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    margin: 1.4rem 0 0.75rem;
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
   }
 
-  .impact-title i, .technical-title i {
-    color: #06b6d4;
+  .impact-title i,
+  .technical-title i {
+    color: var(--accent);
+    font-size: 0.8rem;
   }
 
   .impact-list {
-    list-style: none;
-    padding: 0;
     display: grid;
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
+    gap: 0.55rem;
+    list-style: none;
   }
 
   .impact-list li {
-    color: var(--text-secondary);
-    padding-left: 1.5rem;
     position: relative;
+    padding-left: 1.2rem;
+    color: var(--text-soft);
+    font-size: 0.88rem;
     line-height: 1.6;
   }
 
@@ -668,169 +717,412 @@ import SkillBlock from '../components/SkillBlock.astro';
     content: "✓";
     position: absolute;
     left: 0;
-    color: #06b6d4;
-    font-weight: bold;
+    color: var(--accent);
+    font-size: 0.72rem;
+    font-weight: 700;
+  }
+
+  .impact-list strong {
+    color: var(--text);
   }
 
   .tech-stack-featured {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 1.5rem;
+    gap: 0.4rem;
+    margin-top: 1.25rem;
   }
 
   .tech-stack-featured span {
-    background: rgba(6, 182, 212, 0.25);
-    color: #cbd5e1;
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
+    padding: 0.32rem 0.7rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-soft);
+    font-size: 0.76rem;
+  }
+
+  /* Services */
+  .services-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+  }
+
+  .service-item {
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .service-item h3 {
+    margin-bottom: 0.4rem;
+    font-size: 0.94rem;
+  }
+
+  .service-item p {
     font-size: 0.85rem;
-    border: 1px solid rgba(6, 182, 212, 0.4);
+    line-height: 1.65;
+    margin: 0;
   }
 
-  /* Download Section */
+  /* Certifications */
+  .certifications-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+  }
+
+  .cert-item {
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--line);
+    border-left: 2px solid var(--accent-2);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .cert-item h3 {
+    margin-bottom: 0.15rem;
+    font-size: 0.92rem;
+  }
+
+  .cert-issuer {
+    margin-bottom: 0.35rem !important;
+    color: var(--accent-2) !important;
+    font-family: var(--font-mono);
+    font-size: 0.68rem !important;
+  }
+
+  .cert-item p:last-child {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  /* Download */
   .download-section {
-    text-align: center;
-    padding: 3rem 2rem;
-    background: linear-gradient(135deg, rgba(5, 150, 105, 0.15), rgba(168, 85, 247, 0.15));
-    border: 2px dashed rgba(168, 85, 247, 0.3);
-  }
-
-  .download-btn {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 0.75rem;
-    background: linear-gradient(135deg, var(--accent-tertiary), var(--accent-secondary));
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: var(--transition);
+    justify-content: space-between;
+    gap: 2rem;
+    border-color: rgba(var(--accent-rgb), 0.2);
+    background:
+      linear-gradient(135deg, rgba(var(--accent-rgb), 0.07), rgba(var(--accent-2-rgb), 0.07)),
+      var(--card);
   }
 
-  .download-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(6, 182, 212, 0.3);
+  .download-section h2 {
+    margin-bottom: 0.4rem;
   }
 
-  @media (max-width: 768px) {
-    .cv-container {
-      padding: 1rem;
+  .download-section p {
+    margin: 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 760px) {
+    .cv-page {
+      padding-top: 1.5rem;
     }
 
     .cv-header {
-      padding: 2rem 1rem;
-    }
-
-    .cv-header h1 {
-      font-size: 1.8rem;
-    }
-
-    .cv-contacts {
       flex-direction: column;
+    }
+
+    .cv-actions {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    .cv-identity {
+      align-items: flex-start;
+    }
+
+    .cv-highlights,
+    .skills-grid,
+    .services-list,
+    .certifications-list {
+      grid-template-columns: 1fr;
+    }
+
+    .project-header-featured {
+      flex-direction: column;
+    }
+
+    .download-section {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .cv-monogram {
+      flex-basis: 58px;
+      width: 58px;
+      height: 58px;
+      font-size: 1rem;
+      border-radius: 15px;
+    }
+
+    .cv-identity {
       gap: 1rem;
     }
 
-    .cv-section {
-      padding: 1.5rem;
+    .cv-actions {
+      width: 100%;
     }
 
-    .skills-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .cv-highlights {
-      grid-template-columns: 1fr;
+    .cv-actions .btn {
+      flex: 1;
     }
   }
 
-@media print {
-    #download-pdf, .download-section, .nav-buttons {
+  /* ---------- Print ---------- */
+  @media print {
+    .cv-actions,
+    .download-section {
       display: none !important;
     }
-    .cv-container {
-      margin: 0;
+
+    .cv-page {
+      max-width: none;
       padding: 0;
     }
-    body {
-      background: white;
-      color: black;
-    }
+
+    .cv-header,
     .cv-section {
       break-inside: avoid;
-      background: transparent;
-      border-color: #eee;
+      border-color: #d8dee9;
+      background: #fff !important;
+      box-shadow: none;
+    }
+
+    .cv-header {
+      margin-bottom: 1rem;
+    }
+
+    .cv-header::after,
+    .cv-monogram {
+      display: none;
+    }
+
+    .cv-section {
+      margin-bottom: 0.75rem;
+      padding: 1rem;
+    }
+
+    .cv-section h2,
+    .cv-section h3,
+    .cv-section h4,
+    .cv-section p,
+    .cv-section li,
+    .cv-section span,
+    .cv-section strong {
+      color: #0f172a !important;
+    }
+
+    .timeline-subtitle,
+    .project-role,
+    .cert-issuer,
+    .cv-location {
+      color: #0e7490 !important;
+    }
+
+    .highlight,
+    .service-item,
+    .cert-item,
+    .featured-project,
+    .cv-emphasis {
+      break-inside: avoid;
+      background: #f8fafc !important;
+      border-color: #d8dee9 !important;
     }
   }
-@media print {
-    #download-pdf, .download-section {
-      display: none !important;
-    }
-    
-    .cv-container {
-  background: white;
-  color: black;
-}
 
-    /* Ajuste para que las secciones se vean bien en papel/PDF */
-    .cv-section {
-      background: #f8fafc !important;
-      border-left: 4px solid #06b6d4 !important;
-      color: #1a1a1a !important;
-      break-inside: avoid;
-      margin-bottom: 1.5rem;
-    }
+  /* ---------- PDF export (light, print-like) ---------- */
+  :global(.pdf-overlay) {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    background: rgba(6, 8, 13, 0.72);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
 
-    h1, h2, h3, p, li, span, .timeline-title, .timeline-subtitle {
-      color: #000000 !important;
-    }
+  :global(.pdf-overlay-card) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.9rem 1.2rem;
+    border: 1px solid rgba(var(--accent-rgb), 0.3);
+    border-radius: 12px;
+    background: #0d121c;
+    color: #edf2f8;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: var(--shadow);
+  }
 
-    .highlight, .cert-item, .service-item, .skill-block {
-      background: #f1f5f9 !important;
-      border: 1px solid #ddd !important;
-      color: #000 !important;
-    }
+  :global(.pdf-overlay-card i) {
+    color: var(--accent);
+  }
+
+  :global(.pdf-holder) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 733px;
+    background: #fff;
+    z-index: 999;
+  }
+
+  :global(.pdf-mode) {
+    width: 733px !important;
+    max-width: 733px !important;
+    margin: 0 auto !important;
+    padding: 24px !important;
+    background: #fff !important;
+    color: #0f172a !important;
+    font-family: var(--font-sans);
+  }
+
+  :global(.pdf-mode .cv-header),
+  :global(.pdf-mode .cv-section) {
+    border: 1px solid #dbe2ec !important;
+    background: #fff !important;
+    box-shadow: none !important;
+  }
+
+  :global(.pdf-mode .cv-header) {
+    padding: 22px !important;
+  }
+
+  :global(.pdf-mode .cv-header::after),
+  :global(.pdf-mode .cv-monogram) {
+    display: none !important;
+  }
+
+  :global(.pdf-mode .cv-section) {
+    padding: 18px !important;
+    margin-bottom: 12px !important;
+  }
+
+  :global(.pdf-mode h1),
+  :global(.pdf-mode h2),
+  :global(.pdf-mode h3),
+  :global(.pdf-mode h4),
+  :global(.pdf-mode p),
+  :global(.pdf-mode li),
+  :global(.pdf-mode span),
+  :global(.pdf-mode strong) {
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+  }
+
+  :global(.pdf-mode .eyebrow),
+  :global(.pdf-mode .timeline-subtitle),
+  :global(.pdf-mode .project-role),
+  :global(.pdf-mode .cert-issuer),
+  :global(.pdf-mode .cv-location) {
+    color: #0e7490 !important;
+    -webkit-text-fill-color: #0e7490 !important;
+  }
+
+  :global(.pdf-mode .highlight),
+  :global(.pdf-mode .service-item),
+  :global(.pdf-mode .cert-item),
+  :global(.pdf-mode .featured-project),
+  :global(.pdf-mode .cv-emphasis),
+  :global(.pdf-mode .skill-block) {
+    background: #f8fafc !important;
+    border-color: #dbe2ec !important;
+  }
+
+  :global(.pdf-mode .cv-section h2 i) {
+    color: #0e7490 !important;
+    border-color: #dbe2ec !important;
+    background: #f1f5f9 !important;
+  }
+
+  :global(.pdf-mode .tech-stack-featured span) {
+    background: #f1f5f9 !important;
+    border-color: #dbe2ec !important;
+    color: #334155 !important;
+  }
+
+  :global(.pdf-mode .download-section),
+  :global(.pdf-mode .cv-actions) {
+    display: none !important;
   }
 </style>
 
 <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
 <script is:inline>
-function generatePDF() {
-  const element = document.querySelector('.cv-container');
+  function generatePDF() {
+    const original = document.querySelector(".cv-page");
+    if (!original || typeof html2pdf === "undefined") return;
 
-  // 🔧 Forzar colores sólidos y fondos para que se vean en PDF
-  element.querySelectorAll('*').forEach(el => {
-    const style = window.getComputedStyle(el);
-    el.style.color = style.color;
-    // Si el fondo es transparente, reemplazar por blanco
-    if (style.backgroundColor === 'rgba(0, 0, 0, 0)' || style.backgroundColor === 'transparent') {
-      el.style.backgroundColor = '#ffffff';
-    } else {
-      el.style.backgroundColor = style.backgroundColor;
-    }
-  });
+    const clone = original.cloneNode(true);
+    clone.classList.add("pdf-mode");
 
-  const opt = {
-    margin: [10, 10, 10, 10],
-    filename: 'CV-Milton-Medina.pdf',
-    image: { type: 'jpeg', quality: 1 },
-    html2canvas: { 
-      scale: 2,
-      useCORS: true,
-      logging: false,
-      letterRendering: true,
-      backgroundColor: '#ffffff' // asegura que el fondo del PDF sea blanco
-    },
-    jsPDF: { 
-      unit: 'mm',
-      format: 'a4',
-      orientation: 'portrait'
-    }
-  };
+    const holder = document.createElement("div");
+    holder.className = "pdf-holder";
+    holder.appendChild(clone);
 
-  html2pdf().set(opt).from(element).save();
-}
+    const overlay = document.createElement("div");
+    overlay.className = "pdf-overlay";
+    overlay.innerHTML =
+      '<div class="pdf-overlay-card"><i class="fa-solid fa-circle-notch fa-spin"></i><span>Generando PDF…</span></div>';
+
+    document.body.appendChild(holder);
+    document.body.appendChild(overlay);
+
+    const root = document.documentElement;
+    const previousScrollBehavior = root.style.scrollBehavior;
+    const previousScroll = window.scrollY;
+
+    root.style.scrollBehavior = "auto";
+    window.scrollTo(0, 0);
+
+    const cleanup = () => {
+      holder.remove();
+      overlay.remove();
+      window.scrollTo(0, previousScroll);
+      root.style.scrollBehavior = previousScrollBehavior;
+    };
+
+    const options = {
+      margin: [8, 8, 8, 8],
+      filename: "CV-Milton-Medina.pdf",
+      image: { type: "jpeg", quality: 0.98 },
+      html2canvas: {
+        scale: 2,
+        useCORS: true,
+        logging: false,
+        letterRendering: true,
+        backgroundColor: "#ffffff",
+      },
+      jsPDF: {
+        unit: "mm",
+        format: "a4",
+        orientation: "portrait",
+      },
+    };
+
+    requestAnimationFrame(() => {
+      html2pdf()
+        .set(options)
+        .from(clone)
+        .save()
+        .then(cleanup)
+        .catch((error) => {
+          console.error("No se pudo generar el PDF", error);
+          cleanup();
+        });
+    });
+  }
 </script>

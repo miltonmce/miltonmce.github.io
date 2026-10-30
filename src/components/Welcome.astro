@@ -1,373 +1,619 @@
 ---
-
+// src/components/Welcome.astro
 ---
 
 <section class="hero">
-  <div class="hero-wrapper">
-    <div class="hero-badge">
-      <i class="fas fa-briefcase"></i> Consultor Técnico Independiente
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+
+  <div class="container hero-inner">
+    <div class="hero-copy" data-reveal>
+      <span class="availability">
+        <span class="availability-dot" aria-hidden="true"></span>
+        Disponible para proyectos · 2026
+      </span>
+
+      <h1 class="hero-title">
+        Transformo procesos manuales en
+        <span class="text-gradient">sistemas que escalan.</span>
+      </h1>
+
+      <p class="hero-lead">
+        Backend, arquitectura y automatización para operaciones críticas.
+      </p>
+
+      <p class="hero-description">
+        Especialista en Python, Django y diseño de sistemas. Ayudo a empresas a
+        modelar reglas de negocio complejas, digitalizar procesos técnicos y
+        convertir datos dispersos en información confiable.
+      </p>
+
+      <div class="hero-actions">
+        <a
+          href="mailto:miltonmce@gmail.com?subject=Quiero%20hablar%20sobre%20un%20proyecto"
+          class="btn btn-primary"
+        >
+          Hablemos de tu proyecto
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+        <a href="/cv" class="btn btn-ghost">
+          <i class="fa-regular fa-file-lines" aria-hidden="true"></i>
+          Ver CV completo
+        </a>
+      </div>
+
+      <ul class="hero-proof">
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i> 10+ años de experiencia</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i> 800+ pozos en producción</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i> Trabajo 100% remoto</li>
+      </ul>
     </div>
 
-    <h1 class="hero-title">
-      Transformo Procesos Manuales en Sistemas Robustos
-    </h1>
+    <div class="hero-aside" data-reveal style="--reveal-delay: 120ms">
+      <div class="terminal">
+        <div class="terminal-bar">
+          <span class="terminal-dots" aria-hidden="true">
+            <i></i><i></i><i></i>
+          </span>
+          <span class="terminal-title">milton@portfolio — zsh</span>
+        </div>
 
-    <p class="hero-subtitle">
-      Diseño y desarrollo de sistemas backend que resuelven problemas reales de
-      negocio
-    </p>
+        <div class="terminal-body">
+          <p><span class="prompt">$</span> whoami</p>
+          <p class="output">Milton Medina · Backend Engineer</p>
 
-    <p class="hero-description">
-      Especializado en Python, Django y arquitectura de sistemas. Ayudo a
-      empresas a estructurar datos técnicos complejos, automatizar procesos
-      críticos y escalar sus operaciones sin perder consistencia.
-    </p>
+          <p><span class="prompt">$</span> cat stack.txt</p>
+          <p class="output">Python · Django · PostgreSQL · HTMX</p>
 
-    <div class="highlight-points">
-      <div class="point">
-        <i class="fas fa-check-circle"></i>
-        <span>No solo código, sino soluciones de negocio</span>
+          <p><span class="prompt">$</span> current_focus</p>
+          <p class="output">Gestión técnica · IIoT · Datos críticos</p>
+
+          <p><span class="prompt">$</span> status</p>
+          <p class="output status">
+            <span class="status-dot" aria-hidden="true"></span>
+            Disponible para nuevos retos
+          </p>
+        </div>
+
+        <div class="terminal-stats">
+          <div>
+            <strong>10+</strong>
+            <span>años</span>
+          </div>
+          <div>
+            <strong>800+</strong>
+            <span>pozos</span>
+          </div>
+          <div>
+            <strong>100%</strong>
+            <span>remoto</span>
+          </div>
+        </div>
       </div>
 
-      <div class="point">
-        <i class="fas fa-check-circle"></i>
-        <span>Arquitectura limpia y mantenible a largo plazo</span>
+      <div class="floating-chip floating-chip--top" aria-hidden="true">
+        <i class="fa-brands fa-python"></i> Python
       </div>
-
-      <div class="point">
-        <i class="fas fa-check-circle"></i>
-        <span>Enfoque en reglas de negocio y validaciones críticas</span>
+      <div class="floating-chip floating-chip--bottom" aria-hidden="true">
+        <i class="fa-solid fa-database"></i> PostgreSQL
       </div>
-    </div>
-
-    <div class="cta-buttons">
-      <a href="#servicios" class="btn btn-primary">
-        <i class="fas fa-layer-group"></i> Mis Servicios
-      </a>
-
-      <a
-        href="mailto:miltonmce@gmail.com?subject=Consultoría Técnica"
-        class="btn btn-secondary"
-      >
-        <i class="fas fa-envelope"></i> Solicitar Consulta
-      </a>
-
-      <a href="/cv" class="btn btn-tertiary">
-        <i class="fas fa-file"></i> Ver CV Completo
-      </a>
     </div>
   </div>
-
-  <h2 class="tech-title">Especialidades</h2>
-
-  <div class="specialties-grid">
-    <div class="specialty-card">
-      <div class="specialty-icon">📡</div>
-      <h3>Ecosistemas de Telemetría</h3>
-      <p>
-        Captura vía MQTT/Node-RED y procesamiento centralizado en Django Cloud
-        para control total.
-      </p>
-    </div>
-
-    <div class="specialty-card">
-      <div class="specialty-icon">📊</div>
-      <h3>Gestión de Datos Técnicos</h3>
-      <p>
-        Modelado de bases de datos complejas alineadas a reglas de negocio
-        críticas.
-      </p>
-    </div>
-
-    <div class="specialty-card">
-      <div class="specialty-icon">⚡</div>
-      <h3>Automatización de Procesos</h3>
-      <p>
-        Eliminación de tareas manuales y reducción de errores operativos
-        mediante software.
-      </p>
-    </div>
-
-    <div class="specialty-card">
-      <div class="specialty-icon">🔧</div>
-      <h3>Optimización de Sistemas</h3>
-      <p>
-        Refactorización y mejora de infraestructuras existentes para
-        escalabilidad y seguridad.
-      </p>
-    </div>
-  </div>
-
-  <!-- STACK TECNOLÓGICO -->
-
-  <h2 class="tech-title">Stack Tecnológico</h2>
-
-  <div class="skills-grid">
-    <div class="skill-card">
-      <div class="skill-icon">🐍</div>
-      <h3>Python Experto</h3>
-      <p>Desarrollo de lógica robusta y procesamiento de datos técnicos.</p>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-icon">🎯</div>
-      <h3>Django Framework</h3>
-      <p>Arquitecturas escalables para plataformas de gestión y APIs.</p>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-icon">📡</div>
-      <h3>IIoT & Real-time</h3>
-      <p>Comunicación vía MQTT y Node-RED para flujos de baja latencia.</p>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-icon">🐧</div>
-      <h3>Infraestructura</h3>
-      <p>Despliegue soberano con Linux, Podman y seguridad SSL/TLS.</p>
-    </div>
-</div>
 </section>
+
+<section class="section specialties" id="especialidades">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow">Especialidades</span>
+      <h2 class="section-title">Lo que construyo</h2>
+      <p class="section-lead">
+        Soluciones de software pensadas para entornos donde la precisión y la
+        integridad de los datos no son opcionales.
+      </p>
+    </div>
+
+    <div class="specialty-grid">
+      <article class="specialty-card" data-reveal>
+        <div class="specialty-top">
+          <span class="icon-tile">
+            <i class="fa-solid fa-tower-broadcast" aria-hidden="true"></i>
+          </span>
+          <span class="specialty-index">01</span>
+        </div>
+        <h3>Ecosistemas de telemetría</h3>
+        <p>
+          Captura vía MQTT y Node-RED, con procesamiento centralizado en Django
+          para control total de campo.
+        </p>
+      </article>
+
+      <article class="specialty-card" data-reveal style="--reveal-delay: 80ms">
+        <div class="specialty-top">
+          <span class="icon-tile">
+            <i class="fa-solid fa-database" aria-hidden="true"></i>
+          </span>
+          <span class="specialty-index">02</span>
+        </div>
+        <h3>Gestión de datos técnicos</h3>
+        <p>
+          Modelado de bases de datos complejas alineadas a reglas de negocio
+          críticas y trazabilidad histórica.
+        </p>
+      </article>
+
+      <article class="specialty-card" data-reveal style="--reveal-delay: 160ms">
+        <div class="specialty-top">
+          <span class="icon-tile">
+            <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+          </span>
+          <span class="specialty-index">03</span>
+        </div>
+        <h3>Automatización de procesos</h3>
+        <p>
+          Eliminación de tareas manuales y reducción de errores operativos
+          mediante flujos de software confiables.
+        </p>
+      </article>
+
+      <article class="specialty-card" data-reveal style="--reveal-delay: 240ms">
+        <div class="specialty-top">
+          <span class="icon-tile">
+            <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+          </span>
+          <span class="specialty-index">04</span>
+        </div>
+        <h3>Optimización de sistemas</h3>
+        <p>
+          Refactorización y mejora de plataformas existentes para ganar
+          escalabilidad, rendimiento y seguridad.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
 <style>
   .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 4rem 2rem;
-
-    background:
-      linear-gradient(135deg, rgba(10, 13, 47, 0.7), rgba(15, 23, 42, 0.7)),
-      radial-gradient(
-        ellipse at 20% 50%,
-        rgba(6, 182, 212, 0.1),
-        transparent 50%
-      );
-
     position: relative;
     overflow: hidden;
+    padding: clamp(3.5rem, 8vw, 6.5rem) 0 clamp(4rem, 8vw, 6rem);
   }
 
-  .hero-wrapper {
+  .hero-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(148, 163, 184, 0.055) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.055) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 75% 65% at 50% 35%, #000 25%, transparent 78%);
+    -webkit-mask-image: radial-gradient(ellipse 75% 65% at 50% 35%, #000 25%, transparent 78%);
+    pointer-events: none;
+  }
+
+  .hero-glow {
+    position: absolute;
+    top: -180px;
+    right: -120px;
+    width: 620px;
+    height: 620px;
+    background: radial-gradient(circle, rgba(var(--accent-rgb), 0.16), transparent 62%);
+    filter: blur(20px);
+    pointer-events: none;
+  }
+
+  .hero-inner {
     position: relative;
-    z-index: 2;
-    max-width: 900px;
-    text-align: center;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    align-items: center;
+    gap: clamp(2.5rem, 6vw, 5rem);
   }
 
-  .hero-badge {
+  .availability {
     display: inline-flex;
     align-items: center;
-    gap: 0.6rem;
-    background: rgba(6, 182, 212, 0.15);
-    color: #06b6d4;
-    padding: 0.6rem 1.4rem;
-    border-radius: 50px;
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-    border: 1px solid rgba(6, 182, 212, 0.3);
+    gap: 0.55rem;
+    padding: 0.42rem 0.85rem;
+    border: 1px solid rgba(52, 211, 153, 0.22);
+    border-radius: 999px;
+    background: rgba(52, 211, 153, 0.07);
+    color: var(--success);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+  }
+
+  .availability-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--success);
+    box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.12);
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.55;
+      transform: scale(0.85);
+    }
   }
 
   .hero-title {
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
-    font-weight: 800;
-    background: linear-gradient(135deg, #06b6d4, #a78bfa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 1.5rem 0;
-    letter-spacing: -2px;
+    margin-top: 1.35rem;
+    font-size: clamp(2.35rem, 5.4vw, 4.05rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
   }
 
-  .hero-subtitle {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #a78bfa;
-    margin-bottom: 1rem;
+  .hero-lead {
+    margin-top: 1.4rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.02rem, 1.7vw, 1.2rem);
+    font-weight: 500;
+    color: var(--text);
   }
 
   .hero-description {
-    font-size: 1.05rem;
-    color: #cbd5e1;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 540px;
+    margin-top: 0.75rem;
+    color: var(--text-soft);
+    font-size: 1rem;
+    line-height: 1.75;
   }
 
-  .highlight-points {
+  .hero-actions {
     display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-    margin-bottom: 2rem;
-  }
-
-  .point {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    justify-content: center;
-    color: #cbd5e1;
-  }
-
-  .point i {
-    color: #06b6d4;
-  }
-
-  .cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
     flex-wrap: wrap;
-    margin: 3rem 0;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    padding: 0.75rem 1.7rem;
-    border-radius: 10px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.25s;
-  }
-
-  .btn-primary {
-    background: linear-gradient(135deg, #06b6d4, #0891b2);
-    color: white;
-  }
-
-  .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(6, 182, 212, 0.4);
-  }
-
-  .btn-secondary {
-    background: rgba(168, 85, 247, 0.15);
-    color: #c4b5fd;
-    border: 1px solid #a78bfa;
-  }
-
-  .btn-secondary:hover {
-    background: rgba(168, 85, 247, 0.25);
-  }
-
-  .btn-tertiary {
-    background: transparent;
-    color: #94a3b8;
-    border: 1px solid #64748b;
-  }
-
-  .btn-tertiary:hover {
-    color: #cbd5e1;
-  }
-
-  .specialties-grid,
-.skills-grid {
-    display: grid;
-    /* En desktop forzamos 4 columnas */
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 1.5rem;
-    width: 100%;
-    max-width: 1100px; /* Un poco más ancho para que respiren las 4 tarjetas */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-  .specialties-grid {
-    margin-top: 5rem;
-  }
-
-  .skills-grid {
+    gap: 0.75rem;
     margin-top: 2rem;
   }
 
-  .tech-title {
-    margin-top: 6rem; /* Más espacio para separar las secciones */
-    margin-bottom: 2rem;
-    color: #06b6d4; /* Color de acento para los títulos de sección */
-    font-size: 1.6rem;
-    font-weight: 700;
+  .hero-proof {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-top: 2rem;
+    padding: 0;
+    list-style: none;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+  }
+
+  .hero-proof li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .hero-proof i {
+    font-size: 0.7rem;
+    color: var(--accent);
+  }
+
+  /* Terminal card */
+  .hero-aside {
+    position: relative;
+  }
+
+  .terminal {
+    position: relative;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-lg);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent 40%),
+      rgba(10, 14, 22, 0.92);
+    box-shadow:
+      var(--shadow),
+      0 0 0 1px rgba(var(--accent-rgb), 0.05),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    transform: perspective(1200px) rotateY(-3deg) rotateX(1deg);
+    transition: transform 0.5s var(--ease);
+  }
+
+  .terminal:hover {
+    transform: perspective(1200px) rotateY(0deg) rotateX(0deg);
+  }
+
+  .terminal-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.025);
+  }
+
+  .terminal-dots {
+    display: inline-flex;
+    gap: 6px;
+  }
+
+  .terminal-dots i {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #2c3a4e;
+  }
+
+  .terminal-dots i:nth-child(1) {
+    background: #f87171;
+  }
+
+  .terminal-dots i:nth-child(2) {
+    background: #fbbf24;
+  }
+
+  .terminal-dots i:nth-child(3) {
+    background: #34d399;
+  }
+
+  .terminal-title {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+  }
+
+  .terminal-body {
+    padding: 1.4rem 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.83rem;
+    line-height: 1.55;
+  }
+
+  .terminal-body p {
+    margin: 0 0 0.55rem;
+    color: var(--text-soft);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .terminal-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .prompt {
+    color: var(--accent);
+    margin-right: 0.45rem;
+  }
+
+  .terminal-body .output {
+    margin-bottom: 1.1rem;
+    padding-left: 1.1rem;
+    color: var(--text);
+  }
+
+  .terminal-body .output:last-child {
+    margin-bottom: 0;
+  }
+
+  .status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--success) !important;
+  }
+
+  .status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--success);
+    box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.12);
+  }
+
+  .terminal-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .terminal-stats div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1rem;
+    padding: 1rem 0.5rem;
+    border-right: 1px solid var(--line);
+  }
+
+  .terminal-stats div:last-child {
+    border-right: 0;
+  }
+
+  .terminal-stats strong {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--text);
+  }
+
+  .terminal-stats span {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    text-align: center;
-}
+    color: var(--text-muted);
+  }
 
-  .specialty-card,
-  .skill-card {
-    background: rgba(15, 23, 42, 0.5);
-    border: 1px solid rgba(6, 182, 212, 0.3);
+  .floating-chip {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid var(--line-strong);
+    border-radius: 10px;
+    background: rgba(13, 18, 28, 0.95);
+    box-shadow: var(--shadow-sm);
+    color: var(--text-soft);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    z-index: 2;
+  }
+
+  .floating-chip i {
+    color: var(--accent);
+  }
+
+  .floating-chip--top {
+    top: -18px;
+    right: 18px;
+  }
+
+  .floating-chip--bottom {
+    bottom: -18px;
+    left: -16px;
+  }
+
+  .floating-chip--bottom i {
+    color: var(--accent-2);
+  }
+
+  /* Specialties */
+  .specialties {
+    padding-top: clamp(3rem, 6vw, 4.5rem);
+  }
+
+  .specialty-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .specialty-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--card);
+    transition: var(--transition);
+    overflow: hidden;
+  }
+
+  .specialty-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(320px 180px at 50% 0%, rgba(var(--accent-rgb), 0.1), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+  }
+
+  .specialty-card:hover {
+    border-color: rgba(var(--accent-rgb), 0.32);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .specialty-card:hover::after {
+    opacity: 1;
+  }
+
+  .specialty-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 1.4rem;
+  }
+
+  .icon-tile {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(var(--accent-rgb), 0.18);
     border-radius: 12px;
-    padding: 2rem 1.5rem;
-    text-align: center;
-    transition: 0.3s;
+    background: rgba(var(--accent-rgb), 0.08);
+    color: var(--accent);
+    font-size: 1rem;
   }
 
-  /* --- Ajuste de Responsividad --- */
-@media (max-width: 1024px) {
-    .specialties-grid,
-    .skills-grid {
-        /* En tablets ponemos 2 y 2 */
-        grid-template-columns: repeat(2, 1fr);
+  .specialty-index {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-muted);
+  }
+
+  .specialty-card h3 {
+    margin-bottom: 0.6rem;
+    font-size: 1.02rem;
+  }
+
+  .specialty-card p {
+    color: var(--text-soft);
+    font-size: 0.87rem;
+    line-height: 1.65;
+  }
+
+  @media (max-width: 1040px) {
+    .specialty-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-}
+  }
 
-@media (max-width: 600px) {
-    .specialties-grid,
-    .skills-grid {
-        /* En móviles 1 sola columna */
-        grid-template-columns: 1fr;
+  @media (max-width: 900px) {
+    .hero-inner {
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
     }
-}
 
-  .specialty-card:hover,
-  .skill-card:hover {
-    transform: translateY(-8px);
-    background: rgba(15, 23, 42, 0.8);
-    border-color: #06b6d4;
-    box-shadow: 0 12px 24px rgba(6, 182, 212, 0.15);
+    .hero-copy {
+      max-width: 660px;
+    }
+
+    .hero-aside {
+      max-width: 560px;
+    }
+
+    .terminal {
+      transform: none;
+    }
   }
 
-  .specialty-icon,
-  .skill-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  .specialty-card h3,
-  .skill-card h3 {
-    color: #e2e8f0;
-    margin-bottom: 0.4rem;
-  }
-
-  .specialty-card p,
-  .skill-card p {
-    color: #94a3b8;
-    font-size: 0.9rem;
-  }
-
-  @media (max-width: 768px) {
+  @media (max-width: 560px) {
     .hero {
-      padding: 3rem 1rem;
+      padding-top: 3rem;
     }
 
-    .hero-title {
-      font-size: 2rem;
-    }
-
-    .hero-subtitle {
-      font-size: 1rem;
-    }
-
-    .cta-buttons {
+    .hero-actions {
       flex-direction: column;
       align-items: stretch;
     }
 
-    .btn {
-      justify-content: center;
+    .hero-proof {
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .hero-aside {
+      padding-inline: 0.35rem;
+    }
+
+    .floating-chip {
+      display: none;
+    }
+
+    .specialty-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .terminal-body {
+      font-size: 0.76rem;
+      padding: 1.15rem 1.1rem;
     }
   }
 </style>

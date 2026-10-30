@@ -3,6 +3,7 @@ title: "Simulated Pump Station with OpenPLC and Modbus TCP"
 description: "A Structured Text test bench on OpenPLC Runtime v4, driven from Python with pymodbus: interlocks, fault codes and a volume totalizer."
 date: 2026-10-29
 tags: ["OpenPLC", "Modbus", "PLC", "Python", "Structured Text"]
+lang: en
 ---
 
 # Simulated Pump Station with OpenPLC and Modbus TCP
