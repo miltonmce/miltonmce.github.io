@@ -992,65 +992,147 @@ import SkillBlock from "../components/SkillBlock.astro";
   :global(.pdf-mode .cv-header),
   :global(.pdf-mode .cv-section) {
     border: 1px solid #dbe2ec !important;
-    background: #fff !important;
     box-shadow: none !important;
   }
 
   :global(.pdf-mode .cv-header) {
     padding: 22px !important;
+    background:
+      radial-gradient(600px 260px at 85% 0%, rgba(129, 140, 248, 0.14), transparent 65%),
+      radial-gradient(500px 260px at 0% 100%, rgba(34, 211, 238, 0.10), transparent 65%),
+      #ffffff !important;
   }
 
-  :global(.pdf-mode .cv-header::after),
-  :global(.pdf-mode .cv-monogram) {
+  :global(.pdf-mode .cv-header::after) {
     display: none !important;
+  }
+
+  :global(.pdf-mode .cv-monogram) {
+    background: linear-gradient(135deg, #22d3ee, #818cf8) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    box-shadow: 0 10px 24px -12px rgba(34, 211, 238, 0.55) !important;
   }
 
   :global(.pdf-mode .cv-section) {
     padding: 18px !important;
     margin-bottom: 12px !important;
+    background: #ffffff !important;
   }
 
   :global(.pdf-mode h1),
   :global(.pdf-mode h2),
   :global(.pdf-mode h3),
   :global(.pdf-mode h4),
-  :global(.pdf-mode p),
-  :global(.pdf-mode li),
-  :global(.pdf-mode span),
-  :global(.pdf-mode strong) {
+  :global(.pdf-mode strong),
+  :global(.pdf-mode .timeline-title) {
     color: #0f172a !important;
     -webkit-text-fill-color: #0f172a !important;
   }
 
+  :global(.pdf-mode p),
+  :global(.pdf-mode li) {
+    color: #334155 !important;
+    -webkit-text-fill-color: #334155 !important;
+  }
+
+  :global(.pdf-mode span) {
+    color: #475569 !important;
+    -webkit-text-fill-color: #475569 !important;
+  }
+
   :global(.pdf-mode .eyebrow),
   :global(.pdf-mode .timeline-subtitle),
-  :global(.pdf-mode .project-role),
-  :global(.pdf-mode .cert-issuer),
   :global(.pdf-mode .cv-location) {
-    color: #0e7490 !important;
-    -webkit-text-fill-color: #0e7490 !important;
+    color: #0891b2 !important;
+    -webkit-text-fill-color: #0891b2 !important;
+  }
+
+  :global(.pdf-mode .cv-location i),
+  :global(.pdf-mode .impact-title i),
+  :global(.pdf-mode .technical-title i) {
+    color: #06b6d4 !important;
+    -webkit-text-fill-color: #06b6d4 !important;
+  }
+
+  :global(.pdf-mode .project-role),
+  :global(.pdf-mode .cert-issuer) {
+    color: #6366f1 !important;
+    -webkit-text-fill-color: #6366f1 !important;
   }
 
   :global(.pdf-mode .highlight),
   :global(.pdf-mode .service-item),
   :global(.pdf-mode .cert-item),
-  :global(.pdf-mode .featured-project),
   :global(.pdf-mode .cv-emphasis),
   :global(.pdf-mode .skill-block) {
     background: #f8fafc !important;
     border-color: #dbe2ec !important;
   }
 
+  :global(.pdf-mode .cv-emphasis) {
+    border-left: 3px solid #22d3ee !important;
+    background: rgba(34, 211, 238, 0.06) !important;
+  }
+
+  :global(.pdf-mode .cert-item) {
+    border-left: 3px solid #818cf8 !important;
+  }
+
+  :global(.pdf-mode .featured-project) {
+    border: 1px solid rgba(34, 211, 238, 0.35) !important;
+    background:
+      linear-gradient(135deg, rgba(34, 211, 238, 0.07), rgba(129, 140, 248, 0.07)),
+      #ffffff !important;
+  }
+
+  :global(.pdf-mode .highlight li::before),
+  :global(.pdf-mode .impact-list li::before) {
+    color: #06b6d4 !important;
+    -webkit-text-fill-color: #06b6d4 !important;
+  }
+
+  :global(.pdf-mode .timeline::before) {
+    background: linear-gradient(#22d3ee, #dbe2ec) !important;
+  }
+
+  :global(.pdf-mode .timeline-item::before) {
+    background: #ffffff !important;
+    border: 2px solid #22d3ee !important;
+    box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.15) !important;
+  }
+
+  :global(.pdf-mode .project-date) {
+    border: 1px solid rgba(34, 211, 238, 0.4) !important;
+    background: rgba(34, 211, 238, 0.08) !important;
+    color: #0891b2 !important;
+    -webkit-text-fill-color: #0891b2 !important;
+  }
+
   :global(.pdf-mode .cv-section h2 i) {
-    color: #0e7490 !important;
-    border-color: #dbe2ec !important;
-    background: #f1f5f9 !important;
+    color: #0891b2 !important;
+    -webkit-text-fill-color: #0891b2 !important;
+    border: 1px solid rgba(34, 211, 238, 0.35) !important;
+    background: linear-gradient(135deg, rgba(34, 211, 238, 0.12), rgba(129, 140, 248, 0.12)) !important;
   }
 
   :global(.pdf-mode .tech-stack-featured span) {
-    background: #f1f5f9 !important;
-    border-color: #dbe2ec !important;
-    color: #334155 !important;
+    background: linear-gradient(135deg, rgba(34, 211, 238, 0.08), rgba(129, 140, 248, 0.08)) !important;
+    border: 1px solid rgba(129, 140, 248, 0.35) !important;
+    color: #4338ca !important;
+    -webkit-text-fill-color: #4338ca !important;
+  }
+
+  :global(.pdf-mode .skill-block h3) {
+    color: #0891b2 !important;
+    -webkit-text-fill-color: #0891b2 !important;
+  }
+
+  :global(.pdf-mode .skill-tags span) {
+    background: rgba(34, 211, 238, 0.07) !important;
+    border: 1px solid rgba(34, 211, 238, 0.3) !important;
+    color: #155e75 !important;
+    -webkit-text-fill-color: #155e75 !important;
   }
 
   :global(.pdf-mode .download-section),
@@ -1059,12 +1141,13 @@ import SkillBlock from "../components/SkillBlock.astro";
   }
 </style>
 
-<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 <script is:inline>
   function generatePDF() {
     const original = document.querySelector(".cv-page");
-    if (!original || typeof html2pdf === "undefined") return;
+    if (!original || typeof html2canvas === "undefined" || !window.jspdf) return;
 
     const clone = original.cloneNode(true);
     clone.classList.add("pdf-mode");
@@ -1095,34 +1178,70 @@ import SkillBlock from "../components/SkillBlock.astro";
       root.style.scrollBehavior = previousScrollBehavior;
     };
 
-    const options = {
-      margin: [8, 8, 8, 8],
-      filename: "CV-Milton-Medina.pdf",
-      image: { type: "jpeg", quality: 0.98 },
-      html2canvas: {
-        scale: 2,
-        useCORS: true,
-        logging: false,
-        letterRendering: true,
-        backgroundColor: "#ffffff",
-      },
-      jsPDF: {
-        unit: "mm",
-        format: "a4",
-        orientation: "portrait",
-      },
-    };
+    requestAnimationFrame(async () => {
+      try {
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
 
-    requestAnimationFrame(() => {
-      html2pdf()
-        .set(options)
-        .from(clone)
-        .save()
-        .then(cleanup)
-        .catch((error) => {
-          console.error("No se pudo generar el PDF", error);
-          cleanup();
-        });
+        const pageW = 210;
+        const pageH = 297;
+        const margin = 10;
+        const contentW = pageW - margin * 2;
+        const contentH = pageH - margin * 2;
+        const gap = 4;
+
+        // Render each block (header + each section) separately so page
+        // breaks fall between sections instead of cutting them in half.
+        const blocks = Array.from(
+          clone.querySelectorAll(":scope > .cv-header, :scope > .cv-section:not(.download-section)")
+        );
+
+        let cursorY = margin;
+        let first = true;
+
+        const newPage = () => {
+          if (!first) pdf.addPage();
+          first = false;
+          cursorY = margin;
+        };
+
+        const addCanvas = (canvas) => {
+          const pxPerMm = canvas.width / contentW;
+          const sliceH = Math.floor(contentH * pxPerMm);
+
+          for (let offset = 0; offset < canvas.height; offset += sliceH) {
+            const h = Math.min(sliceH, canvas.height - offset);
+            const part = document.createElement("canvas");
+            part.width = canvas.width;
+            part.height = h;
+            part.getContext("2d").drawImage(canvas, 0, offset, canvas.width, h, 0, 0, canvas.width, h);
+
+            const partMm = h / pxPerMm;
+            if (cursorY + partMm > pageH - margin && cursorY > margin) newPage();
+            pdf.addImage(part.toDataURL("image/jpeg", 0.98), "JPEG", margin, cursorY, contentW, partMm);
+            cursorY += partMm;
+          }
+        };
+
+        for (const block of blocks) {
+          const canvas = await html2canvas(block, {
+            scale: 2,
+            useCORS: true,
+            logging: false,
+            backgroundColor: "#ffffff",
+          });
+          const blockMm = canvas.height / (canvas.width / contentW);
+          if (blockMm <= contentH && cursorY + blockMm > pageH - margin) newPage();
+          await addCanvas(canvas);
+          cursorY += gap;
+        }
+
+        pdf.save("CV-Milton-Medina.pdf");
+        cleanup();
+      } catch (error) {
+        console.error("No se pudo generar el PDF", error);
+        cleanup();
+      }
     });
   }
 </script>
